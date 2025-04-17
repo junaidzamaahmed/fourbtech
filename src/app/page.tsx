@@ -1,16 +1,9 @@
-// import { Button } from "@/components/ui/button";
-
-import Button from "@/components/global/Button";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <div className='font-extrabold mx-auto w-full h-screen'>
-      {/* <Button variant={"outline"}>rahul</Button> */}
-      <Button
-        text='rahul'
-        outline={false}
-        customCLass='!border-2 !border-black !text-black'
-      />
-    </div>
+    <main className="mx-auto h-screen w-full font-extrabold">
+      <Hero />
+    </main>
   );
 }
