@@ -3,6 +3,7 @@ export interface ProjectShowcase {
   title: string;
   description: string;
   projectLink: string;
+  imageUrl: string;
 }
 
 export interface CustomerFeedback {
@@ -24,4 +25,13 @@ export interface Insight {
   date: string;
   title: string;
   link: string;
+}
+
+export interface Employee {
+  name: string;
+  role: string;
+  image: string;
+  description?: string;
+  email: string;
+  linkedin: string;
 }

@@ -58,7 +58,7 @@
   --accent-hover: hsl(222, 100%, 50%);
   --custom-white: hsl(228, 45%, 98%);
 
-  --radius: 0.625rem;
+  --radius: 8px;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -93,7 +93,7 @@
 }
 
 .dark {
-  --deep-black: hsl(255, 84%, 57%);
+  --deep-black: hsl(255, 100%, 4%);
   --dark-bg: #1e1d28;
   --dark-bg-primary: #272633;
   --h1-color: #313131;
