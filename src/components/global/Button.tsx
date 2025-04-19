@@ -21,9 +21,9 @@ const Button = ({
     <Link
       href={href}
       className={clsx(
-        "group flex cursor-pointer items-center justify-center rounded-full py-1 pr-3 pl-1 transition-all duration-300",
+        "group border-[2px] duration-300 flex cursor-pointer items-center justify-center rounded-full py-1 pr-3 pl-1 transition-all",
         outline
-          ? "text-h1-color border-[2px] bg-transparent"
+          ? "text-h1-color bg-transparent"
           : "bg-accent-hover text-custom-white",
         customCLass,
       )}

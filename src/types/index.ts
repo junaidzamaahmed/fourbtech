@@ -35,3 +35,11 @@ export interface Employee {
   email: string;
   linkedin: string;
 }
+
+export interface Services{
+  title: string;
+  description: string;
+  icon: string;
+  link: string;
+  
+}

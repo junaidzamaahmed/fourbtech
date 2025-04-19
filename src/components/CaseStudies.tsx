@@ -17,18 +17,18 @@ const CaseStudies = ({
           src={imageUrl}
           alt={title}
           width={626}
-          height={510}
+          height={410}
           className="h-full w-full object-cover"
         />
       </div>
-      <div className="flex flex-col items-start justify-between p-4 max-sm:px-0">
-        <h1 className="text-h1-color my-2 text-xl font-semibold tracking-wide lg:text-3xl">
+      <div className="flex flex-col items-start justify-center p-4 max-sm:px-0 gap-5">
+        <h1 className="text-h1-color text-xl font-semibold tracking-wide lg:text-4xl">
           {company}
         </h1>
-        <p className="text-h1-color mb-4 text-sm font-semibold lg:text-xl">
+        <p className="text-h1-color text-sm font-semibold lg:text-xl">
           {title}
         </p>
-        <p className="text-p-color mb-4 text-sm font-normal lg:text-lg">
+        <p className="text-p-color  text-sm font-normal lg:text-lg">
           {description}
         </p>
         <Button

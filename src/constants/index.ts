@@ -1,4 +1,4 @@
-import { Employee, FAQItem, Insight } from "@/types";
+import { Employee, FAQItem, Insight, Services } from "@/types";
 import { ProjectShowcase } from "@/types";
 import { CustomerFeedback } from "@/types";
 
@@ -104,30 +104,30 @@ export const projectShowcaseData: ProjectShowcase[] = [
     projectLink: "https://ai-medical-platform.com",
     imageUrl: "/placeholders/palaceholder1.png",
   },
-  // {
-  //   company: "FinWise Capital",
-  //   title: "Predictive Analytics Dashboard for Investment Forecasting",
-  //   description:
-  //     "Needed a responsive analytics dashboard for real-time portfolio risk analysis and stock trend prediction. We implemented a D3.js-powered data viz system integrated with a PyTorch forecasting engine and microservice APIs.",
-  //   projectLink: "https://finwise-ai-dashboard.com",
-  //   imageUrl:"/palaceholder/palaceholder1.png"
-  // },
-  // {
-  //   company: "VeriEduTech",
-  //   title: "Smart Learning Assistant Using NLP",
-  //   description:
-  //     "Wanted an adaptive AI chatbot to help students understand STEM concepts better. We fine-tuned GPT models for contextual Q&A and built a multilingual, accessible frontend using Next.js and TailwindCSS.",
-  //   projectLink: "https://smartedu-assistant.com",
-  //   imageUrl:"/palaceholder/palaceholder1.png"
-  // },
-  // {
-  //   company: "CityVision Urban Labs",
-  //   title: "AI-Powered Urban Traffic Flow Optimization System",
-  //   description:
-  //     "Faced challenges in visualizing real-time traffic bottlenecks and signal optimization. We developed a computer vision pipeline with YOLOv8 and a live control dashboard using React, Firebase, and WebSocket APIs.",
-  //   projectLink: "https://urban-trafficai.com",
-  //   imageUrl:"/palaceholder/palaceholder1.png"
-  // },
+  {
+    company: "FinWise Capital",
+    title: "Predictive Analytics Dashboard for Investment Forecasting",
+    description:
+      "Needed a responsive analytics dashboard for real-time portfolio risk analysis and stock trend prediction. We implemented a D3.js-powered data viz system integrated with a PyTorch forecasting engine and microservice APIs.",
+    projectLink: "https://finwise-ai-dashboard.com",
+    imageUrl:"/placeholders/palaceholder1.png"
+  },
+  {
+    company: "VeriEduTech",
+    title: "Smart Learning Assistant Using NLP",
+    description:
+      "Wanted an adaptive AI chatbot to help students understand STEM concepts better. We fine-tuned GPT models for contextual Q&A and built a multilingual, accessible frontend using Next.js and TailwindCSS.",
+    projectLink: "https://smartedu-assistant.com",
+    imageUrl:"/placeholders/palaceholder1.png"
+  },
+  {
+    company: "CityVision Urban Labs",
+    title: "AI-Powered Urban Traffic Flow Optimization System",
+    description:
+      "Faced challenges in visualizing real-time traffic bottlenecks and signal optimization. We developed a computer vision pipeline with YOLOv8 and a live control dashboard using React, Firebase, and WebSocket APIs.",
+    projectLink: "https://urban-trafficai.com",
+    imageUrl:"/placeholders/palaceholder1.png"
+  },
 ];
 
 export const faqs: FAQItem[] = [
@@ -282,3 +282,43 @@ export const employees: Employee[] = [
     linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
   },
 ];
+
+
+export const services: Services[] = [
+  {
+    title: "Web Development",
+    description:
+      "Building responsive, high-performance web applications using modern frameworks and technologies.",
+    icon: "/icons/code.svg",
+    link: "/web-development"
+  },
+  {
+    title: "Web Development",
+    description:
+      "Building responsive, high-performance web applications using modern frameworks and technologies.",
+    icon: "/icons/code.svg",
+    link: "/web-development"
+  },
+  {
+    title: "Web Development",
+    description:
+      "Building responsive, high-performance web applications using modern frameworks and technologies.",
+    icon: "/icons/code.svg",
+    link: "/web-development"
+  },
+  {
+    title: "Web Development",
+    description:
+      "Building responsive, high-performance web applications using modern frameworks and technologies.",
+    icon: "/icons/code.svg",
+    link: "/web-development"
+  },
+  {
+    title: "Web Development",
+    description:
+      "Building responsive, high-performance web applications using modern frameworks and technologies.",
+    icon: "/icons/code.svg",
+    link: "/web-development"
+  },
+
+]
