@@ -2,6 +2,7 @@ import { Employee, FAQItem, Insight, Services } from "@/types";
 import { ProjectShowcase } from "@/types";
 import { CustomerFeedback } from "@/types";
 
+
 export const customerFeedbacks: CustomerFeedback[] = [
   {
     name: "Alyssa Greene",
@@ -269,6 +270,42 @@ export const employees: Employee[] = [
     name: "Kazi Rafiqual Islam",
     role: "Co-Founder & Chairma",
     image: "/members/CHAIRMAIN.png",
+    description:
+      "B.Sc. Engr. Mechanical (DUET) <br/>M.Sc. Engr. PMRE - Non-thesis (BUET) <br/>MBA-SSM-Switzerland <br/>MSc Digital Marketing - I-JWL London <br/>Doctor of Business Administration <br/>(DBA) in progress)- I-JWL London.",
+    email: "https://twitter.com/kazirafiqual",
+    linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
+  },
+  {
+    name: "Kazi Rafiqual Islam",
+    role: "Co-Founder & Chairma",
+    image: "/members/CHAIRMAIN.png",
+    description:
+      "B.Sc. Engr. Mechanical (DUET) <br/>M.Sc. Engr. PMRE - Non-thesis (BUET) <br/>MBA-SSM-Switzerland <br/>MSc Digital Marketing - I-JWL London <br/>Doctor of Business Administration <br/>(DBA) in progress)- I-JWL London.",
+    email: "https://twitter.com/kazirafiqual",
+    linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
+  },
+  {
+    name: "Kazi Rafiqual Islam",
+    role: "Co-Founder & Chairma",
+    image: "/members/CHAIRMAIN.png",
+    description:
+      "B.Sc. Engr. Mechanical (DUET) <br/>M.Sc. Engr. PMRE - Non-thesis (BUET) <br/>MBA-SSM-Switzerland <br/>MSc Digital Marketing - I-JWL London <br/>Doctor of Business Administration <br/>(DBA) in progress)- I-JWL London.",
+    email: "https://twitter.com/kazirafiqual",
+    linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
+  },
+  {
+    name: "Kazi Rafiqual Islam",
+    role: "Co-Founder & Chairma",
+    image: "/members/CHAIRMAIN.png",
+    description:
+      "B.Sc. Engr. Mechanical (DUET) <br/>M.Sc. Engr. PMRE - Non-thesis (BUET) <br/>MBA-SSM-Switzerland <br/>MSc Digital Marketing - I-JWL London <br/>Doctor of Business Administration <br/>(DBA) in progress)- I-JWL London.",
+    email: "https://twitter.com/kazirafiqual",
+    linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
+  },
+  {
+    name: "Kazi Rafiqual Islam",
+    role: "Co-Founder & Chairma",
+    image: "/members/CHAIRMAIN.png",
     email: "https://twitter.com/kazirafiqual",
     linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
   },
@@ -282,6 +319,7 @@ export const employees: Employee[] = [
     linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
   },
 ];
+
 
 
 export const services: Services[] = [

@@ -27,7 +27,7 @@ export default function CustomSwiperCarousel({
   };
 
   return (
-    <div className="p-10">
+    <div className="my-5">
       {/* Swiper */}
       <Swiper
         modules={[Pagination, Autoplay, Navigation]}
@@ -37,6 +37,7 @@ export default function CustomSwiperCarousel({
         speed={400}
         autoplay={{
           delay: 5000,
+          pauseOnMouseEnter: true,
         }}
         pagination={{
           el: ".custom-pagination",

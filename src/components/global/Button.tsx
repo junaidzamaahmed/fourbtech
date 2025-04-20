@@ -30,13 +30,13 @@ const Button = ({
     >
       {leftIcon && (
         <div className="-rotate-45 transition-all duration-300 group-hover:rotate-0">
-          <IoIosArrowRoundForward size={30} />
+          <IoIosArrowRoundForward className="max-sm:size-5 sm:size-10"  />
         </div>
       )}
       <p className={clsx("font-normal uppercase")}>{text}</p>
       {rightIcon && (
         <div className="-rotate-45 transition-all duration-300 group-hover:rotate-0">
-          <IoIosArrowRoundForward size={30} />
+          <IoIosArrowRoundForward className="max-sm:size-5 sm:size-10" />
         </div>
       )}
     </Link>
