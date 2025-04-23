@@ -320,8 +320,6 @@ export const employees: Employee[] = [
   },
 ];
 
-
-
 export const services: Services[] = [
   {
     title: "Web Development",

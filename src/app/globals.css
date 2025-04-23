@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
   --color-deep-black: var(--deep-black);
@@ -147,6 +147,33 @@
 
 @layer base {
   body {
-    @apply bg-custom-white;
+    @apply bg-custom-white font-normal transition-all duration-200;
+  }
+  h1 {
+    @apply text-h1-color text-4xl font-semibold capitalize md:text-5xl lg:text-6xl xl:text-7xl;
+  }
+  h2 {
+    @apply text-h1-color text-2xl font-semibold capitalize md:text-3xl lg:text-4xl xl:text-5xl;
+  }
+  h3 {
+    @apply text-p-color text-base font-normal capitalize md:text-lg lg:text-2xl;
+  }
+  h4 {
+    @apply text-base font-normal capitalize md:text-lg lg:text-2xl;
+  }
+  p {
+    @apply text-p-color text-sm font-normal capitalize md:text-base lg:text-xl;
+  }
+}
+
+@layer utilities {
+  .main-container{
+    @apply px-4 sm:px-8 md:px-12 xl:px-20 py-5;
+  }
+  .flex-center {
+    @apply flex items-center justify-center gap-4;
+  }
+  .flex-between {
+    @apply flex items-center justify-between gap-4;
   }
 }
