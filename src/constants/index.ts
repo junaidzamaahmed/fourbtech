@@ -2,35 +2,7 @@ import { Employee, FAQItem, Insight, Services } from "@/types";
 import { ProjectShowcase } from "@/types";
 import { CustomerFeedback } from "@/types";
 
-
 export const customerFeedbacks: CustomerFeedback[] = [
-  {
-    name: "Alyssa Greene",
-    company: "NeoHealth Systems",
-    role: "Chief Medical Officer",
-    feedback:
-      "FourBtech's AI-powered diagnostic platform has revolutionized how we serve our patients. The accuracy and usability are beyond expectations.",
-    rating: 5,
-    avatarUrl: "https://i.pravatar.cc/150?img=12",
-  },
-  {
-    name: "Mikhail Tanaka",
-    company: "FinWise Capital",
-    role: "Head of Data Science",
-    feedback:
-      "Their team delivered a state-of-the-art analytics dashboard that helped us uncover portfolio insights in real time. Exceptional work!",
-    rating: 5,
-    avatarUrl: "https://i.pravatar.cc/150?img=21",
-  },
-  {
-    name: "Elena Rodríguez",
-    company: "VeriEduTech",
-    role: "Product Manager",
-    feedback:
-      "The learning assistant we built with FourBtech was a game changer for our platform. Students love the personalized responses and easy UI.",
-    rating: 4,
-    avatarUrl: "https://i.pravatar.cc/150?img=45",
-  },
   {
     name: "Victor Osei",
     company: "CityVision Urban Labs",
@@ -48,42 +20,6 @@ export const customerFeedbacks: CustomerFeedback[] = [
       "Thanks to FourBtech’s vision system, we now predict crop yields with much higher precision. Their tech and timeline commitment are impressive.",
     rating: 4,
     avatarUrl: "https://i.pravatar.cc/150?img=17",
-  },
-  {
-    name: "Benjamin Wallace",
-    company: "SafeTalk Inc.",
-    role: "Cybersecurity Consultant",
-    feedback:
-      "Their hate speech detection model caught 98% of flagged content in real-time. We've never had this level of content control before.",
-    rating: 5,
-    avatarUrl: "https://i.pravatar.cc/150?img=6",
-  },
-  {
-    name: "Nina Das",
-    company: "SmartFleet Dynamics",
-    role: "Fleet Operations Manager",
-    feedback:
-      "Fleet tracking and maintenance have become seamless with the FourBtech dashboard. The alerts and insights are incredibly useful.",
-    rating: 4,
-    avatarUrl: "https://i.pravatar.cc/150?img=30",
-  },
-  {
-    name: "Carlos Mendes",
-    company: "RetailX Analytics",
-    role: "Consumer Insights Lead",
-    feedback:
-      "Their NLP model helped us understand our customers better. The sentiment analysis dashboard was a huge value add for marketing decisions.",
-    rating: 5,
-    avatarUrl: "https://i.pravatar.cc/150?img=23",
-  },
-  {
-    name: "Leila Farouq",
-    company: "LegalAssist AI",
-    role: "Contract Analyst",
-    feedback:
-      "Our legal team saves hours weekly thanks to the smart clause detection tool. FourBtech’s delivery was timely and highly professional.",
-    rating: 5,
-    avatarUrl: "https://i.pravatar.cc/150?img=14",
   },
   {
     name: "Daniel Huang",
@@ -111,7 +47,7 @@ export const projectShowcaseData: ProjectShowcase[] = [
     description:
       "Needed a responsive analytics dashboard for real-time portfolio risk analysis and stock trend prediction. We implemented a D3.js-powered data viz system integrated with a PyTorch forecasting engine and microservice APIs.",
     projectLink: "https://finwise-ai-dashboard.com",
-    imageUrl:"/placeholders/palaceholder1.png"
+    imageUrl: "/placeholders/palaceholder1.png",
   },
   {
     company: "VeriEduTech",
@@ -119,7 +55,7 @@ export const projectShowcaseData: ProjectShowcase[] = [
     description:
       "Wanted an adaptive AI chatbot to help students understand STEM concepts better. We fine-tuned GPT models for contextual Q&A and built a multilingual, accessible frontend using Next.js and TailwindCSS.",
     projectLink: "https://smartedu-assistant.com",
-    imageUrl:"/placeholders/palaceholder1.png"
+    imageUrl: "/placeholders/palaceholder1.png",
   },
   {
     company: "CityVision Urban Labs",
@@ -127,7 +63,7 @@ export const projectShowcaseData: ProjectShowcase[] = [
     description:
       "Faced challenges in visualizing real-time traffic bottlenecks and signal optimization. We developed a computer vision pipeline with YOLOv8 and a live control dashboard using React, Firebase, and WebSocket APIs.",
     projectLink: "https://urban-trafficai.com",
-    imageUrl:"/placeholders/palaceholder1.png"
+    imageUrl: "/placeholders/palaceholder1.png",
   },
 ];
 
@@ -186,64 +122,46 @@ export const faqs: FAQItem[] = [
 
 export const insights: Insight[] = [
   {
-    image: "https://source.unsplash.com/random/800x600?ai,technology",
+    image: "/placeholders/palaceholder3.png",
     date: "2025-04-15",
     title: "How Generative AI is Redefining Product Design",
     link: "https://fourbtech.com/insights/generative-ai-product-design",
   },
   {
-    image: "https://source.unsplash.com/random/800x600?machine-learning",
+    image: "/placeholders/palaceholder3.png",
     date: "2025-04-10",
     title: "5 Machine Learning Models Every Startup Should Know",
     link: "https://fourbtech.com/insights/ml-models-for-startups",
   },
   {
-    image: "https://source.unsplash.com/random/800x600?ux,design",
+    image: "/placeholders/palaceholder3.png",
     date: "2025-04-03",
     title: "Designing Scalable UX for AI-Powered Apps",
     link: "https://fourbtech.com/insights/scalable-ux-ai",
   },
   {
-    image: "https://source.unsplash.com/random/800x600?cybersecurity",
+    image: "/placeholders/palaceholder3.png",
     date: "2025-03-27",
     title: "Why Cybersecurity Should Be Baked Into Your MVP",
     link: "https://fourbtech.com/insights/cybersecurity-in-mvp",
   },
   {
-    image: "https://source.unsplash.com/random/800x600?startup,teamwork",
+    image: "/placeholders/palaceholder3.png",
     date: "2025-03-21",
     title: "How Small Teams Can Build Billion-Dollar Tech",
     link: "https://fourbtech.com/insights/startup-team-strategy",
   },
   {
-    image: "https://source.unsplash.com/random/800x600?web3,blockchain",
+    image: "/placeholders/palaceholder3.png",
     date: "2025-03-14",
     title: "Web3 Explained: Opportunities for Early-Stage Founders",
     link: "https://fourbtech.com/insights/web3-for-founders",
   },
   {
-    image: "https://source.unsplash.com/random/800x600?devops",
+    image: "/placeholders/palaceholder3.png",
     date: "2025-03-06",
     title: "DevOps for Startups: Automate, Iterate, Succeed",
     link: "https://fourbtech.com/insights/devops-for-startups",
-  },
-  {
-    image: "https://source.unsplash.com/random/800x600?data,analytics",
-    date: "2025-02-27",
-    title: "Turning Raw Data Into Business Gold",
-    link: "https://fourbtech.com/insights/data-to-insight",
-  },
-  {
-    image: "https://source.unsplash.com/random/800x600?innovation",
-    date: "2025-02-18",
-    title: "Why Innovation Starts With Listening",
-    link: "https://fourbtech.com/insights/innovation-through-feedback",
-  },
-  {
-    image: "https://source.unsplash.com/random/800x600?nextjs",
-    date: "2025-02-10",
-    title: "Mastering Next.js for High-Performance Web Apps",
-    link: "https://fourbtech.com/insights/nextjs-performance-guide",
   },
 ];
 
@@ -326,35 +244,34 @@ export const services: Services[] = [
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
     icon: "/icons/code.svg",
-    link: "/web-development"
+    link: "/web-development",
   },
   {
     title: "Web Development",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
     icon: "/icons/code.svg",
-    link: "/web-development"
+    link: "/web-development",
   },
   {
     title: "Web Development",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
     icon: "/icons/code.svg",
-    link: "/web-development"
+    link: "/web-development",
   },
   {
     title: "Web Development",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
     icon: "/icons/code.svg",
-    link: "/web-development"
+    link: "/web-development",
   },
   {
     title: "Web Development",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
     icon: "/icons/code.svg",
-    link: "/web-development"
+    link: "/web-development",
   },
-
-]
+];

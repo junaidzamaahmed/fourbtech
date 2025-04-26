@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
@@ -167,8 +171,8 @@
 }
 
 @layer utilities {
-  .main-container{
-    @apply px-4 sm:px-8 md:px-12 xl:px-20 py-5;
+  .main-container {
+    @apply px-4 py-5 sm:px-8 md:px-12 xl:px-20;
   }
   .flex-center {
     @apply flex items-center justify-center gap-4;
@@ -176,4 +180,13 @@
   .flex-between {
     @apply flex items-center justify-between gap-4;
   }
+}
+
+/* Custom Swiper Styles */
+.swiper-pagination-bullet {
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
 }

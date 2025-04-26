@@ -1,5 +1,12 @@
 import ArrowButton from "@/components/global/ArrowButton";
+import CaseStudies from "@/components/pages/main/CaseStudies";
+import CompanyProfile from "@/components/pages/main/Company Profile";
 import ContactUS from "@/components/pages/main/ContactUS";
+import CustomerFeedBack from "@/components/pages/main/CustomerFeedBack";
+import Employess from "@/components/pages/main/Employess";
+import Insides from "@/components/pages/main/Insides";
+import FaqSection from "@/components/pages/main/Questions";
+import Services from "@/components/pages/main/Services";
 import Link from "next/link";
 
 export default function Home() {
@@ -45,7 +52,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <CompanyProfile />
+      <Services />
+      <CaseStudies />
+      <Employess />
+      <FaqSection />
       <ContactUS />
+      <CustomerFeedBack />
+      <Insides />
     </main>
   );
 }

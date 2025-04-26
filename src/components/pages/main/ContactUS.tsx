@@ -44,14 +44,14 @@ const ContactUS = () => {
     console.log(save);
   };
   return (
-    <section className="bg-custom-white main-container grid grid-cols-2 py-20 *:p-5">
+    <section className="bg-custom-white main-container grid grid-cols-1 md:grid-cols-2 py-20 *:p-5">
       <div className="flex-between flex-col bg-[#F0F5FF]">
         <h2>Ready To Take Your Business to the Next Level?</h2>
         <p>
           Contact us today to schedule a consultation or learn more about our
           services
         </p>
-        <ul className="*:text-p-color flex list-none flex-col gap-5 items-start justify-between">
+        <ul className="*:text-p-color flex list-none flex-col gap-5 items-start justify-between ">
           <li>+447424438741</li>
           <li>infO@fourbtech.com</li>
           <li>252-262 Romford Road, E7 9HZ, London, UK</li>
