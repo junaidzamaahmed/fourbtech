@@ -43,3 +43,14 @@ export interface Services{
   link: string;
   
 }
+
+export interface IndustrySolutionType{
+  icon: string;
+  title: string;
+  desc: string;
+}
+
+
+
+
+

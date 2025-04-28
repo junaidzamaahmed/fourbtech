@@ -44,20 +44,20 @@ const ContactUS = () => {
     console.log(save);
   };
   return (
-    <section className="bg-custom-white main-container grid grid-cols-1 md:grid-cols-2 py-20 *:p-5">
-      <div className="flex-between flex-col bg-[#F0F5FF]">
+    <section className="bg-custom-white main-container grid grid-cols-1 py-20 *:p-5 md:grid-cols-2">
+      <div className="flex-between flex-col rounded-t-xl bg-[#F0F5FF] md:rounded-l-xl">
         <h2>Ready To Take Your Business to the Next Level?</h2>
         <p>
           Contact us today to schedule a consultation or learn more about our
           services
         </p>
-        <ul className="*:text-p-color flex list-none flex-col gap-5 items-start justify-between ">
+        <ul className="*:text-p-color flex list-none flex-col items-start justify-between gap-5">
           <li>+447424438741</li>
           <li>infO@fourbtech.com</li>
           <li>252-262 Romford Road, E7 9HZ, London, UK</li>
         </ul>
       </div>
-      <div className="bg-dark-bg-primary">
+      <div className="bg-dark-bg-primary rounded-b-xl md:rounded-r-xl">
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}

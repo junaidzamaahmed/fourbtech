@@ -1,4 +1,10 @@
-import { Employee, FAQItem, Insight, Services } from "@/types";
+import {
+  Employee,
+  FAQItem,
+  IndustrySolutionType,
+  Insight,
+  Services,
+} from "@/types";
 import { ProjectShowcase } from "@/types";
 import { CustomerFeedback } from "@/types";
 
@@ -273,5 +279,38 @@ export const services: Services[] = [
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
     icon: "/icons/code.svg",
     link: "/web-development",
+  },
+];
+
+export const IndustrySolutionData: IndustrySolutionType[] = [
+  {
+    icon: "/Icons/Web/ecom.png",
+    title: "ERetall ECommerce",
+    desc: "wo Empower Retail Businesses By auibding Custom E-commerce platforms For Online Product Sales. Aaditionally, we Offer Specialised Web Solutions Like Inventory Control. Order Tracking. And Integrated Point-Of-Sale (POS) Systems.",
+  },
+  {
+    icon: "/Icons/Web/healthcare.png",
+    title: "Healthcare",
+    desc: "Transform The Healthcare sector With Custom-Built Web Applications. From Digital Patient Record Systems And Lab Management Software To Telemedicine Platforms And E-Prescription Tools, We Create Solutions TO Modernise Healthcare Delivery.",
+  },
+  {
+    icon: "/Icons/Web/entertainment.png",
+    title: "Media & Entertainment—Social Platforms",
+    desc: "Got An Idea For A Streaming Service Or A Video Editing Web App? Share Your Vision With us. We Bring Your Creative Ideas For The Entertainment Industry To Life With Functional And Engaging Web Applications",
+  },
+  {
+    icon: "/Icons/Web/travel.png",
+    title: "Travel",
+    desc: "Looking to create a comprehensive  travel booking platform? We build  dynamic travel web apps for everything  from navigation and event booking to  transport scheduling and management,  tailored to your specific needs.",
+  },
+  {
+    icon: "/Icons/Web/education.png",
+    title: "Education",
+    desc: "We design custom eLearning platforms  to make education more accessible.  From virtual classrooms and study  resources to live chat and automated  exams, we help you create complete  online learning environments.",
+  },
+  {
+    icon: "/Icons/Web/education.png",
+    title: "Education",
+    desc: "Simplify your food business operations  with web apps built for inventory control,  delivery logistics, packaging, storage,  and distribution. Let’s discuss your  requirements and craft a custom  solution for your food and beverage  venture.",
   },
 ];

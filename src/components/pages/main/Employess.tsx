@@ -22,7 +22,7 @@ const EmployeeCard = ({
   email,
   linkedin,
 }: Employee) => (
-  <Card className="border-dark-bg-primary/30 items-center gap-2 border-[1px]">
+  <Card className="border-dark-bg-primary/30 items-center gap-2 border-[1px] hover:shadow-xl">
     <CardHeader className="flex min-w-full flex-col items-center justify-center">
       <Image src={image} height={300} width={300} alt={name} />
       <CardTitle className="min-w-full">
@@ -37,7 +37,7 @@ const EmployeeCard = ({
         </p>
       ))}
     </CardContent>
-    <CardFooter className="min-w-full flex gap-5">
+    <CardFooter className="flex min-w-full gap-5">
       <Link
         href={`mailTo:${email}`}
         className="bg-p-color/20 hover:bg-accent-hover group rounded-full p-2 transition-all duration-300"

@@ -27,7 +27,7 @@ const Header = () => {
   });
   const [visible, setVisible] = useState<boolean>(false);
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 100) {
+    if (latest > 80) {
       setVisible(true);
     } else {
       setVisible(false);
@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <header
       ref={ref}
-      className={`flex-between main-container sticky top-0 z-50 ${visible ? "bg-transparent" : "bg-custom-white/50"}`}
+      className={`flex-between main-container sticky top-0 z-50 ${!visible ? "bg-transparent" : "bg-custom-white/90"}`}
     >
       <Link href="/" className="relative w-28 sm:w-36 md:w-44 lg:w-52">
         <Image

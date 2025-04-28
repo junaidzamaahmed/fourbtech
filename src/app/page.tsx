@@ -35,7 +35,7 @@ export default function Home() {
             Innovative, Tailored Tech Services Designed To Drive Growth And
             Efficiency.
           </h3>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <ArrowButton
               variant="fill"
               className="!py-4 md:!py-4 lg:!py-7"
@@ -44,7 +44,12 @@ export default function Home() {
             >
               <Link href="/">See our products</Link>
             </ArrowButton>
-            <ArrowButton variant="blueOutline" left={true} size={30}>
+            <ArrowButton
+              variant="blueOutline"
+              left={true}
+              className="!py-4 md:!py-4 lg:!py-7"
+              size={30}
+            >
               <Link href="/" className="">
                 talk to us
               </Link>

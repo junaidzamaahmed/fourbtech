@@ -14,7 +14,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { NavigationButtons } from "@/components/global/NavigationButton";
 
-
 const CaseStudies = () => {
   const swiperRef = useRef(null);
   return (
@@ -87,6 +86,7 @@ const CaseStudies = () => {
           <NavigationButtons
             totalSlides={projectShowcaseData.length}
             swiperRef={swiperRef}
+            customClass={"custom-pagination bg-custom-white"}
           />
         </Swiper>
       </div>

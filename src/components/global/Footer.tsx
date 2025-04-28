@@ -8,20 +8,19 @@ import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-dark-bg-primary py-20">
-      <div className="main-container mb-10 grid grid-cols-4 gap-6">
+      <div className="main-container mb-10 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2">
         <div className="flex flex-col gap-3">
-          <Link href="/" className="relative w-20 sm:w-24 md:w-32 lg:w-40">
+          <Link href="/" className="relative flex h-14 items-start">
             <Image
               src="/Secondary logo.svg"
               alt=""
-              width={200}
-              height={200}
-              property=""
-              className="origin-center object-cover object-center"
+              fill
+              priority
+              className="object-contain"
             />
           </Link>
           <h3>Subscribe to Stay in Touch</h3>
-          <div className="relative max-w-full lg:max-w-[85%]">
+          <div className="relative max-w-full sm:max-w-[75%]">
             <Input
               placeholder="Email Address"
               className="bg-custom-white text-p-color rounded-full px-4 py-1 text-[.7rem] focus-visible:!ring-0 md:text-[1rem]"
