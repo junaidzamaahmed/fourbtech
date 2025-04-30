@@ -36,21 +36,37 @@ export interface Employee {
   linkedin: string;
 }
 
-export interface Services{
+export interface Services {
   title: string;
   description: string;
   icon: string;
   link: string;
-  
 }
 
-export interface IndustrySolutionType{
+export interface IndustrySolutionType {
   icon: string;
   title: string;
   desc: string;
 }
 
+export interface WhyUsType {
+  icon: string;
+  title: string;
+}
 
+export interface AppBenifitesType {
+  icon: string;
+  title: string;
+  desc: string;
+}
 
+export interface Team {
+  image: string;
+  title: string;
+  desc: string;
+}
 
-
+export interface TitleDesc {
+  title?: string;
+  desc: string;
+}

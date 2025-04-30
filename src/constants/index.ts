@@ -1,9 +1,13 @@
 import {
+  AppBenifitesType,
   Employee,
   FAQItem,
   IndustrySolutionType,
   Insight,
   Services,
+  Team,
+  TitleDesc,
+  WhyUsType,
 } from "@/types";
 import { ProjectShowcase } from "@/types";
 import { CustomerFeedback } from "@/types";
@@ -23,7 +27,7 @@ export const customerFeedbacks: CustomerFeedback[] = [
     company: "AgroMind AI",
     role: "Agricultural Data Lead",
     feedback:
-      "Thanks to FourBtech’s vision system, we now predict crop yields with much higher precision. Their tech and timeline commitment are impressive.",
+      "Thanks to FourBtech's vision system, we now predict crop yields with much higher precision. Their tech and timeline commitment are impressive.",
     rating: 4,
     avatarUrl: "https://i.pravatar.cc/150?img=17",
   },
@@ -311,6 +315,173 @@ export const IndustrySolutionData: IndustrySolutionType[] = [
   {
     icon: "/Icons/Web/education.png",
     title: "Education",
-    desc: "Simplify your food business operations  with web apps built for inventory control,  delivery logistics, packaging, storage,  and distribution. Let’s discuss your  requirements and craft a custom  solution for your food and beverage  venture.",
+    desc: "Simplify your food business operations  with web apps built for inventory control,  delivery logistics, packaging, storage,  and distribution. Let's discuss your  requirements and craft a custom  solution for your food and beverage  venture.",
+  },
+];
+
+export const WhyUsData: WhyUsType[] = [
+  {
+    icon: "/Icons/Web/need/phoneCall.png",
+    title: "30 min free consultation",
+  },
+  {
+    icon: "/Icons/Web/need/nda.png",
+    title: "Signs NDA",
+  },
+  {
+    icon: "/Icons/Web/need/team.png",
+    title: "Dedicated Web Developers & Designers",
+  },
+  {
+    icon: "/Icons/Web/need/security.png",
+    title: "100% Data Security",
+  },
+  {
+    icon: "/Icons/Web/need/feedback.png",
+    title: "Constant FeedBack Cycle",
+  },
+  {
+    icon: "/Icons/Web/need/regular.png",
+    title: "Regular Updatges",
+  },
+  {
+    icon: "/Icons/Web/need/treanparancy.png",
+    title: "Complete Transparency",
+  },
+  {
+    icon: "/Icons/Web/need/varified.png",
+    title: "Highest Code Quality",
+  },
+  {
+    icon: "/Icons/Web/need/support.png",
+    title: "90 Days Maintainace Support",
+  },
+];
+
+export const AppBenifitesData: AppBenifitesType[] = [
+  {
+    icon: "/Icons/app/people-group.png",
+    title: "Broader Audience",
+    desc: "Java Cross-Platform Development Enables You TO Engage users On Various Platforms Like los And Android, Boosting Your App's Visibility And Expanding Your Market Presence.",
+  },
+  {
+    icon: "/Icons/app/efficiency.png",
+    title: "Cost and Time Efficiency",
+    desc: "Develop once and deploy everywhere—saving both time and resources while  accelerating your app&apos;s launch.",
+  },
+  {
+    icon: "/Icons/app/user-experience.png",
+    title: "Seamless User Experiencee",
+    desc: "Deliver a consistent and smooth user interface across all devices and platforms.",
+  },
+  {
+    icon: "/Icons/app/simplified.png",
+    title: "Simplified Maintenance and Updates",
+    desc: "Manage and update your app more easily with a single codebase, ensuring quicker  rollouts and fewer complications.",
+  },
+];
+
+export const OurIndustryExperties: WhyUsType[] = [
+  { icon: "/Icons/app/e-commerce.png", title: "E-Commerce" },
+  { icon: "/Icons/app/healthcare.png", title: "Healthcare" },
+  { icon: "/Icons/app/education.png", title: "Eductaion" },
+  { icon: "/Icons/app/travel.png", title: "Travel & Hospitality" },
+  { icon: "/Icons/app/realEstate.png", title: "Real Estate" },
+];
+
+export const MindsApart: Team[] = [
+  {
+    image: "/placeholders/people_meating.png",
+    title: "Dedicated Team",
+    desc: "Our Compact And Focused Team Allows IJS TO Give Every Project The Detailed Attention It Deserves, Ensuring High-Quality Results With A Personalized Approach.",
+  },
+  {
+    image: "/placeholders/people_meating.png",
+    title: "Skilled Project Management",
+    desc: "With a flat organizational structure and  visionary product strategists, our  experienced project managers deliver  results faster and more efficiently, without  unnecessary layers of bureaucracy.",
+  },
+  {
+    image: "/placeholders/people_meating.png",
+    title: "Agile Development Approach",
+    desc: "We don't wait until the end to show results.  Instead, we follow an agile  methodology—breaking development into  small, manageable phases. After each  phase, we gather your feedback, keeping  you involved and ensuring the final product  aligns perfectly with your expectations.",
+  },
+  {
+    image: "/placeholders/people_meating.png",
+    title: "Clear and Ongoing Communication",
+    desc: "Strong communication is at the core of  everything we do. Our team collaborates  closely with you, sharing ideas, setting  strategies, and keeping you informed at  every stage. We value your input, offer  regular updates, and ensure a smooth,  transparent development journey.",
+  },
+  {
+    image: "/placeholders/people_meating.png",
+    title: "End-to-End IT Solutions",
+    desc: "From UX/UI design and mobile app  development to backend systems,  re-engineering, consultation, testing, and  beyond, we offer comprehensive, full-cycle  software development services tailored to  your needs.",
+  },
+  {
+    image: "/placeholders/people_meating.png",
+    title: "Thorough Quality Assurance",
+    desc: "We prioritize quality at every stage. Our QA  process includes continuous bug detection,  error resolution, and rigorous testing to  ensure your product is stable, secure, and  ready for launch.",
+  },
+  {
+    image: "/placeholders/people_meating.png",
+    title: "Reliable Support & Maintenance",
+    desc: "Post-launch, our dedicated support and  maintenance team ensures your app  continues to run smoothly. We're here to  offer long-term solutions and dependable  performance, even after delivery.",
+  },
+  {
+    image: "/placeholders/people_meating.png",
+    title: "Fourbtech Protection",
+    desc: "When you partner with us, your ideas and  data are treated with complete  confidentiality. We ensure full transparency  and uphold the highest level of respect for  your intellectual property through strict  Fourbtech agreements.",
+  },
+];
+
+export const DigitalServiceAgency: AppBenifitesType[] = [
+  {
+    icon: "/Icons/digital/one-one.png",
+    title: "Connect One-on-One with a Marketing Expert",
+    desc: "Have a direct conversation with a dedicated marketing specialist who understands your  business and growth goals.",
+  },
+  {
+    icon: "/Icons/digital/growth.png",
+    title: "Driving Unmatched Growth",
+    desc: "Take your business to the next level with innovative strategies that unlock your brand's full  potential.",
+  },
+  {
+    icon: "/Icons/digital/expart.png",
+    title: "Expert agency for SEO service",
+    desc: "We develop smart, tailored ideas through organic SEO and provide a clear, actionable  roadmap for execution, every step of the way.",
+  },
+];
+
+export const SEO_Details: TitleDesc[] = [
+  {
+    title: "SEO Optimisation service provider",
+    desc: " Our comprehensive SEO audit evaluates  every aspect of your website, including  technical performance, content quality, user  experience, and how you stack up against  competitors. This analysis uncovers  opportunities for growth and aligns your site  with the latest search engine algorithms and  SEO best practices. Regular audits are  essential to stay ahead in a constantly  evolving digital landscape.",
+  },
+  {
+    title: "Keyword Research",
+    desc: " Keywords are the terms users enter into  search engines to find what they need.  Effective keyword research sets the  foundation for a successful SEO campaign  by identifying high-value search terms that  attract the right audience. It helps guide  content creation and prioritize SEO efforts  to ensure maximum impact.",
+  },
+  {
+    title: "Off-Page SEO",
+    desc: " Off-page SEO builds your website's  credibility and authority beyond its own  pages. While link building is a key  component, effective off-page SEO also  includes brand mentions, citation  management, influencer outreach, and  social media engagement—all aimed at  boosting your site's trustworthiness and  search visibility.",
+  },
+  {
+    title: "Citation Building",
+    desc: "Citations are online references of your  business that include key details like name,  address, phone number, and website. They  are crucial for improving local search  rankings and establishing your local  presence. If you're aiming to rank in  Google's local pack or top SERP spots,  strong and consistent citation building is a  must.",
+  },
+  {
+    title: "Link Building",
+    desc: " Link building involves earning backlinks  from authoritative and relevant websites to  boost your site's credibility. Search engines  use these links to gauge the quality and  trustworthiness of your content. When two  pages are otherwise equal, the one with  stronger backlinks often ranks higher.",
+  },
+  {
+    title: "Blogging",
+    desc: " Blogging allows you to target additional  keywords and provide valuable content that  doesn't quite fit on your main site pages. It  also supports link building, increases social  media engagement, and strengthens your  brand's Expertise, Authority, and Trust  (E-A-T). Regular blogging enhances  visibility and supports long-term SEO  growth.",
+  },
+];
+
+export const BoostRanking = [
+  {
+    desc: "Search Engine Optimization (SEO) is an  ongoing strategy focused on enhancing  your website's visibility in search engine  results—ultimately increasing both the  quality and quantity of organic traffic,  primarily from Google. SEO involves  optimizing hundreds of elements across  your site, all of which must work together to  ensure your business captures the full  benefits of search visibility.",
+  },
+  {
+    desc: "The main goal of SEO is to attract highly  relevant visitors from search  engines—people actively searching for  products or services like yours. As one of  the most reliable and cost-effective digital  marketing strategies, SEO places your  business right where it matters most: in  front of potential customers when they're  ready to take action.",
   },
 ];

@@ -12,7 +12,7 @@ import React from "react";
 
 const IndustryCard = ({ icon, title, desc }: IndustrySolutionType) => {
   return (
-    <Card className="border-dark-bg-primary/10 border-[1px]">
+    <Card className="border-dark-bg-primary/10 transform-all border-[1px] shadow-none duration-500 hover:drop-shadow-xl">
       <CardHeader className="">
         <Image
           src={icon}
