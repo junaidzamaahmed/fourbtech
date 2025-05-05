@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import Header from "@/components/global/Header";
 import Footer from "@/components/global/Footer";
+import SmoothScrollLayout from "@/components/global/SmoothScroll";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -24,16 +25,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.className} antialiased `}>
+      <body className={`${poppins.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          {children}
-          <Footer />
+          <SmoothScrollLayout>
+            <Header />
+            {children}
+            <Footer />
+          </SmoothScrollLayout>
         </ThemeProvider>
       </body>
     </html>

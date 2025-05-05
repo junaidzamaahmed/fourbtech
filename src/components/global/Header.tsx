@@ -2,73 +2,231 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import ArrowButton from "./ArrowButton";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { MdOutlineClose } from "react-icons/md";
-import { useScroll, useMotionValueEvent } from "motion/react";
+import { ChevronDown, Menu, X } from "lucide-react";
+import gsap from "gsap";
 
 const links = [
   { title: "Home", path: "/", sub: [] },
   { title: "About", path: "/about", sub: [] },
-  { title: "Services", path: "/services", sub: [] },
-  { title: "Blogs", path: "/blogs", sub: [] },
+  {
+    title: "Services",
+    path: "/Services",
+    sub: [
+      { title: "Web Development", path: "/Services/web-development" },
+      { title: "Mobile Apps", path: "/Services/mobile-apps" },
+      { title: "Digital Marketing", path: "/Services/digital-marketing" },
+    ],
+  },
+  {
+    title: "Blogs",
+    path: "/blogs",
+    sub: [],
+  },
   { title: "Projects", path: "/projects", sub: [] },
 ];
 
 const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const pathname = usePathname();
-
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollY } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-  const [visible, setVisible] = useState<boolean>(false);
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 80) {
-      setVisible(true);
+  const [visible, setVisible] = useState<boolean>(true);
+
+  useEffect(() => {
+    const header = ref.current;
+    if (!header) return;
+
+    gsap.fromTo(
+      header,
+      { y: -100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" },
+    );
+
+    let lastScrollY = 0;
+    let ticking = false;
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          const isScrollingDown = currentScrollY > lastScrollY + 10;
+
+          if (currentScrollY > 100) {
+            if (isScrollingDown && visible) {
+              gsap.to(header, {
+                y: -100,
+                opacity: 0,
+                duration: 0.4,
+                ease: "power2.inOut",
+                onComplete: () => setVisible(false),
+              });
+            } else if (!isScrollingDown && !visible) {
+              setVisible(true);
+              gsap.to(header, {
+                y: 0,
+                opacity: 1,
+                duration: 0.4,
+                ease: "power2.inOut",
+              });
+            }
+          } else if (!visible) {
+            setVisible(true);
+            gsap.to(header, {
+              y: 0,
+              opacity: 1,
+              duration: 0.4,
+              ease: "power2.inOut",
+            });
+          }
+
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [visible]);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const menu = document.getElementById("mobile-menu");
+      if (mobileMenu && menu && !menu.contains(e.target as Node)) {
+        closeMobileMenu();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [mobileMenu]);
+
+  const toggleDropdown = (title: string) => {
+    if (activeDropdown === title) {
+      setActiveDropdown(null);
     } else {
-      setVisible(false);
+      setActiveDropdown(title);
+
+      setTimeout(() => {
+        const dropdown = document.querySelector(`[data-dropdown="${title}"]`);
+        if (dropdown) {
+          const items = dropdown.querySelectorAll("a");
+          gsap.fromTo(
+            items,
+            { y: 10, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              stagger: 0.05,
+              duration: 0.3,
+              ease: "power2.out",
+            },
+          );
+        }
+      }, 50);
     }
-  });
+  };
+
+  const closeAllDropdowns = () => setActiveDropdown(null);
+  const closeMobileMenu = () => {
+    setMobileMenu(false);
+    setActiveDropdown(null);
+  };
 
   return (
     <header
       ref={ref}
-      className={`flex-between main-container sticky top-0 z-50 ${!visible ? "bg-transparent" : "bg-custom-white/90"}`}
+      className={`flex-between main-container sticky top-0 z-50 transition-all duration-300 ${
+        visible
+          ? "bg-custom-white/90 translate-y-0 shadow-sm backdrop-blur-sm"
+          : "-translate-y-full bg-transparent"
+      }`}
     >
       <Link href="/" className="relative w-28 sm:w-36 md:w-44 lg:w-52">
         <Image
           src="/Primary logo.svg"
-          alt=""
+          alt="Logo"
           width={200}
           height={200}
-          property=""
           className="origin-center object-cover object-center"
         />
       </Link>
+
+      {/* Desktop Nav */}
       <nav className="hidden sm:block">
         <ul className="flex-between list-none !gap-1 duration-500 lg:!gap-5">
           {links.map((link) => {
+            const hasSub = link.sub.length > 0;
+            const isActive =
+              pathname === link.path || pathname.startsWith(link.path + "/");
+
             return (
               <li
                 key={link.title}
-                className={`group hover:text-accent-hover hover:bg-dark-bg-primary/10 cursor-pointer rounded-4xl p-2 duration-500`}
+                className="group hover:text-accent-hover hover:bg-dark-bg-primary/10 relative cursor-pointer rounded-4xl p-2 duration-500"
+                onMouseEnter={() => hasSub && setActiveDropdown(link.title)}
+                onMouseLeave={() => hasSub && setActiveDropdown(null)}
               >
-                <Link href={link.path}>
-                  <p
-                    className={`text-h1-color group-hover:text-accent-hover ${pathname === link.path && "!text-accent-hover"}`}
+                {hasSub ? (
+                  <div className="flex items-center gap-1">
+                    <span
+                      className={`text-h1-color group-hover:text-accent-hover ${isActive && "!text-accent-hover"}`}
+                    >
+                      {link.title}
+                    </span>
+                    <ChevronDown
+                      className={`h-4 w-4 transition-transform duration-300 ${
+                        activeDropdown === link.title ? "rotate-180" : ""
+                      }`}
+                    />
+                  </div>
+                ) : (
+                  <Link href={link.path}>
+                    <p
+                      className={`text-h1-color group-hover:text-accent-hover ${isActive && "!text-accent-hover"}`}
+                    >
+                      {link.title}
+                    </p>
+                  </Link>
+                )}
+
+                {hasSub && (
+                  <div
+                    data-dropdown={link.title}
+                    className={`absolute top-full left-0 mt-1 w-48 rounded-md bg-white shadow-lg transition-all duration-200 ${
+                      activeDropdown === link.title
+                        ? "visible opacity-100"
+                        : "invisible opacity-0"
+                    }`}
                   >
-                    {link.title}
-                  </p>
-                </Link>
+                    <div className="py-1">
+                      {link.sub.map((subLink) => (
+                        <Link
+                          key={subLink.title}
+                          href={subLink.path}
+                          className={`block px-4 py-2 text-sm hover:bg-gray-100 ${
+                            pathname === subLink.path
+                              ? "text-accent-hover"
+                              : "text-gray-700"
+                          }`}
+                          onClick={closeAllDropdowns}
+                        >
+                          {subLink.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </li>
             );
           })}
         </ul>
       </nav>
+
       <div className="flex-center">
         <div className="hidden sm:block">
           <ArrowButton left={true} size={30} className="h-full md:h-1/3">
@@ -77,41 +235,113 @@ const Header = () => {
             </Link>
           </ArrowButton>
         </div>
+
+        {/* Mobile Menu Button */}
         <div className="sm:hidden">
-          <div
-            className="hover:text-accent-hover z-50 cursor-pointer *:size-8"
+          <button
+            className="hover:text-accent-hover z-50 flex cursor-pointer items-center justify-center text-black"
             onClick={() => setMobileMenu((prev) => !prev)}
+            aria-label={mobileMenu ? "Close menu" : "Open menu"}
           >
-            {mobileMenu ? <MdOutlineClose /> : <GiHamburgerMenu />}
-          </div>
+            {mobileMenu ? (
+              <X className="h-8 w-8" />
+            ) : (
+              <Menu className="h-8 w-8" />
+            )}
+          </button>
+
+          {/* Mobile Menu */}
           <div
-            className={`bg-dark-bg-primary flex-center absolute top-20 left-0 w-screen flex-col transition-all duration-500 ${mobileMenu ? "h-screen" : "z-0 hidden h-0"}`}
+            id="mobile-menu"
+            className={`!bg-dark-bg-primary fixed inset-0 z-40 flex h-screen flex-col items-center justify-center pt-20 transition-all duration-500 ${
+              mobileMenu
+                ? "pointer-events-auto visible opacity-100"
+                : "pointer-events-none invisible opacity-0"
+            }`}
+            onClick={closeMobileMenu}
           >
-            <ul className="flex-between text-custom-white list-none flex-col">
+            <ul className="text-custom-white flex w-full flex-col items-center space-y-6 px-6">
               {links.map((link) => {
+                const hasSub = link.sub.length > 0;
+                const isActive =
+                  pathname === link.path ||
+                  pathname.startsWith(link.path + "/");
+
                 return (
-                  <li
-                    key={link.title}
-                    className={`hover:text-accent-hover ${pathname === link.path && "!text-accent-hover"} ${mobileMenu ? "block h-full delay-300" : "hidden h-0"}`}
-                  >
-                    <Link href={link.path}>{link.title}</Link>
+                  <li key={link.title} className="w-full">
+                    {hasSub ? (
+                      <div className="w-full">
+                        <button
+                          onMouseOver={() => toggleDropdown(link.title)}
+                          className={`flex w-full items-center justify-between text-lg font-medium ${
+                            isActive
+                              ? "text-accent-hover"
+                              : "text-custom-white hover:text-accent-hover"
+                          }`}
+                        >
+                          <span>{link.title}</span>
+                          <ChevronDown
+                            className={`h-5 w-5 transition-transform duration-300 ${
+                              activeDropdown === link.title ? "rotate-180" : ""
+                            }`}
+                          />
+                        </button>
+                        <div
+                          className={`bg-dark-bg-primary mt-2 space-y-2 overflow-hidden pl-4 transition-[max-height,opacity] duration-300 ease-in-out ${
+                            activeDropdown === link.title
+                              ? "max-h-64 opacity-100"
+                              : "max-h-0 opacity-0"
+                          }`}
+                        >
+                          {link.sub.map((subLink) => (
+                            <Link
+                              key={subLink.title}
+                              href={subLink.path}
+                              className={`block py-2 text-sm ${
+                                pathname === subLink.path
+                                  ? "text-accent-hover"
+                                  : "hover:text-accent-hover text-custom-white"
+                              }`}
+                              onClick={closeMobileMenu}
+                            >
+                              {subLink.title}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <Link
+                        href={link.path}
+                        className={`block text-lg font-medium ${
+                          isActive
+                            ? "text-accent-hover"
+                            : "text-custom-white hover:text-accent-hover"
+                        }`}
+                        onClick={closeMobileMenu}
+                      >
+                        {link.title}
+                      </Link>
+                    )}
                   </li>
                 );
               })}
-              <div
-                className={`${mobileMenu ? "block h-full delay-300" : "hidden"}`}
-              >
+
+              <li className="w-full pt-4">
                 <ArrowButton
                   left={true}
                   size={30}
-                  className="!border-none"
+                  className="w-full !border-none"
                   variant="fill"
                 >
-                  <Link href="/contact" className="">
+                  <Link
+                    href="/contact"
+                    className="w-full text-center"
+                    onClick={closeMobileMenu}
+                  >
                     Let&apos;s talk
                   </Link>
                 </ArrowButton>
-              </div>
+              </li>
             </ul>
           </div>
         </div>

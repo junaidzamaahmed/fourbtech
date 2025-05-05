@@ -1,47 +1,131 @@
 "use client";
 import ArrowButton from "@/components/global/ArrowButton";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CountUp from "react-countup";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const Counter = ({ number, text }: { number: number; text: string }) => (
-  <span>
-    <h2 className="text-custom-white font-light">
-      <CountUp start={0} end={number} duration={5} />
-      <span>K+</span>
-    </h2>
-    <p className="text-custom-white">{text}</p>
-  </span>
-);
+gsap.registerPlugin(ScrollTrigger);
+
+const Counter = ({
+  number,
+  text,
+  index,
+  triggerStart,
+}: {
+  number: number;
+  text: string;
+  index: number;
+  triggerStart: boolean;
+}) => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (ref.current) {
+      gsap.fromTo(
+        ref.current,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          delay: 0.15 * index,
+          duration: 0.6,
+          ease: "power3.out",
+        },
+      );
+    }
+  }, [triggerStart]);
+
+  return (
+    <div ref={ref} className="text-center">
+      <h1 className="text-custom-white font-semibold">
+        {triggerStart && <CountUp start={0} end={number} duration={2.5} />}K+
+      </h1>
+      <p className="text-custom-white mt-2 text-sm font-light">{text}</p>
+    </div>
+  );
+};
 
 const CompanyProfile = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [startCount, setStartCount] = useState(false);
+
+  useEffect(() => {
+    if (sectionRef.current) {
+      const ctx = gsap.context(() => {
+        const timeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            onEnter: () => setStartCount(true),
+            onLeaveBack: () => setStartCount(false),
+          },
+        });
+
+        timeline.fromTo(
+          sectionRef.current,
+          { opacity: 0, y: 50 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+          },
+        );
+      }, sectionRef);
+
+      return () => ctx.revert();
+    }
+  }, []);
+
   return (
-    <section className="bg-dark-bg-primary main-container text-custom-white grid grid-cols-1 gap-5 sm:grid-cols-2">
-      <div className="text-custom-white order-2 flex flex-col items-start justify-between gap-5 sm:order-1">
-        <p className="text-custom-white">Company Profile</p>
-        <h2 className="text-custom-white">
-          We Don&apos;t Just Work For You, We Grow With You!
+    <section
+      ref={sectionRef}
+      className="main-container bg-dark-bg-primary text-custom-white grid grid-cols-1 gap-10 min-h-[80vh] sm:grid-cols-2 "
+    >
+      {/* Text Content */}
+      <div className="order-2 flex flex-col items-start justify-center gap-6 sm:order-1x">
+        <h2 className="text-custom-white text-sm font-medium tracking-wider uppercase">
+          Company Profile
         </h2>
-        <p className="text-custom-white">
-          We Specialize In Creating Visually Stunning And Highly Functional
-          Websites That Help Businesses Stand Out In The Digital World. Our Team
-          Of Talented Designers And Developers Are Passionate About Crafting
+        <h1 className="text-custom-white leading-tight font-bold">
+          We Don&apos;t Just Work For You,
+          <br /> We Grow With You!
+        </h1>
+        <p className="text-md text-custom-white leading-relaxed font-light">
+          We specialize in creating visually stunning and highly functional
+          websites that help businesses stand out in the digital world. Our team
+          of talented designers and developers are passionate about crafting
+          user-first experiences.
         </p>
         <ArrowButton
           left={true}
           variant="noOutline"
           className="hover:!text-custom-white"
         >
-          <Link href={"/"}>MORE ABOUT US</Link>
+          <Link href="/">MORE ABOUT US</Link>
         </ArrowButton>
       </div>
-      <div className="order-1 flex h-full flex-col items-center sm:order-2">
-        <div className="bg-p-color hidden h-[3px] w-full sm:visible" />
-        <div className=" grid  min-w-full grid-cols-2 gap-2 sm:grid-cols-2 md:gap-5 min-h-full md:grid-cols-2 place-items-center">
-          <Counter text="Project Completed" number={26} />
-          <Counter text="Project Completed" number={26} />
-          <Counter text="Project Completed" number={26} />
-          <Counter text="Project Completed" number={26} />
+
+      {/* Counters */}
+      <div className="order-1 flex flex-col items-center justify-center sm:order-2">
+        <div className="bg-p-color hidden h-[1px] w-full rounded-full sm:block" />
+        <div className="grid w-full grid-cols-2 place-items-center gap-y-10 pt-10 sm:grid-cols-2 md:gap-y-12">
+          {[
+            "Projects Completed",
+            "Happy Clients",
+            "Years of Experience",
+            "Team Members",
+          ].map((label, i) => (
+            <Counter
+              key={label}
+              text={label}
+              number={26 + i * 5}
+              index={i}
+              triggerStart={startCount}
+            />
+          ))}
         </div>
       </div>
     </section>

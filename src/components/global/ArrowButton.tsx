@@ -10,17 +10,17 @@ const arrowButtonVariants = cva(
     variants: {
       variant: {
         blueOutline:
-          "border-accent-hover text-accent-hover hover:text-white hover:bg-accent-hover",
-        fill: "border-accent-hover bg-accent-hover text-white hover:bg-transparent hover:text-accent-hover",
+          "border-accent-hover text-accent-hover hover:!text-white hover:!bg-accent-hover",
+        fill: "border-accent-hover bg-accent-hover text-white hover:!bg-transparent hover:text-accent-hover",
         outline:
-          "border border-h1-color text-h1-color bg-transparent hover:bg-transparent",
-        noOutline: "!border-none hover:bg-transparent",
+          "border border-h1-color !text-h1-color !bg-transparent hover:!bg-transparent",
+        noOutline: "!border-none hover:bg-transparent !text-h1-color",
       },
     },
     defaultVariants: {
       variant: "blueOutline",
     },
-  }
+  },
 );
 
 interface ArrowButtonProps
@@ -53,7 +53,9 @@ const ArrowButton: React.FC<ArrowButtonProps> = ({
           size={size}
         />
       )}
-      <span className="inline-flex items-center justify-center">{children}</span>
+      <span className="inline-flex items-center justify-center">
+        {children}
+      </span>
       {right && (
         <IoIosArrowRoundForward
           className={`-rotate-45 transition-transform duration-500 group-hover:rotate-0 size-${size} -ml-4`}

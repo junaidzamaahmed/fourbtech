@@ -18,10 +18,10 @@ export function NavigationButtons({
   const swiper = useSwiper();
 
   return (
-    <div className="flex items-center justify-center gap-10 px-4">
+    <div className="mb-5 flex items-center justify-center gap-10 px-4">
       <button
         onClick={() => swiper.slidePrev()}
-        className="bg-background/80 hover:bg-background focus:ring-primary flex h-10 w-10 items-center justify-center rounded-full shadow-md backdrop-blur-sm transition-all focus:ring-2 focus:outline-none"
+        className="bg-background/80 hover:bg-custom-white hover:text-dark-bg-primary hover:outline-dark-bg-primary flex h-10 w-10 cursor-pointer items-center justify-center rounded-full shadow-md backdrop-blur-sm transition-all hover:outline-2 focus:outline-none"
         aria-label="Previous slide"
       >
         <ChevronLeft className="h-6 w-6" />
@@ -33,7 +33,7 @@ export function NavigationButtons({
       />
       <button
         onClick={() => swiper.slideNext()}
-        className="bg-background/80 hover:bg-background focus:ring-primary flex h-10 w-10 items-center justify-center rounded-full shadow-md backdrop-blur-sm transition-all focus:ring-2 focus:outline-none"
+        className="bg-background/80 hover:bg-custom-white hover:text-dark-bg-primary hover:outline-dark-bg-primary flex h-10 w-10 cursor-pointer items-center justify-center rounded-full shadow-md backdrop-blur-sm transition-all hover:outline-2"
         aria-label="Next slide"
       >
         <ChevronRight className="h-6 w-6" />

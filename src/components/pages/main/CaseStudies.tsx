@@ -2,7 +2,6 @@
 import ArrowButton from "@/components/global/ArrowButton";
 import { projectShowcaseData } from "@/constants";
 import Link from "next/link";
-import React from "react";
 
 import { useRef } from "react";
 import Image from "next/image";
@@ -17,11 +16,13 @@ import { NavigationButtons } from "@/components/global/NavigationButton";
 const CaseStudies = () => {
   const swiperRef = useRef(null);
   return (
-    <section className="main-container bg-dark-bg-primary">
-      <div className="flex-between mb-8 sm:mb-16">
-        <span className="">
-          <h1 className="text-custom-white">Case Studies</h1>
-          <p className="text-custom-white capitalize">
+    <section className="main-container bg-dark-bg-primary !py-16 md:!py-20">
+      <div className="mb-6 flex flex-col gap-4 sm:mb-10 sm:flex-row sm:items-center sm:justify-between md:mb-16">
+        <span className="space-y-1">
+          <h1 className="text-custom-white text-2xl md:text-3xl lg:text-4xl">
+            Case Studies
+          </h1>
+          <p className="text-custom-white/80 text-sm capitalize md:text-base">
             Proven Solution Tailored to your business needs
           </p>
         </span>
@@ -29,7 +30,7 @@ const CaseStudies = () => {
           right
           variant="outline"
           size={24}
-          className="!border-custom-white text-custom-white/90 hover:!text-custom-white"
+          className="!border-custom-white text-custom-white/90 hover:!text-custom-white self-start sm:self-center"
         >
           <Link href="/">view all cases</Link>
         </ArrowButton>
@@ -45,27 +46,34 @@ const CaseStudies = () => {
             el: ".custom-pagination",
             renderBullet: () => "",
           }}
+          loop={true}
           className="pb-14"
         >
           {projectShowcaseData.map((data, index) => (
             <SwiperSlide key={index}>
-              <div className="grid grid-cols-2 rounded-xl">
-                <div className="relative h-full w-full rounded-xl">
+              <div className="flex flex-col overflow-hidden rounded-xl shadow-lg sm:grid sm:grid-cols-2">
+                <div className="relative h-64 w-full sm:h-72 md:h-full">
                   <Image
-                    src={data.imageUrl}
-                    width={400}
-                    height={300}
+                    src={data.imageUrl || "/placeholder.svg"}
+                    fill
                     alt={data.title}
-                    className="h-full w-full rounded-l-xl object-cover"
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
-                <div className="bg-custom-white item-start flex flex-col justify-between gap-2 rounded-r-xl p-8 md:justify-around">
-                  <h2 className="">{data.company}</h2>
-                  <p className="">{data.title}</p>
-                  <p className="text-[.8rem] md:text-base">
-                    {data.description}
-                  </p>
-                  <div className=" ">
+                <div className="bg-custom-white flex flex-col justify-between gap-4 p-6 md:p-8 lg:p-10">
+                  <div className="space-y-3 md:space-y-4">
+                    <h2 className="text-xl font-semibold md:text-2xl">
+                      {data.company}
+                    </h2>
+                    <p className="text-lg font-medium md:text-xl">
+                      {data.title}
+                    </p>
+                    <p className="text-sm text-gray-700 md:text-base">
+                      {data.description}
+                    </p>
+                  </div>
+                  <div className="mt-4">
                     <ArrowButton
                       right
                       variant="noOutline"
@@ -80,13 +88,12 @@ const CaseStudies = () => {
             </SwiperSlide>
           ))}
           <div className="custom-pagination mt-6 flex items-center justify-center"></div>
-          <div className="mt-10"></div>
 
           {/* Navigation Buttons */}
           <NavigationButtons
             totalSlides={projectShowcaseData.length}
             swiperRef={swiperRef}
-            customClass={"custom-pagination bg-custom-white"}
+            customClass={"custom-pagination bg-custom-white mt-4 md:mt-8 !py-5"}
           />
         </Swiper>
       </div>

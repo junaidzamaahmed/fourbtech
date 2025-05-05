@@ -5,6 +5,7 @@ import ContactUS from "@/components/pages/main/ContactUS";
 import CustomerFeedBack from "@/components/pages/main/CustomerFeedBack";
 import Employess from "@/components/pages/main/Employess";
 import Insides from "@/components/pages/main/Insides";
+import Marquee from "@/components/pages/main/Marquee";
 import FaqSection from "@/components/pages/main/Questions";
 import Services from "@/components/pages/main/Services";
 import Link from "next/link";
@@ -12,7 +13,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="">
-      <section className="flex-center -mt-20 h-screen flex-col">
+      {/* <section className="flex-center -mt-20 h-screen flex-col">
         <div className="absolute top-0 left-0 -z-10 h-screen w-full opacity-45">
           <video
             src="/herobg.mp4"
@@ -55,8 +56,63 @@ export default function Home() {
               </Link>
             </ArrowButton>
           </div>
+          <Marquee />
+        </div>
+      </section> */}
+      <section className="relative flex min-h-screen flex-col items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
+        {/* Background Video */}
+        <div className="absolute inset-0 -z-10 opacity-40">
+          <video
+            src="/herobg.mp4"
+            autoPlay
+            playsInline
+            controls={false}
+            preload="auto"
+            loop
+            muted
+            className="h-full w-full object-cover"
+          />
+        </div>
+
+        {/* Content Container */}
+        <div className="flex w-full max-w-5xl flex-col items-center gap-8 text-center">
+          <h1 className="text-h1-color text-3xl leading-snug sm:text-4xl md:text-5xl">
+            We Design, Build & Grow Digital <br />
+            Brands That Deliver Results
+          </h1>
+          <h3 className="text-h3-color max-w-3xl text-base sm:text-lg md:text-xl">
+            Empowering Your Business With Cutting-Edge Technology Solutions.
+            Innovative, Tailored Tech Services Designed To Drive Growth And
+            Efficiency.
+          </h3>
+
+          {/* Buttons */}
+          <div className="grid md:w-[60%] gap-4 sm:grid-cols-2">
+            <ArrowButton
+              variant="fill"
+              className="!py-4 md:!py-5 lg:!py-6"
+              left
+              size={30}
+            >
+              <Link href="/">See our products</Link>
+            </ArrowButton>
+            <ArrowButton
+              variant="blueOutline"
+              left
+              className="!py-4 md:!py-5 lg:!py-6"
+              size={30}
+            >
+              <Link href="/">Talk to us</Link>
+            </ArrowButton>
+          </div>
+
+          {/* Marquee */}
+          <div className="mt-8 w-full overflow-hidden">
+            <Marquee />
+          </div>
         </div>
       </section>
+
       <CompanyProfile />
       <Services />
       <CaseStudies />

@@ -19,15 +19,16 @@ import { Textarea } from "@/components/ui/textarea";
 import ArrowButton from "@/components/global/ArrowButton";
 
 const formSchema = z.object({
-  firstname: z.string().min(2),
-  lastname: z.string().min(10),
-  email: z.string().email(),
-  phone: z.string().min(9),
-  message: z.string(),
+  firstname: z.string().min(2, "First name is too short"),
+  lastname: z.string().min(2, "Last name is too short"),
+  email: z.string().email("Invalid email"),
+  phone: z.string().min(9, "Invalid phone number"),
+  message: z.string().min(1, "Message cannot be empty"),
   save: z.boolean(),
 });
 
 const ContactUS = () => {
+  const [save, setSave] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -39,137 +40,116 @@ const ContactUS = () => {
       save: false,
     },
   });
-  const [save, setSave] = useState(false);
-  const onSubmit = () => {
-    console.log(save);
+
+  const onSubmit = (data: z.infer<typeof formSchema>) => {
+    console.log({ ...data, save });
   };
+
   return (
-    <section className="bg-custom-white main-container grid grid-cols-1 py-20 *:p-5 md:grid-cols-2">
-      <div className="flex-between flex-col rounded-t-xl bg-[#F0F5FF] md:rounded-l-xl">
-        <h2>Ready To Take Your Business to the Next Level?</h2>
-        <p>
-          Contact us today to schedule a consultation or learn more about our
-          services
-        </p>
-        <ul className="*:text-p-color flex list-none flex-col items-start justify-between gap-5">
-          <li>+447424438741</li>
-          <li>infO@fourbtech.com</li>
-          <li>252-262 Romford Road, E7 9HZ, London, UK</li>
-        </ul>
+    <section className="main-container bg-custom-white grid grid-cols-1 overflow-hidden rounded-xl shadow-md md:grid-cols-2">
+      {/* Left Info Block */}
+      <div className="flex flex-col justify-between gap-8 bg-[#F0F5FF] p-10 md:p-14">
+        <div className="flex h-full w-full flex-col items-start justify-center">
+          <h2 className="text-dark-bg-primary mb-4 text-2xl font-semibold">
+            Ready To Take Your Business to the Next Level?
+          </h2>
+          <p className="text-p-color mb-6">
+            Contact us today to schedule a consultation or learn more about our
+            services.
+          </p>
+          <ul className="text-p-color space-y-2 text-sm sm:text-base">
+            <li>
+              <strong>Phone:</strong> +447424438741
+            </li>
+            <li>
+              <strong>Email:</strong> info@fourbtech.com
+            </li>
+            <li>
+              <strong>Address:</strong> 252-262 Romford Road, E7 9HZ, London, UK
+            </li>
+          </ul>
+        </div>
       </div>
-      <div className="bg-dark-bg-primary rounded-b-xl md:rounded-r-xl">
+
+      {/* Form Block */}
+      <div className="bg-dark-bg-primary p-10 md:p-14">
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="*:text-custom-white flex flex-col gap-4"
+            className="text-custom-white flex flex-col gap-6"
           >
-            <div className="*:text-custom-white grid grid-cols-2 gap-4">
-              <FormField
-                control={form.control}
-                name="firstname"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>First Name</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder=""
-                        className="border-p-color rounded-none !border-0 !border-b-[2px] !ring-0"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="lastname"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Last Name</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder=""
-                        className="border-p-color rounded-none !border-0 !border-b-[2px] !ring-0"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Email</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder=""
-                        className="border-p-color rounded-none !border-0 !border-b-[2px] !ring-0"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="phone"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Phone Number</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder=""
-                        className="border-p-color rounded-none !border-0 !border-b-[2px] !ring-0"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {["firstname", "lastname", "email", "phone"].map((field, idx) => (
+                <FormField
+                  key={idx}
+                  control={form.control}
+                  name={field as keyof z.infer<typeof formSchema>}
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-sm capitalize">
+                        {field.name === "firstname"
+                          ? "First Name"
+                          : field.name === "lastname"
+                            ? "Last Name"
+                            : field.name === "email"
+                              ? "Email"
+                              : "Phone Number"}
+                      </FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          value={
+                            typeof field.value === "boolean"
+                              ? field.value.toString()
+                              : field.value
+                          }
+                          className="border-custom-white/60 rounded-none border-0 !border-b-2 px-1 py-2 focus:ring-0 focus:outline-0"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              ))}
             </div>
-            <div className="flex gap-2">
+
+            {/* Checkbox */}
+            <div className="flex items-center gap-3 text-sm">
               <Checkbox
-                id="checked"
-                onCheckedChange={() => setSave(true)}
-                className="checked:bg-accent-hover z-10 size-3 rounded-full"
+                id="save"
+                onCheckedChange={(checked) => setSave(Boolean(checked))}
+                className="data-[state=checked]:!bg-accent-hover border-accent-hover size-4 rounded-full data-[state=checked]:text-custom-white "
               />
-              <label
-                htmlFor="terms"
-                className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
+              <label htmlFor="save" className="text-custom-white">
                 Save details for later
               </label>
             </div>
+
+            {/* Message Field */}
             <FormField
               control={form.control}
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Message</FormLabel>
+                  <FormLabel className="text-sm">Message</FormLabel>
                   <FormControl>
                     <Textarea
-                      className="border-p-color rounded-none !border-0 !border-b-[2px] !ring-0"
                       {...field}
+                      rows={4}
+                      className="border-custom-white/60 rounded-none border-0 !border-b-2 px-1 py-2 focus:ring-0 focus:outline-0"
                     />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <ArrowButton
-              variant="fill"
-              left
-              type="submit"
-              className="max-w-1/2"
-            >
-              Submit
-            </ArrowButton>
+
+            {/* Submit */}
+            <div className="mt-4">
+              <ArrowButton variant="fill" left type="submit" className="w-fit">
+                Submit
+              </ArrowButton>
+            </div>
           </form>
         </Form>
       </div>
