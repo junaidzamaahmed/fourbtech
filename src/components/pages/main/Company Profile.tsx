@@ -35,7 +35,7 @@ const Counter = ({
         },
       );
     }
-  }, [triggerStart]);
+  }, [index, triggerStart]);
 
   return (
     <div ref={ref} className="text-center">
