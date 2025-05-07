@@ -12,9 +12,9 @@ const page = () => {
     <main className="bg-custom-white">
       {/* Video and header  */}
       <section className="relative mb-14">
-        <div className="relative flex h-[200px] w-full items-center justify-center bg-gray-900">
+        <div className="relative flex h-[300px] w-full items-center justify-center bg-gray-900">
           <Image
-            src="/coding.png"
+            src="/digital/digital.png"
             alt="Code background"
             fill
             className="object-cover opacity-50"
@@ -39,7 +39,7 @@ const page = () => {
       <section className="main-container grid grid-cols-1 gap-12 object-center !pb-32 lg:grid-cols-2">
         <div className="order-1 h-full w-full lg:order-2">
           <Image
-            src="/placeholders/palaceholder2.png"
+            src="/digital/strategy.png"
             width={300}
             height={300}
             className="h-full w-full object-cover"

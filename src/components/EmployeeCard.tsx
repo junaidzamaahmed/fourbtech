@@ -25,7 +25,7 @@ const EmployeeCard = ({
   return (
     <Card
       className={clsx(
-        "bg-custom-white border-p-color/20 min-h-full max-w-[331px] rounded-xl border-[1px] shadow-lg hover:shadow-2xl",
+        "bg-custom-white border-p-color/20 min-h-full max-w-[331px] rounded-xl border-[1px] text-start shadow-lg hover:shadow-2xl",
       )}
     >
       <CardHeader>
@@ -43,25 +43,6 @@ const EmployeeCard = ({
       </CardHeader>
       <CardContent className="-mt-5">
         <p className="text-p-color/70 text-sm font-light">
-          {/* {showMore
-            ? allDescription?.map((desc, index) => (
-                <span key={index}>
-                  {desc}
-                  <br />
-                </span>
-              ))
-            : allDescription?.slice(0, 3).map((desc, index) => (
-                <span key={index}>
-                  {desc}
-                  <br />
-                </span>
-              ))}
-          <button
-            onClick={() => setShowMore(!showMore)}
-            className={clsx("text-p-color cursor-pointer font-semibold", !description && "hidden")}
-          >
-            {showMore ? " show less" : " show more"}
-          </button> */}
           {description &&
             allDescription?.map((desc, index) => (
               <span key={index}>

@@ -46,7 +46,7 @@ const ContactUS = () => {
   };
 
   return (
-    <section className="main-container bg-custom-white grid grid-cols-1 overflow-hidden rounded-xl shadow-md md:grid-cols-2">
+    <section className="main-container bg-custom-white grid grid-cols-1 overflow-hidden rounded-xl md:grid-cols-2 my-28" >
       {/* Left Info Block */}
       <div className="flex flex-col justify-between gap-8 bg-[#F0F5FF] p-10 md:p-14">
         <div className="flex h-full w-full flex-col items-start justify-center">
@@ -72,7 +72,7 @@ const ContactUS = () => {
       </div>
 
       {/* Form Block */}
-      <div className="bg-dark-bg-primary p-10 md:p-14">
+      <div className="bg-dark-bg-primary p-10 md:p-14 rounded-xl">
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}

@@ -32,9 +32,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
           <SmoothScrollLayout>
-            <Header />
-            {children}
+            <div className="mt-24">{children}</div>
             <Footer />
           </SmoothScrollLayout>
         </ThemeProvider>

@@ -12,7 +12,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="-mt-24">
       {/* <section className="flex-center -mt-20 h-screen flex-col">
         <div className="absolute top-0 left-0 -z-10 h-screen w-full opacity-45">
           <video
@@ -87,27 +87,31 @@ export default function Home() {
           </h3>
 
           {/* Buttons */}
-          <div className="grid md:w-[60%] gap-4 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2 md:w-[60%]">
             <ArrowButton
               variant="fill"
-              className="!py-4 md:!py-5 lg:!py-6"
+              className="!py-6 md:!py-8 lg:!py-8"
               left
               size={30}
             >
-              <Link href="/">See our products</Link>
+              <Link href="/" className="text-base sm:text-lg">
+                See our products
+              </Link>
             </ArrowButton>
             <ArrowButton
               variant="blueOutline"
               left
-              className="!py-4 md:!py-5 lg:!py-6"
+              className="!py-6 md:!py-8 lg:!py-8"
               size={30}
             >
-              <Link href="/">Talk to us</Link>
+              <Link href="/" className="text-base sm:text-lg">
+                Talk to us
+              </Link>
             </ArrowButton>
           </div>
 
           {/* Marquee */}
-          <div className="mt-8 w-full overflow-hidden">
+          <div className="mt-8 w-screen -mb-6">
             <Marquee />
           </div>
         </div>

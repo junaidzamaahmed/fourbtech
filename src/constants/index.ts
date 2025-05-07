@@ -12,6 +12,12 @@ import {
 import { ProjectShowcase } from "@/types";
 import { CustomerFeedback } from "@/types";
 
+export const aboutLogo = [
+  "/about/logos/logo1.png",
+  "/about/logos/logo2.png",
+  "/about/logos/logo3.png",
+];
+
 export const customerFeedbacks: CustomerFeedback[] = [
   {
     name: "Victor Osei",
@@ -132,46 +138,28 @@ export const faqs: FAQItem[] = [
 
 export const insights: Insight[] = [
   {
-    image: "/placeholders/palaceholder3.png",
+    image: "/insights/image1.png",
     date: "2025-04-15",
     title: "How Generative AI is Redefining Product Design",
     link: "https://fourbtech.com/insights/generative-ai-product-design",
   },
   {
-    image: "/placeholders/palaceholder3.png",
+    image: "/insights/image2.png",
     date: "2025-04-10",
     title: "5 Machine Learning Models Every Startup Should Know",
     link: "https://fourbtech.com/insights/ml-models-for-startups",
   },
   {
-    image: "/placeholders/palaceholder3.png",
+    image: "/insights/image3.png",
     date: "2025-04-03",
     title: "Designing Scalable UX for AI-Powered Apps",
     link: "https://fourbtech.com/insights/scalable-ux-ai",
   },
   {
-    image: "/placeholders/palaceholder3.png",
+    image: "/insights/image4.png",
     date: "2025-03-27",
     title: "Why Cybersecurity Should Be Baked Into Your MVP",
     link: "https://fourbtech.com/insights/cybersecurity-in-mvp",
-  },
-  {
-    image: "/placeholders/palaceholder3.png",
-    date: "2025-03-21",
-    title: "How Small Teams Can Build Billion-Dollar Tech",
-    link: "https://fourbtech.com/insights/startup-team-strategy",
-  },
-  {
-    image: "/placeholders/palaceholder3.png",
-    date: "2025-03-14",
-    title: "Web3 Explained: Opportunities for Early-Stage Founders",
-    link: "https://fourbtech.com/insights/web3-for-founders",
-  },
-  {
-    image: "/placeholders/palaceholder3.png",
-    date: "2025-03-06",
-    title: "DevOps for Startups: Automate, Iterate, Succeed",
-    link: "https://fourbtech.com/insights/devops-for-startups",
   },
 ];
 
@@ -179,70 +167,63 @@ export const employees: Employee[] = [
   {
     name: "Kazi Rafiqual Islam",
     role: "Co-Founder & Chairma",
-    image: "/members/CHAIRMAIN.png",
+    image: "/members/kazi_rafiqual_islam.png",
     description:
-      "B.Sc. Engr. Mechanical (DUET) <br/>M.Sc. Engr. PMRE - Non-thesis (BUET) <br/>MBA-SSM-Switzerland <br/>MSc Digital Marketing - I-JWL London <br/>Doctor of Business Administration <br/>(DBA) in progress)- I-JWL London.",
+      "B.Sc. Engr. MechanicalDET) <br/>M.Sc. Engr. PMRE - Non-thesis (BUET) <br/>MBA-SSM-Switzerland <br/>MSc Digital Marketing - I-JWL London <br/>Doctor of Business Administration <br/>(DBA) in progress)- I-JWL London.",
     email: "https://twitter.com/kazirafiqual",
     linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
   },
   {
-    name: "Kazi Rafiqual Islam",
-    role: "Co-Founder & Chairma",
-    image: "/members/CHAIRMAIN.png",
+    name: "Himu_Chowdhury",
+    role: "Co-Founder & CEO",
+    image: "/members/Himu_Chowdhury.png",
     description:
-      "B.Sc. Engr. Mechanical (DUET) <br/>M.Sc. Engr. PMRE - Non-thesis (BUET) <br/>MBA-SSM-Switzerland <br/>MSc Digital Marketing - I-JWL London <br/>Doctor of Business Administration <br/>(DBA) in progress)- I-JWL London.",
+      "Former Mobile Application Developer at PMT LLC, Tokyo, Japan <br/>Former Software Engineer at Togo and Webit, Okinawa, Japan <br/>Former Team Lead at SmartMux LTD BSc in Computer Science and Engineering (National University) ",
+    email: "himu.chowdhury01@gmail.com",
+    linkedin: "https://www.linkedin.com/in/himu-chowdhury/",
+  },
+  {
+    name: "Junaid Ahmed Zama",
+    role: "Software Engineer",
+    image: "/members/Junaid_Ahmed_Zama.png",
+    description:
+      "Former Founder of Zobotics IT<br/>Former Web Developer at Raqamisuq<br/>BSc. in Computer Science and <br/>Engineering (BRAC University)",
     email: "https://twitter.com/kazirafiqual",
     linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
   },
   {
-    name: "Kazi Rafiqual Islam",
-    role: "Co-Founder & Chairma",
-    image: "/members/CHAIRMAIN.png",
+    name: "Mohammad Titon",
+    role: "Digital Marketing Specialist",
+    image: "/members/Mohammad_Titon.png",
     description:
-      "B.Sc. Engr. Mechanical (DUET) <br/>M.Sc. Engr. PMRE - Non-thesis (BUET) <br/>MBA-SSM-Switzerland <br/>MSc Digital Marketing - I-JWL London <br/>Doctor of Business Administration <br/>(DBA) in progress)- I-JWL London.",
+      "Consultant for Data-Driven Digital <br/>Strategies - Freelance <br/>Expert in SEO, Social Media Marketing & <br/> Performance Ads <br/> Certified – Creative IT Institute <br/> Skilled in PHP, Laravel & Vue.js.",
     email: "https://twitter.com/kazirafiqual",
     linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
   },
   {
-    name: "Kazi Rafiqual Islam",
-    role: "Co-Founder & Chairma",
-    image: "/members/CHAIRMAIN.png",
+    name: "Hirok Roy Rahul",
+    role: "frontend Developer",
+    image: "/members/Hirok_Roy_Rahul.png",
     description:
-      "B.Sc. Engr. Mechanical (DUET) <br/>M.Sc. Engr. PMRE - Non-thesis (BUET) <br/>MBA-SSM-Switzerland <br/>MSc Digital Marketing - I-JWL London <br/>Doctor of Business Administration <br/>(DBA) in progress)- I-JWL London.",
+      "Former Web Developer at  Nebulae-Soft<br/>Junior Machine Vision Engineer at BRACU  Duburi<br/>BS.c in computer science & Engineering (BRAC University) ",
     email: "https://twitter.com/kazirafiqual",
     linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
   },
   {
-    name: "Kazi Rafiqual Islam",
-    role: "Co-Founder & Chairma",
-    image: "/members/CHAIRMAIN.png",
+    name: "A F M Shabbir khan",
+    role: "Flutter Developer",
+    image: "/members/A_F_M_Shabbir_khan.png",
     description:
-      "B.Sc. Engr. Mechanical (DUET) <br/>M.Sc. Engr. PMRE - Non-thesis (BUET) <br/>MBA-SSM-Switzerland <br/>MSc Digital Marketing - I-JWL London <br/>Doctor of Business Administration <br/>(DBA) in progress)- I-JWL London.",
+      "Flutter Developer for Cross-Platform <br/> Mobile Apps - Freelance,<br/> Diploma in Computer - SSR Institute<br/> of Technology & Management",
     email: "https://twitter.com/kazirafiqual",
     linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
   },
   {
-    name: "Kazi Rafiqual Islam",
-    role: "Co-Founder & Chairma",
-    image: "/members/CHAIRMAIN.png",
+    name: "Md Muhib Monowar",
+    role: "UI UX Designer",
+    image: "/members/Muhib_Monoar.png",
     description:
-      "B.Sc. Engr. Mechanical (DUET) <br/>M.Sc. Engr. PMRE - Non-thesis (BUET) <br/>MBA-SSM-Switzerland <br/>MSc Digital Marketing - I-JWL London <br/>Doctor of Business Administration <br/>(DBA) in progress)- I-JWL London.",
-    email: "https://twitter.com/kazirafiqual",
-    linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
-  },
-  {
-    name: "Kazi Rafiqual Islam",
-    role: "Co-Founder & Chairma",
-    image: "/members/CHAIRMAIN.png",
-    email: "https://twitter.com/kazirafiqual",
-    linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
-  },
-  {
-    name: "Kazi Rafiqual Islam",
-    role: "Co-Founder & Chairma",
-    image: "/members/CHAIRMAIN.png",
-    description:
-      "B.Sc. Engr. Mechanical (DUET) <br/>M.Sc. Engr. PMRE - Non-thesis (BUET) <br/>MBA-SSM-Switzerland <br/>MSc Digital Marketing - I-JWL London <br/>Doctor of Business Administration <br/>(DBA) in progress)- I-JWL London.",
+      "UI Designer - MediMontro App <br/>Professional UI/UX Designer - Freelance <br/>Complete Web & Mobile Design - ZTM <br/>Academy, Toronto",
     email: "https://twitter.com/kazirafiqual",
     linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
   },
@@ -257,32 +238,39 @@ export const services: Services[] = [
     link: "/web-development",
   },
   {
-    title: "Web Development",
+    title: "Mobile Development",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
-    icon: "/icons/code.svg",
+    icon: "/service/mobile.svg",
     link: "/web-development",
   },
   {
-    title: "Web Development",
+    title: "Digital Product Design",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
-    icon: "/icons/code.svg",
+    icon: "/service/dot dot.svg",
     link: "/web-development",
   },
   {
-    title: "Web Development",
+    title: "Digital Marketing",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
-    icon: "/icons/code.svg",
+    icon: "/service/speakerphone.svg",
     link: "/web-development",
   },
   {
-    title: "Web Development",
+    title: "SEO Optimisation",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
-    icon: "/icons/code.svg",
+    icon: "/service/search.svg",
     link: "/web-development",
+  },
+  {
+    title: "Video Production & Motion Design",
+    description:
+      "Building responsive, high-performance web applications using modern frameworks and technologies.",
+    icon: "/service/film.svg",
+    link: "/",
   },
 ];
 

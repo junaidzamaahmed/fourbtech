@@ -47,7 +47,7 @@ const Counter = ({
   );
 };
 
-const CompanyProfile = () => {
+const CompanyProfile = ({ isHome = true }: { isHome?: boolean }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [startCount, setStartCount] = useState(false);
 
@@ -82,10 +82,10 @@ const CompanyProfile = () => {
   return (
     <section
       ref={sectionRef}
-      className="main-container bg-dark-bg-primary text-custom-white grid grid-cols-1 gap-10 min-h-[80vh] sm:grid-cols-2 "
+      className={`main-container grid min-h-[80vh] grid-cols-1 gap-10 sm:grid-cols-2 ${isHome ? "bg-dark-bg-primary text-custom-white" : "**:text-dark-bg-primary bg-custom-white"}`}
     >
       {/* Text Content */}
-      <div className="order-2 flex flex-col items-start justify-center gap-6 sm:order-1x">
+      <div className="sm:order-1x order-2 flex flex-col items-start justify-center gap-6">
         <h2 className="text-custom-white text-sm font-medium tracking-wider uppercase">
           Company Profile
         </h2>

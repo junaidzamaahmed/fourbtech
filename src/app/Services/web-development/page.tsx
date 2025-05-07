@@ -11,7 +11,7 @@ const page = () => {
     <main className="bg-custom-white">
       {/* Video and header  */}
       <section className="relative mb-14">
-        <div className="relative flex h-[200px] w-full items-center justify-center bg-gray-900">
+        <div className="relative flex h-[300px] w-full items-center justify-center bg-gray-900">
           <Image
             src="/coding.png"
             alt="Code background"
@@ -94,7 +94,7 @@ const page = () => {
         </div>
         <div className="order-1 h-full w-full lg:order-2">
           <Image
-            src="/placeholders/palaceholder2.png"
+            src="/webDev/pwds.png"
             width={300}
             height={300}
             className="h-full w-full object-cover"
@@ -106,7 +106,7 @@ const page = () => {
       <section className="main-container grid grid-cols-1 gap-12 object-center !pb-32 lg:grid-cols-2">
         <div className="order-1 h-full w-full lg:order-2">
           <Image
-            src="/placeholders/palaceholder2.png"
+            src="/webDev/front_end.png"
             width={300}
             height={300}
             className="h-full w-full object-cover"
@@ -258,7 +258,7 @@ const page = () => {
         </div>
         <div className="order-1 h-full w-full lg:order-2">
           <Image
-            src="/placeholders/palaceholder2.png"
+            src="/webDev/backend.png"
             width={300}
             height={300}
             className="h-full w-full object-cover"
@@ -270,7 +270,7 @@ const page = () => {
       <section className="main-container grid grid-cols-1 gap-12 object-center !pb-32 lg:grid-cols-2">
         <div className="order-1 h-full w-full lg:order-2">
           <Image
-            src="/placeholders/palaceholder2.png"
+            src="/webDev/consulting.png"
             width={300}
             height={300}
             className="h-full w-full object-cover"
@@ -361,7 +361,7 @@ const page = () => {
         </div>
         <div className="order-1 h-full w-full lg:order-2">
           <Image
-            src="/placeholders/palaceholder2.png"
+            src="/webDev/pWebDev.png"
             width={300}
             height={300}
             className="h-full w-full object-cover"

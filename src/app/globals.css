@@ -180,6 +180,15 @@
   .flex-between {
     @apply flex items-center justify-between gap-4;
   }
+  .titleHeader {
+    @apply text-xl font-semibold md:text-3xl lg:text-4xl;
+  }
+  .cardParagraph{
+    @apply text-sm font-normal md:text-base
+  }
+  .floating-nav {
+    @apply rounded-lg border bg-black;
+  }
 }
 
 /* Custom Swiper Styles */

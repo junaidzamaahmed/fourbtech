@@ -14,7 +14,7 @@ import Link from "next/link";
 import React from "react";
 
 const InsightCard = ({ image, date, title, link }: Insight) => (
-  <Card className="bg-custom-white border-0 hover:shadow-2xl">
+  <Card className="bg-custom-white border-0 text-start hover:shadow-2xl">
     <CardHeader className="relative h-full w-full">
       <Image
         src={image}
@@ -45,8 +45,9 @@ const InsightCard = ({ image, date, title, link }: Insight) => (
 
 const Insides = () => {
   return (
-    <section className="main-container">
-      <h1 className="text-dark-bg-primary my-12">Explore Latest Insights</h1>
+    <section className="main-container text-center">
+      <p>Blog & News</p>
+      <h1 className="text-dark-bg-primary mb-12">Explore Latest Insights</h1>
       <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
         {insights.slice(0, 4).map((data, index) => (
           <InsightCard key={index} {...data} />

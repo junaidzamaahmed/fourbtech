@@ -18,7 +18,7 @@ export const MarqueeCard = ({
           src={icon || "/placeholder.svg"}
           alt={title}
           fill
-          className="bg-dark-bg-primary/10 rounded-full object-cover p-2"
+          className="bg-dark-bg-primary/10 rounded-full object-scale-down p-1"
         />
       </div>
       <h3 className="text-h1-color">{title}</h3>

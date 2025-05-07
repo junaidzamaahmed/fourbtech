@@ -2,11 +2,14 @@
 import ArrowButton from "@/components/global/ArrowButton";
 import { projectShowcaseData } from "@/constants";
 import Link from "next/link";
-
-import { useRef } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 // Import Swiper styles
 import "swiper/css";
@@ -14,15 +17,30 @@ import "swiper/css/pagination";
 import { NavigationButtons } from "@/components/global/NavigationButton";
 
 const CaseStudies = () => {
+  const divRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      divRef.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+      },
+    );
+  }, []);
   const swiperRef = useRef(null);
   return (
-    <section className="main-container bg-dark-bg-primary !py-16 md:!py-20">
+    <section
+      className="main-container bg-dark-bg-primary !my-28 !py-16 md:!py-20"
+      ref={divRef}
+    >
       <div className="mb-6 flex flex-col gap-4 sm:mb-10 sm:flex-row sm:items-center sm:justify-between md:mb-16">
         <span className="space-y-1">
-          <h1 className="text-custom-white text-2xl md:text-3xl lg:text-4xl">
-            Case Studies
-          </h1>
-          <p className="text-custom-white/80 text-sm capitalize md:text-base">
+          <h1 className="text-custom-white">Case Studies</h1>
+          <p className="text-custom-white/80 capitalize">
             Proven Solution Tailored to your business needs
           </p>
         </span>
@@ -30,7 +48,7 @@ const CaseStudies = () => {
           right
           variant="outline"
           size={24}
-          className="!border-custom-white text-custom-white/90 hover:!text-custom-white self-start sm:self-center"
+          className="!border-custom-white !text-custom-white/70 hover:!text-custom-white self-start !py-7 sm:self-center"
         >
           <Link href="/">view all cases</Link>
         </ArrowButton>
@@ -52,7 +70,7 @@ const CaseStudies = () => {
           {projectShowcaseData.map((data, index) => (
             <SwiperSlide key={index}>
               <div className="flex flex-col overflow-hidden rounded-xl shadow-lg sm:grid sm:grid-cols-2">
-                <div className="relative h-64 w-full sm:h-72 md:h-full">
+                <div className="relative h-full">
                   <Image
                     src={data.imageUrl || "/placeholder.svg"}
                     fill
