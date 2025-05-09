@@ -101,7 +101,7 @@ const CompanyProfile = ({ isHome = true }: { isHome?: boolean }) => {
         </p>
         <ArrowButton
           left={true}
-          variant="noOutline"
+          variant="outline"
           className="hover:!text-custom-white"
         >
           <Link href="/">MORE ABOUT US</Link>
@@ -110,7 +110,6 @@ const CompanyProfile = ({ isHome = true }: { isHome?: boolean }) => {
 
       {/* Counters */}
       <div className="order-1 flex flex-col items-center justify-center sm:order-2">
-        <div className="bg-p-color hidden h-[1px] w-full rounded-full sm:block" />
         <div className="grid w-full grid-cols-2 place-items-center gap-y-10 pt-10 sm:grid-cols-2 md:gap-y-12">
           {[
             "Projects Completed",

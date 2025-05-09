@@ -2,6 +2,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { AppBenifitesData } from "@/constants";
@@ -10,16 +11,18 @@ import Image from "next/image";
 import React from "react";
 
 export const BenifitCard = ({ icon, title, desc }: AppBenifitesType) => (
-  <Card className="border-dark-bg-primary/10 transform-all flex flex-col items-center justify-center border-[1px] shadow-none duration-500 hover:drop-shadow-xl">
-    <div className=" ">
-      <Image
-        src={icon}
-        width={52}
-        height={52}
-        alt={title}
-        className="bg-p-color/20 flex rounded-full object-contain p-2"
-      />
-    </div>
+  <Card className="border-dark-bg-primary/10 transform-all border-[1px] shadow-none duration-500 hover:drop-shadow-xl">
+    <CardHeader className="flex-center w-full">
+      <div className="bg-h1-color/20 flex-center flex h-12 w-12 rounded-full p-2">
+        <Image
+          src={icon}
+          width={52}
+          height={52}
+          alt={title}
+          className="object-contain"
+        />
+      </div>
+    </CardHeader>
     <CardContent className="flex flex-col gap-3 *:text-center">
       <CardTitle>{title}</CardTitle>
       <CardDescription>{desc}</CardDescription>

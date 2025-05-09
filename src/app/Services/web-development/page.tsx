@@ -306,7 +306,7 @@ const page = () => {
                 width={30}
                 height={30}
                 alt="html"
-                className="bg-dark-bg-primary/10 rounded-full p-1"
+                className="bg-dark-bg-primary/10 aspect-square rounded-full p-1"
               />
               <span className="text-gray-700">Web Consulting</span>
             </div>
@@ -316,7 +316,7 @@ const page = () => {
                 width={30}
                 height={30}
                 alt="html"
-                className="bg-dark-bg-primary/10 rounded-full p-1"
+                className="bg-dark-bg-primary/10 aspect-square rounded-full p-1"
               />
               <span className="text-gray-700">Techonology Consultants</span>
             </div>

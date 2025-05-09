@@ -45,7 +45,7 @@ const InsightCard = ({ image, date, title, link }: Insight) => (
 
 const Insides = () => {
   return (
-    <section className="main-container text-center">
+    <section className="main-container !mb-12 text-center">
       <p>Blog & News</p>
       <h1 className="text-dark-bg-primary mb-12">Explore Latest Insights</h1>
       <div className="grid grid-cols-2 gap-2 md:grid-cols-4">

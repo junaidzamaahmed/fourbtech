@@ -1,10 +1,10 @@
-import EmployeeCard from "@/components/EmployeeCard";
 import ArrowButton from "@/components/global/ArrowButton";
 import AboutFeedBack from "@/components/pages/about/AboutFeedBack";
 // import AboutMarquee from "@/components/pages/about/AboutMarquee";
 import CompanyProfile from "@/components/pages/main/Company Profile";
+import Employees from "@/components/pages/main/Employess";
 import Insides from "@/components/pages/main/Insides";
-import { employees, services } from "@/constants";
+import { services } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -22,7 +22,7 @@ const page = () => {
             priority
           />
           <div className="relative z-10 text-center">
-            <h1 className="mb-2 text-4xl font-bold text-white">About Us</h1>
+            <h1 className="mb-2 font-semibold text-white">About Us</h1>
             <div className="flex items-center justify-center gap-2 text-gray-300">
               <Link href="/" className="transition-colors hover:text-white">
                 Home
@@ -34,7 +34,7 @@ const page = () => {
         </div>
       </section>
       {/* What We Do*/}
-      <section className="main-container grid grid-cols-1 gap-12 object-center !py-20 lg:grid-cols-2">
+      <section className="main-container grid grid-cols-1 gap-12 object-center !py-10 lg:grid-cols-2">
         <div className="flex flex-col items-start justify-center gap-4">
           <p className="">What We Do</p>
           <h1>
@@ -53,13 +53,13 @@ const page = () => {
             {services.map((service, index) => {
               return (
                 <div className="flex items-center gap-2" key={index}>
-                  <div className="relative">
+                  <div className="bg-dark-bg-primary/10 flex-center relative h-8 w-8 rounded-full p-1">
                     <Image
                       src={service.icon}
                       alt={service.title}
                       width={30}
                       height={30}
-                      className="bg-dark-bg-primary/10 rounded-full p-1"
+                      className="aspect-square object-contain p-[.6px]"
                     />
                   </div>
                   <span className="text-gray-700">Website Development</span>
@@ -74,7 +74,7 @@ const page = () => {
       </section>
       <CompanyProfile isHome={false} />
       {/* Our Mission*/}
-      <section className="main-container grid grid-cols-1 gap-12 object-center !pb-32 lg:grid-cols-2">
+      <section className="main-container grid grid-cols-1 gap-12 object-center !py-10 lg:grid-cols-2">
         <div className="order-2 h-full w-full lg:order-2">
           <Image
             src="/about/colaboration.png"
@@ -95,8 +95,8 @@ const page = () => {
           </p>
         </div>
       </section>
-
-      <section className="main-container grid grid-cols-1 gap-12 object-center !pb-32 lg:grid-cols-2">
+      {/* Why Choose Us  */}
+      <section className="main-container grid grid-cols-1 gap-12 object-center lg:grid-cols-2">
         <div className="order-2 flex flex-col items-start justify-center gap-6">
           <p>Why Choose Us</p>
           <h1 className="text-h2-color mb-3 text-4xl font-semibold">
@@ -156,21 +156,11 @@ const page = () => {
         </div>
       </section>
 
-      <section className="main-container text-center">
-        <p>Our Team</p>
-        <h1>Meet the Minds Behind Your Success</h1>
-        <div className="mt-4 grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {employees.map((employee, index) => (
-            <EmployeeCard key={index} {...employee} />
-          ))}
-        </div>
-      </section>
+      <Employees isHome={false} />
       <AboutFeedBack />
-      {/* <section className="bg-red-400">
-        <AboutMarquee />
-      </section> */}
       {/* Why us */}
       <Insides />
+      <div className="mb-24" />
     </main>
   );
 };

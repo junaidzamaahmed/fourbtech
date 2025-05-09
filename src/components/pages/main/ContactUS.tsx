@@ -46,7 +46,7 @@ const ContactUS = () => {
   };
 
   return (
-    <section className="main-container bg-custom-white grid grid-cols-1 overflow-hidden rounded-xl md:grid-cols-2 my-28" >
+    <section className="main-container bg-custom-white grid grid-cols-1 overflow-hidden rounded-xl md:grid-cols-2 my-28" id="contact">
       {/* Left Info Block */}
       <div className="flex flex-col justify-between gap-8 bg-[#F0F5FF] p-10 md:p-14">
         <div className="flex h-full w-full flex-col items-start justify-center">

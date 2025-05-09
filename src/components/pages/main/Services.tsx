@@ -29,15 +29,15 @@ const ServiceCard = ({
   link: string;
 }) => {
   return (
-    <Card className="group bg-custom-white hover:bg-dark-bg-primary border-dark-bg-primary/10 transition-all duration-500">
+    <Card className="group bg-custom-white hover:bg-dark-bg-primary border-dark-bg-primary/10 flex h-full flex-col items-start justify-between transition-all duration-500">
       <CardHeader>
-        <div className="group-hover:bg-accent-hover inline-block w-fit rounded-full p-2">
+        <div className="group-hover:bg-accent-hover bg-dark-bg-primary/20 flex h-10 w-10 items-center justify-center rounded-full">
           <Image
             src={icon}
             alt={title}
             width={30}
-            height={40}
-            className="object-contain object-center group-hover:brightness-0 group-hover:invert"
+            height={30}
+            className="aspect-square object-contain object-center p-1 group-hover:brightness-0 group-hover:invert"
           />
         </div>
       </CardHeader>
@@ -47,7 +47,7 @@ const ServiceCard = ({
             {title}
           </h3>
         </CardTitle>
-        <CardDescription className="group-hover:text-custom-white cardParagraph">
+        <CardDescription className="group-hover:!text-custom-white cardParagraph !text-h1-color">
           {description}
         </CardDescription>
       </CardContent>

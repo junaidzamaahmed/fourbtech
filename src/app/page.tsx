@@ -111,7 +111,7 @@ export default function Home() {
           </div>
 
           {/* Marquee */}
-          <div className="mt-8 w-screen -mb-6">
+          <div className="mt-8 -mb-6 w-screen">
             <Marquee />
           </div>
         </div>

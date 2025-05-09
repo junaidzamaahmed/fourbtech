@@ -95,11 +95,11 @@ const Header = () => {
   return (
     <div
       ref={navContainerRef}
-      className={`fixed top-3 z-50 h-16 w-full border-none transition-all duration-700`}
+      className={`fixed top-0 z-50 h-16 w-full border-none transition-all duration-700 sm:top-3`}
     >
       <header className="bsolute absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex-between main-container bg-custom-white">
-          <Link href="/" className="relative w-28 sm:w-36 md:w-44 lg:w-52">
+          <Link href="/" className="relative w-20 sm:w-28 md:w-32">
             <Image
               src="/Primary logo.svg"
               alt="Logo"
@@ -181,8 +181,8 @@ const Header = () => {
           </div>
           <div className="flex-center">
             <div className="hidden sm:block">
-              <ArrowButton left={true} size={30} className="h-full md:h-1/3">
-                <Link href="/contact" className="h-full w-full">
+              <ArrowButton left={true} size={30} className="h-1/2 md:h-1/3">
+                <Link href="/#contact" className="w-full">
                   Let&apos;s talk
                 </Link>
               </ArrowButton>

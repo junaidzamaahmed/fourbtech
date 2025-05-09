@@ -13,7 +13,7 @@ const OurServicesTold = ({ icon, title }: WhyUsType) => {
           width={300}
           height={120}
           alt={title}
-          className="object-cover transition-transform duration-500 hover:scale-110"
+          className="object-cover transition-transform duration-500 hover:scale-105"
         />
       </div>
       <div>

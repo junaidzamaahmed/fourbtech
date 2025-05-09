@@ -11,13 +11,13 @@ import React from "react";
 
 export const MarketAgencyCard = ({ icon, title, desc }: AppBenifitesType) => (
   <Card className="border-dark-bg-primary/10 transform-all flex flex-col items-center justify-center border-[1px] shadow-none duration-500 hover:drop-shadow-xl">
-    <div className=" ">
+    <div className="bg-p-color/20 flex-center relative flex h-12 w-12 rounded-full">
       <Image
         src={icon}
-        width={52}
-        height={52}
+        width={30}
+        height={30}
         alt={title}
-        className="bg-p-color/20 flex rounded-full object-contain p-2"
+        className="aspect-square object-contain"
       />
     </div>
     <CardContent className="flex flex-col gap-3 *:text-center">

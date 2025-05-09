@@ -55,7 +55,7 @@ export const projectShowcaseData: ProjectShowcase[] = [
     description:
       "Required a fast, secure platform for diagnosing patient symptoms via image and voice input. We built a HIPAA-compliant AI model with TensorFlow and deployed a React-based frontend integrated with FastAPI for clinical insights.",
     projectLink: "https://ai-medical-platform.com",
-    imageUrl: "/placeholders/palaceholder1.png",
+    imageUrl: "/mobile/MindsAppart/project.png",
   },
   {
     company: "FinWise Capital",
@@ -63,7 +63,7 @@ export const projectShowcaseData: ProjectShowcase[] = [
     description:
       "Needed a responsive analytics dashboard for real-time portfolio risk analysis and stock trend prediction. We implemented a D3.js-powered data viz system integrated with a PyTorch forecasting engine and microservice APIs.",
     projectLink: "https://finwise-ai-dashboard.com",
-    imageUrl: "/placeholders/palaceholder1.png",
+    imageUrl: "/mobile/MindsAppart/project.png",
   },
   {
     company: "VeriEduTech",
@@ -71,7 +71,7 @@ export const projectShowcaseData: ProjectShowcase[] = [
     description:
       "Wanted an adaptive AI chatbot to help students understand STEM concepts better. We fine-tuned GPT models for contextual Q&A and built a multilingual, accessible frontend using Next.js and TailwindCSS.",
     projectLink: "https://smartedu-assistant.com",
-    imageUrl: "/placeholders/palaceholder1.png",
+    imageUrl: "/mobile/MindsAppart/project.png",
   },
   {
     company: "CityVision Urban Labs",
@@ -79,7 +79,7 @@ export const projectShowcaseData: ProjectShowcase[] = [
     description:
       "Faced challenges in visualizing real-time traffic bottlenecks and signal optimization. We developed a computer vision pipeline with YOLOv8 and a live control dashboard using React, Firebase, and WebSocket APIs.",
     projectLink: "https://urban-trafficai.com",
-    imageUrl: "/placeholders/palaceholder1.png",
+    imageUrl: "/mobile/MindsAppart/project.png",
   },
 ];
 
@@ -300,11 +300,6 @@ export const IndustrySolutionData: IndustrySolutionType[] = [
     title: "Education",
     desc: "We design custom eLearning platforms  to make education more accessible.  From virtual classrooms and study  resources to live chat and automated  exams, we help you create complete  online learning environments.",
   },
-  {
-    icon: "/Icons/Web/education.png",
-    title: "Education",
-    desc: "Simplify your food business operations  with web apps built for inventory control,  delivery logistics, packaging, storage,  and distribution. Let's discuss your  requirements and craft a custom  solution for your food and beverage  venture.",
-  },
 ];
 
 export const WhyUsData: WhyUsType[] = [
@@ -379,42 +374,42 @@ export const OurIndustryExperties: WhyUsType[] = [
 
 export const MindsApart: Team[] = [
   {
-    image: "/placeholders/people_meating.png",
+    image: "/mobile/MindsAppart/team.png",
     title: "Dedicated Team",
     desc: "Our Compact And Focused Team Allows IJS TO Give Every Project The Detailed Attention It Deserves, Ensuring High-Quality Results With A Personalized Approach.",
   },
   {
-    image: "/placeholders/people_meating.png",
+    image: "/mobile/MindsAppart/project.png",
     title: "Skilled Project Management",
     desc: "With a flat organizational structure and  visionary product strategists, our  experienced project managers deliver  results faster and more efficiently, without  unnecessary layers of bureaucracy.",
   },
   {
-    image: "/placeholders/people_meating.png",
+    image: "/mobile/MindsAppart/agile.png",
     title: "Agile Development Approach",
     desc: "We don't wait until the end to show results.  Instead, we follow an agile  methodology—breaking development into  small, manageable phases. After each  phase, we gather your feedback, keeping  you involved and ensuring the final product  aligns perfectly with your expectations.",
   },
   {
-    image: "/placeholders/people_meating.png",
+    image: "/mobile/MindsAppart/communication.png",
     title: "Clear and Ongoing Communication",
     desc: "Strong communication is at the core of  everything we do. Our team collaborates  closely with you, sharing ideas, setting  strategies, and keeping you informed at  every stage. We value your input, offer  regular updates, and ensure a smooth,  transparent development journey.",
   },
   {
-    image: "/placeholders/people_meating.png",
+    image: "/mobile/MindsAppart/itSolution.png",
     title: "End-to-End IT Solutions",
     desc: "From UX/UI design and mobile app  development to backend systems,  re-engineering, consultation, testing, and  beyond, we offer comprehensive, full-cycle  software development services tailored to  your needs.",
   },
   {
-    image: "/placeholders/people_meating.png",
+    image: "/mobile/MindsAppart/assurance.png",
     title: "Thorough Quality Assurance",
     desc: "We prioritize quality at every stage. Our QA  process includes continuous bug detection,  error resolution, and rigorous testing to  ensure your product is stable, secure, and  ready for launch.",
   },
   {
-    image: "/placeholders/people_meating.png",
+    image: "/mobile/MindsAppart/support.png",
     title: "Reliable Support & Maintenance",
     desc: "Post-launch, our dedicated support and  maintenance team ensures your app  continues to run smoothly. We're here to  offer long-term solutions and dependable  performance, even after delivery.",
   },
   {
-    image: "/placeholders/people_meating.png",
+    image: "/mobile/MindsAppart/protection.png",
     title: "Fourbtech Protection",
     desc: "When you partner with us, your ideas and  data are treated with complete  confidentiality. We ensure full transparency  and uphold the highest level of respect for  your intellectual property through strict  Fourbtech agreements.",
   },

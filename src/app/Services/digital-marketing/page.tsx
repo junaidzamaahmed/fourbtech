@@ -21,9 +21,9 @@ const page = () => {
             priority
           />
           <div className="relative z-10 text-center">
-            <h2 className="mb-2 text-4xl font-bold text-white">
+            <h1 className="mb-2 font-semibold text-custom-white">
               Digital Marketing
-            </h2>
+            </h1>
             <div className="flex items-center justify-center gap-2 text-gray-300">
               <Link href="/" className="transition-colors hover:text-white">
                 Home
@@ -87,9 +87,9 @@ const page = () => {
       </section>
       {/* Boost Your Rankings and Drive Organic Traffic */}
       <section className="main-container">
-        <h3 className="text-h1-color mb-3 text-center text-4xl font-semibold">
+        <h1 className="text-h1-color mb-3 text-center  font-semibold">
           Boost Your Rankings and Drive Organic Traffic
-        </h3>
+        </h1>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {BoostRanking.map((text, index) => (
             <TitleDescCard key={index} {...text} />

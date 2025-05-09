@@ -20,10 +20,10 @@ const page = () => {
             className="object-cover opacity-50"
             priority
           />
-          <div className="relative z-10 text-center">
-            <h2 className="mb-2 text-4xl font-bold text-white">
+          <div className="main-container relative z-10 text-center">
+            <h1 className="mb-2 font-bold text-white">
               Mobile App Development
-            </h2>
+            </h1>
             <div className="flex items-center justify-center gap-2 text-gray-300">
               <Link href="/" className="transition-colors hover:text-white">
                 Home
@@ -36,18 +36,18 @@ const page = () => {
       </section>
       {/* Universal mobile app development */}
       <section className="main-container flex-center flex-center mb-32 flex-col text-center *:max-w-[95%]">
-        <h3 className="text-h1-color mb-5 text-4xl font-semibold">
+        <h1 className="text-h1-color mb-5 font-semibold">
           Universal Mobile App Development Solutions Unified Cross-Platform App
           Development Services
-        </h3>
+        </h1>
       </section>
       {/* Consistent Performance On All Devices */}
       <section className="main-container grid grid-cols-1 gap-12 object-center !pb-32 lg:grid-cols-2">
         <div className="order-2 flex flex-col items-start justify-center gap-4">
-          <h3 className="text-h1-color mb-3 text-4xl font-semibold">
+          <h1 className="text-h1-color mb-3 font-semibold">
             Consistent Performance On All Devices
-          </h3>
-          <p className="text-[clamp(.8rem, 2vw, 1rem)]">
+          </h1>
+          <p className="">
             Expand Your Audience With Budget-friendly Mobile Apps That Run
             Smoothly Across Multiple Platforms And Devices. Our Cross-platform
             Development Expertise Ensures Your App Delivers A Seamless User
@@ -111,17 +111,17 @@ const page = () => {
             alt="development"
           />
         </div>
-        <div className="order-2 flex flex-col items-start justify-between gap-4">
-          <h3 className="text-h1-color mb-3 text-4xl font-semibold">
+        <div className="order-2 flex flex-col items-start justify-center gap-4 h-full">
+          <h1 className="text-h1-color mb-3 font-semibold">
             Development Tools
-          </h3>
+          </h1>
           <p className="text-[clamp(.8rem, 2vw, 1rem)]">
             We Leverage Powerful And Flexible Development Tools To Create
             Cross-platform Apps That Deliver Smooth Performance Across Different
             Devices And Pperating Systems, Enhancing Efficiency And Cutting Down
             Costs.
           </p>
-          <div className="flex h-full w-full items-center gap-6 pt-4 text-[.8rem] sm:text-[.9rem]">
+          <div className="flex w-full items-center gap-6 pt-4 text-[.8rem] sm:text-[.9rem] ">
             <div className="relative h-20 w-20 md:h-16 md:w-16">
               <Image
                 src="/Icons/app/react-native.png"
@@ -133,7 +133,7 @@ const page = () => {
             <div className="relative h-20 w-20 md:h-16 md:w-16">
               <Image src="/Icons/app/flutter.png" fill alt="Flutter" />
             </div>
-            <div className="relative h-20 w-20 md:h-16 md:w-16">
+            <div className="relative h-28 w-28 md:h-28 md:w-28">
               <Image src="/Icons/app/java.png" fill alt="Java" priority />
             </div>
           </div>
@@ -149,9 +149,9 @@ const page = () => {
       {/* Our Methodology */}
       <section className="main-container grid grid-cols-1 gap-12 object-center !pb-32 lg:grid-cols-2">
         <div className="flex flex-col items-start justify-center gap-6">
-          <h3 className="text-h1-color mb-3 text-4xl font-semibold">
+          <h1 className="text-h1-color mb-3 font-semibold">
             Our Methodology
-          </h3>
+          </h1>
           <p className="text-[clamp(.8rem, 2vw, 1rem)]">
             Our approach sets us apart as the preferred partner for outsourced
             mobile application development and software engineering solutions.

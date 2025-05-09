@@ -86,14 +86,14 @@ export default function FaqSeo() {
   ];
 
   return (
-    <div className="main-container">
-      <h2 className="mb-10 text-center text-2xl font-bold">FAQ SEO</h2>
-      <div className="flex ">
-        <div className="w-full px-4 md:w-1/3 -mr-5">
+    <div className="main-container !py-24">
+      <h1 className="mb-10 text-center font-semibold">FAQ SEO</h1>
+      <div className="flex flex-col sm:flex-row">
+        <div className="-mr-5 mb-3 w-full sm:mb-0 sm:px-4 md:w-1/3">
           {faqs.map((faq) => (
             <div
               key={faq.question}
-              className={`cursor-pointer p-4 ${activeQuestion === faq.question ? "bg-dark-bg-primary/10 border-r-4 border-blue-500" : ""}`}
+              className={`cursor-pointer p-4 ${activeQuestion === faq.question ? "bg-dark-bg-primary/10 border-blue-500 sm:border-r-4" : ""}`}
               onClick={() => setActiveQuestion(faq.question)}
             >
               <h3 className="font-medium">{faq.question}</h3>

@@ -2,6 +2,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { MindsApart } from "@/constants";
@@ -11,15 +12,18 @@ import React from "react";
 
 const WorkForceCard = ({ image, title, desc }: Team) => {
   return (
-    <Card className="border-dark-bg-primary/10 transform-all relative flex flex-col items-center justify-center border-[1px] shadow-none duration-500 hover:drop-shadow-xl">
-      <div className="relative h-32 w-[90%]">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="rounded-xl object-cover"
-        />
-      </div>
+    <Card className="border-dark-bg-primary/10 transform-all border-[1px] shadow-none duration-500 hover:drop-shadow-xl">
+      <CardHeader className="w-full ">
+        <div className="relative rounded-xl">
+          <Image
+            src={image}
+            alt={title}
+            width={256}
+            height={144}
+            className="aspect-video w-full rounded-xl object-cover"
+          />
+        </div>
+      </CardHeader>
       <CardContent className="flex flex-col gap-3 *:text-start">
         <CardTitle>{title}</CardTitle>
         <CardDescription>{desc}</CardDescription>

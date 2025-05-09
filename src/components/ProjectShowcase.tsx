@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -19,9 +20,9 @@ export default function CustomSwiperCarousel({
 }: ProjectData) {
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
-  const swiperRef = useRef(null);
-
-  const handleSlideChange = (swiper) => {
+  const swiperRef = useRef<typeof Swiper | null>(null);
+  
+  const handleSlideChange = (swiper: SwiperType) => {
     setIsBeginning(swiper.isBeginning);
     setIsEnd(swiper.isEnd);
   };

@@ -6,6 +6,7 @@ import { CustomPagination } from "./CustomePagination";
 
 interface CustomPaginationProps {
   totalSlides: number;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   swiperRef: any;
   customClass?: string;
 }
