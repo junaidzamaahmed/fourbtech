@@ -72,11 +72,11 @@ const CaseStudies = () => {
               <div className="grid grid-cols-1 overflow-hidden rounded-xl shadow-lg sm:grid-cols-2">
                 <div className="relative h-56 w-full sm:h-full">
                   <Image
-                    src={data.imageUrl || "/placeholder.svg"}
+                    src={data.imageUrl}
                     fill
                     alt={data.title}
-                    className="object-cover"
-                    // sizes="(max-width: 768px) 100vw, 50vw"
+                    className="origin-center object-center object-cover "
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <div className="bg-custom-white flex flex-col justify-between gap-4 p-6 md:p-8 lg:p-10">

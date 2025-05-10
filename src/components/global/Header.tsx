@@ -16,7 +16,10 @@ const links = [
     path: "/Services",
     sub: [
       { title: "Web Development", path: "/Services/web-development" },
-      { title: "Mobile Apps", path: "/Services/mobile-apps" },
+      {
+        title: "Mobile Application Development",
+        path: "/Services/mobile-apps",
+      },
       { title: "Digital Marketing", path: "/Services/digital-marketing" },
     ],
   },

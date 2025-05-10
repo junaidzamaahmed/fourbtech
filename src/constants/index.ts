@@ -50,36 +50,21 @@ export const customerFeedbacks: CustomerFeedback[] = [
 
 export const projectShowcaseData: ProjectShowcase[] = [
   {
-    company: "NeoHealth Systems",
-    title: "AI-Driven Medical Diagnosis Platform",
+    company: "Monthly Meetup",
+    title: "A Day of Reflection, Vision, and Appreciation at FourBtech.",
     description:
-      "Required a fast, secure platform for diagnosing patient symptoms via image and voice input. We built a HIPAA-compliant AI model with TensorFlow and deployed a React-based frontend integrated with FastAPI for clinical insights.",
-    projectLink: "https://ai-medical-platform.com",
-    imageUrl: "/mobile/MindsAppart/project.png",
+      "On the 1st of May, the FourBtech family came together for a special get-together — a day to pause, reflect, and connect. We shared our thoughts on current projects, future plans, and the exciting journey ahead. From strategic discussions to heartfelt appreciation, it was a day that reminded us of the strength and synergy within our team.",
+    projectLink: "https://www.linkedin.com/company/fourbtech/",
+    imageUrl: "/images/allMember.jpg",
   },
   {
-    company: "FinWise Capital",
-    title: "Predictive Analytics Dashboard for Investment Forecasting",
+    company: "Power Intern",
+    title: "Introducing Our First “Power Intern of the Month”!",
     description:
-      "Needed a responsive analytics dashboard for real-time portfolio risk analysis and stock trend prediction. We implemented a D3.js-powered data viz system integrated with a PyTorch forecasting engine and microservice APIs.",
-    projectLink: "https://finwise-ai-dashboard.com",
-    imageUrl: "/mobile/MindsAppart/project.png",
-  },
-  {
-    company: "VeriEduTech",
-    title: "Smart Learning Assistant Using NLP",
-    description:
-      "Wanted an adaptive AI chatbot to help students understand STEM concepts better. We fine-tuned GPT models for contextual Q&A and built a multilingual, accessible frontend using Next.js and TailwindCSS.",
-    projectLink: "https://smartedu-assistant.com",
-    imageUrl: "/mobile/MindsAppart/project.png",
-  },
-  {
-    company: "CityVision Urban Labs",
-    title: "AI-Powered Urban Traffic Flow Optimization System",
-    description:
-      "Faced challenges in visualizing real-time traffic bottlenecks and signal optimization. We developed a computer vision pipeline with YOLOv8 and a live control dashboard using React, Firebase, and WebSocket APIs.",
-    projectLink: "https://urban-trafficai.com",
-    imageUrl: "/mobile/MindsAppart/project.png",
+      "We're thrilled to announce that our very first Power Intern of the Month for April 2025 is none other than our UI/UX Designer Intern — Md Muhib Monoar! Md Muhib has consistently demonstrated creativity, dedication, and a strong sense of ownership in every project he's been part of. His contributions have not only elevated our design quality but also inspired the team to push boundaries.",
+    projectLink:
+      "https://www.linkedin.com/posts/fourbtech_introducing-our-first-power-intern-of-the-activity-7324294094459961345-qJ-k?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4LWmYB86_zGEarK30a_jAK2aUQ-BwTK6c",
+    imageUrl: "/images/powerIntern.jpg",
   },
 ];
 
@@ -234,7 +219,7 @@ export const employees: Employee[] = [
     description:
       "Business development executive at FourBtech.<br/>Executive Officer at Costa outfitters.<br/>Worked at Jamuna group head Office.<br/>Front Desk Officer at Hotel Ashrafee.",
     email: "",
-    linkedin: "www.linkedin.com/in/ richard-costa-3952",
+    linkedin: "https://www.linkedin.com/in/richard-costa-395210250/",
   },
 ];
 
@@ -244,35 +229,35 @@ export const services: Services[] = [
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
     icon: "/service/web dev.svg",
-    link: "/web-development",
+    link: "/Services/web-development",
   },
   {
     title: "Mobile Development",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
     icon: "/service/app dev.svg",
-    link: "/web-development",
+    link: "/Services/mobile-apps",
   },
   {
     title: "Digital Product Design",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
     icon: "/service/product design.svg",
-    link: "/web-development",
+    link: "/",
   },
   {
     title: "Digital Marketing",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
     icon: "/service/digital marketing.svg",
-    link: "/web-development",
+    link: "/Services/digital-marketing",
   },
   {
     title: "SEO Optimisation",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
     icon: "/service/seo.svg",
-    link: "/web-development",
+    link: "/",
   },
   {
     title: "Video Production & Motion Design",
