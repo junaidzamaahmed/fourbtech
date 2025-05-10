@@ -1,38 +1,37 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination } from "swiper/modules"
-import type { Swiper as SwiperType } from "swiper"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { NavigationButtons } from "@/components/global/NavigationButton"
-import { customerFeedbacks } from "@/constants"
+import { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { NavigationButtons } from "@/components/global/NavigationButton";
+import { customerFeedbacks } from "@/constants";
 
 // Import Swiper styles
-import "swiper/css"
-import "swiper/css/pagination"
+import "swiper/css";
+import "swiper/css/pagination";
 
 const CustomerFeedback = () => {
-  const swiperRef = useRef<SwiperType | null>(null)
+  const swiperRef = useRef(null);
 
   return (
     <section className="main-container">
       <div className="flex-center mb-8 flex-col sm:mb-16">
         <h1 className="text-h1-color">Our Customer Feedback</h1>
-        <p className="text-p-color capitalize">Don&apos;t take our word for it, Trust our customers</p>
+        <p className="text-p-color capitalize">
+          Don&apos;t take our word for it, Trust our customers
+        </p>
       </div>
       <div className="relative">
         <Swiper
-          onSwiper={(swiper) => {
-            swiperRef.current = swiper
-          }}
+          ref = {swiperRef}
           modules={[Navigation, Pagination]}
           spaceBetween={30}
           slidesPerView={1}
           loop={true}
           pagination={{
             clickable: true,
-            el: ".custom-pagination-customer",
+            el: ".customerFeedBack",
             renderBullet: () => "",
           }}
           className="pb-14"
@@ -45,7 +44,10 @@ const CustomerFeedback = () => {
                   <p className="text-center">{data.feedback}</p>
                   <div className="flex items-center justify-center gap-3">
                     <Avatar>
-                      <AvatarImage src={data.avatarUrl || "/placeholder.svg"} alt={`${data.name}'s avatar`} />
+                      <AvatarImage
+                        src={data.avatarUrl || "/placeholder.svg"}
+                        alt={`${data.name}'s avatar`}
+                      />
                       <AvatarFallback>
                         {data.name
                           .split(" ")
@@ -62,22 +64,20 @@ const CustomerFeedback = () => {
               </div>
             </SwiperSlide>
           ))}
-          <div className="custom-pagination-customer mt-6 flex items-center justify-center"></div>
+          <div className="customerFeedBack mt-6 flex items-center justify-center"></div>
           <div className="mt-5"></div>
 
           {/* Navigation Buttons */}
           <NavigationButtons
             totalSlides={customerFeedbacks.length}
             swiperRef={swiperRef}
-            customClass="custom-pagination-customer bg-accent-hover"
+            customClass="customerFeedBack bg-accent-hover"
           />
-          <div className="mb-4"></div>
+          <div className="mb-16"></div>
         </Swiper>
       </div>
     </section>
-  )
-}
+  );
+};
 
-
-export default CustomerFeedback
-
+export default CustomerFeedback;

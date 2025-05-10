@@ -174,12 +174,12 @@ export const employees: Employee[] = [
     linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
   },
   {
-    name: "Himu_Chowdhury",
+    name: "Himu Chowdhury",
     role: "Co-Founder & CEO",
     image: "/members/Himu_Chowdhury.png",
     description:
       "Former Mobile Application Developer at PMT LLC, Tokyo, Japan <br/>Former Software Engineer at Togo and Webit, Okinawa, Japan <br/>Former Team Lead at SmartMux LTD BSc in Computer Science and Engineering (National University) ",
-    email: "himu.chowdhury01@gmail.com",
+    email: "himu.chowdhury@fourbtech.com",
     linkedin: "https://www.linkedin.com/in/himu-chowdhury/",
   },
   {
@@ -188,17 +188,17 @@ export const employees: Employee[] = [
     image: "/members/Junaid_Ahmed_Zama.png",
     description:
       "Former Founder of Zobotics IT<br/>Former Web Developer at Raqamisuq<br/>BSc. in Computer Science and <br/>Engineering (BRAC University)",
-    email: "https://twitter.com/kazirafiqual",
-    linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
+    email: "junaid@fourbtech.com",
+    linkedin: "https://www.linkedin.com/in/junaidahmedzama",
   },
   {
     name: "Mohammad Titon",
     role: "Digital Marketing Specialist",
     image: "/members/Mohammad_Titon.png",
     description:
-      "Consultant for Data-Driven Digital <br/>Strategies - Freelance <br/>Expert in SEO, Social Media Marketing & <br/> Performance Ads <br/> Certified – Creative IT Institute <br/> Skilled in PHP, Laravel & Vue.js.",
-    email: "https://twitter.com/kazirafiqual",
-    linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
+      "Consultant for Data-Driven Digital <br/>Strategies - Freelance <br/>Expert in SEO, Social Media Marketing & <br/> Performance Ads <br/> Certified Creative IT Institute <br/> Skilled in PHP, Laravel & Vue.js.",
+    email: "mrtiton@fourbtech.com",
+    linkedin: "https://www.linkedin.com/in/md-titon-357816243",
   },
   {
     name: "Hirok Roy Rahul",
@@ -206,8 +206,8 @@ export const employees: Employee[] = [
     image: "/members/Hirok_Roy_Rahul.png",
     description:
       "Former Web Developer at  Nebulae-Soft<br/>Junior Machine Vision Engineer at BRACU  Duburi<br/>BS.c in computer science & Engineering (BRAC University) ",
-    email: "https://twitter.com/kazirafiqual",
-    linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
+    email: "hirokrr@fourbtech.com",
+    linkedin: "https://www.linkedin.com/in/hirokrr",
   },
   {
     name: "A F M Shabbir khan",
@@ -215,8 +215,8 @@ export const employees: Employee[] = [
     image: "/members/A_F_M_Shabbir_khan.png",
     description:
       "Flutter Developer for Cross-Platform <br/> Mobile Apps - Freelance,<br/> Diploma in Computer - SSR Institute<br/> of Technology & Management",
-    email: "https://twitter.com/kazirafiqual",
-    linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
+    email: "afmsabbirkhan@fourbtech.com",
+    linkedin: "https://www.linkedin.com/in/afmsabbirkhan/",
   },
   {
     name: "Md Muhib Monowar",
@@ -224,8 +224,17 @@ export const employees: Employee[] = [
     image: "/members/Muhib_Monoar.png",
     description:
       "UI Designer - MediMontro App <br/>Professional UI/UX Designer - Freelance <br/>Complete Web & Mobile Design - ZTM <br/>Academy, Toronto",
-    email: "https://twitter.com/kazirafiqual",
-    linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/muhibmonoar/",
+  },
+  {
+    name: "Richard Costa",
+    role: "Business development executive",
+    image: "",
+    description:
+      "Business development executive at FourBtech.<br/>Executive Officer at Costa outfitters.<br/>Worked at Jamuna group head Office.<br/>Front Desk Officer at Hotel Ashrafee.",
+    email: "",
+    linkedin: "www.linkedin.com/in/ richard-costa-3952",
   },
 ];
 
@@ -234,42 +243,42 @@ export const services: Services[] = [
     title: "Web Development",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
-    icon: "/icons/code.svg",
+    icon: "/service/web dev.svg",
     link: "/web-development",
   },
   {
     title: "Mobile Development",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
-    icon: "/service/mobile.svg",
+    icon: "/service/app dev.svg",
     link: "/web-development",
   },
   {
     title: "Digital Product Design",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
-    icon: "/service/dot dot.svg",
+    icon: "/service/product design.svg",
     link: "/web-development",
   },
   {
     title: "Digital Marketing",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
-    icon: "/service/speakerphone.svg",
+    icon: "/service/digital marketing.svg",
     link: "/web-development",
   },
   {
     title: "SEO Optimisation",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
-    icon: "/service/search.svg",
+    icon: "/service/seo.svg",
     link: "/web-development",
   },
   {
     title: "Video Production & Motion Design",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
-    icon: "/service/film.svg",
+    icon: "/service/video production.svg",
     link: "/",
   },
 ];

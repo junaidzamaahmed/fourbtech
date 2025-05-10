@@ -58,7 +58,6 @@ const AboutFeedBack = () => {
               </div>
             </SwiperSlide>
           ))}
-          <div className="mb-4"></div>
         </Swiper>
       </div>
     </section>

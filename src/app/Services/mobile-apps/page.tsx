@@ -139,7 +139,7 @@ const page = () => {
           </div>
           <div className="">
             <ArrowButton variant="outline" right className="!px-7 !py-5">
-              <Link href="/">Get In touch</Link>
+              <Link href="/#contact">Get In touch</Link>
             </ArrowButton>
           </div>
         </div>

@@ -61,7 +61,7 @@ const page = () => {
           </p>
           <div className="">
             <ArrowButton variant="blueOutline" right className="!px-6 !py-6">
-              <Link href="/">Get In touch</Link>
+              <Link href="/#contact">Get In touch</Link>
             </ArrowButton>
           </div>
         </div>
@@ -76,7 +76,7 @@ const page = () => {
           to help you achieve real, measurable results.
         </p>
         <ArrowButton variant="fill" size={20} left className="!py-5">
-          <Link href="/">get free seo consultation</Link>
+          <Link href="/#contact">get free seo consultation</Link>
         </ArrowButton>
       </section>
       {/* SEO Explainded */}

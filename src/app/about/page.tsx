@@ -68,7 +68,7 @@ const page = () => {
             })}
           </div>
           <ArrowButton variant="fill" className="!py-5" left size={24}>
-            <Link href={"/contactus"}>See Our Products</Link>
+            <Link href={"/"}>See Our Products</Link>
           </ArrowButton>
         </div>
       </section>

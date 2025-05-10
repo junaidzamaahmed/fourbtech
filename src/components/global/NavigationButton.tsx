@@ -22,7 +22,7 @@ export function NavigationButtons({
     <div className="mb-5 flex items-center justify-center gap-10 px-4">
       <button
         onClick={() => swiper.slidePrev()}
-        className="bg-background/80 hover:bg-custom-white hover:text-dark-bg-primary hover:outline-dark-bg-primary flex h-10 w-10 cursor-pointer items-center justify-center rounded-full shadow-md backdrop-blur-sm transition-all hover:outline-2 focus:outline-none"
+        className="bg-background/80 hover:bg-custom-white hover:text-dark-bg-primary hover:outline-dark-bg-primary flex h-10 w-10 cursor-pointer items-center justify-center rounded-full shadow-md backdrop-blur-sm transition-all hover:outline-2"
         aria-label="Previous slide"
       >
         <ChevronLeft className="h-6 w-6" />

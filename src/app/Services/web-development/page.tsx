@@ -189,7 +189,7 @@ const page = () => {
           solutions.
         </h2>
         <ArrowButton variant="fill" size={20} left className="!py-5">
-          <Link href="/">Let&apos;s Talk</Link>
+          <Link href="/#contact">Let&apos;s Talk</Link>
         </ArrowButton>
       </section>
       {/* Backend Development servie */}
@@ -376,7 +376,7 @@ const page = () => {
           application
         </h2>
         <ArrowButton variant="fill" size={20} left className="!py-5">
-          <Link href="/">Get In touch</Link>
+          <Link href="/#contact">Get In touch</Link>
         </ArrowButton>
       </section>
       {/* Industry Support */}
@@ -389,7 +389,7 @@ const page = () => {
           development services.
         </h2>
         <ArrowButton variant="fill" size={20} left>
-          <Link href="/">Get In touch</Link>
+          <Link href="/#contact">Get In touch</Link>
         </ArrowButton>
       </section>
       {/* Why us */}

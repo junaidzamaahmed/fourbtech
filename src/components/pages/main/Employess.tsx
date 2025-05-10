@@ -34,7 +34,7 @@ const EmployeeCard = ({
       <CardHeader className="flex flex-col items-center justify-center space-y-3">
         <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
           <Image
-            src={image || "/placeholder.svg"}
+            src={image || `https://placehold.co/600x400?text=${name}`}
             fill
             alt={name}
             className="object-cover object-center"
