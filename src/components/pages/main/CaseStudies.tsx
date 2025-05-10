@@ -39,18 +39,18 @@ const CaseStudies = () => {
     >
       <div className="mb-6 flex flex-col gap-4 sm:mb-10 sm:flex-row sm:items-center sm:justify-between md:mb-16">
         <span className="space-y-1">
-          <h1 className="text-custom-white">Case Studies</h1>
+          <h1 className="text-custom-white">our recent events</h1>
           <p className="text-custom-white/80 capitalize">
-            Proven Solution Tailored to your business needs
+            A Timeless Showcase of Cherished Occasions{" "}
           </p>
         </span>
         <ArrowButton
           right
           variant="outline"
           size={24}
-          className="!border-custom-white !text-custom-white/70 hover:!text-custom-white self-start !py-7 sm:self-center"
+          className="!border-custom-white !text-custom-white/70 hover:!text-custom-white self-start !py-6 sm:self-center"
         >
-          <Link href="/">view all cases</Link>
+          <Link href="/">view all</Link>
         </ArrowButton>
       </div>
       <div className="relative">
@@ -69,14 +69,14 @@ const CaseStudies = () => {
         >
           {projectShowcaseData.map((data, index) => (
             <SwiperSlide key={index}>
-              <div className="flex flex-col overflow-hidden rounded-xl shadow-lg sm:grid sm:grid-cols-2">
-                <div className="relative h-full">
+              <div className="grid grid-cols-1 overflow-hidden rounded-xl shadow-lg sm:grid-cols-2">
+                <div className="relative h-56 w-full sm:h-full">
                   <Image
                     src={data.imageUrl || "/placeholder.svg"}
                     fill
                     alt={data.title}
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    // sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <div className="bg-custom-white flex flex-col justify-between gap-4 p-6 md:p-8 lg:p-10">
@@ -96,9 +96,9 @@ const CaseStudies = () => {
                       right
                       variant="noOutline"
                       size={20}
-                      className="inline-flex !pl-0"
+                      className="hover:!bg-accent-hover inline-flex hover:!text-white"
                     >
-                      <Link href={data.projectLink}>View Project</Link>
+                      <Link href={data.projectLink}>View</Link>
                     </ArrowButton>
                   </div>
                 </div>

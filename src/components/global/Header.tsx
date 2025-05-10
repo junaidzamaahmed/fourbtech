@@ -47,13 +47,15 @@ const Header = () => {
     if (currentScrollY === 0) {
       setIsNavVisible(true);
     } else if (currentScrollY > lastScrollY) {
-      setIsNavVisible(false);
+      if (mobileMenu === false) {
+        setIsNavVisible(false);
+      }
     } else {
       setIsNavVisible(true);
     }
 
     setLastScrollY(currentScrollY);
-  }, [currentScrollY, lastScrollY]);
+  }, [currentScrollY, lastScrollY, mobileMenu]);
 
   useEffect(() => {
     // Avoid animations on first load or excessive re-renders
@@ -191,12 +193,12 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <div className="sm:hidden">
               <button
-                className="hover:text-accent-hover z-50 flex cursor-pointer items-center justify-center text-black"
+                className="hover:text-accent-hover absolute top-5 right-7 z-50 cursor-pointer text-black"
                 onClick={() => setMobileMenu((prev) => !prev)}
                 aria-label={mobileMenu ? "Close menu" : "Open menu"}
               >
                 {mobileMenu ? (
-                  <X className="h-8 w-8" />
+                  <X className="h-8 w-8 text-white" />
                 ) : (
                   <Menu className="h-8 w-8" />
                 )}
@@ -288,8 +290,8 @@ const Header = () => {
                       variant="fill"
                     >
                       <Link
-                        href="/contact"
-                        className="w-full text-center"
+                        href="/#contact"
+                        className="text-cente w-full"
                         onClick={closeMobileMenu}
                       >
                         Let&apos;s talk

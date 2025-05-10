@@ -243,7 +243,7 @@ const page = () => {
                 height={20}
                 alt="html"
               />
-              <span className="text-gray-700">python Development</span>
+              <span className="text-gray-700">Python Development</span>
             </div>
             <div className="flex items-center gap-2">
               <Image
@@ -262,6 +262,15 @@ const page = () => {
                 alt="html"
               />
               <span className="text-gray-700">Laravel Development</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Image
+                src="/Icons/Web/nodejs.png"
+                width={40}
+                height={40}
+                alt="html"
+              />
+              <span className="text-gray-700">Node Js Development</span>
             </div>
           </div>
         </div>

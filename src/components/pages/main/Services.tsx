@@ -77,8 +77,8 @@ const Services = () => {
           {
             autoAlpha: 1,
             y: 0,
-            duration: 1,
-            delay: i * 0.2,
+            duration: 0.6,
+            delay: i * 0.1,
             ease: "power3.out",
             scrollTrigger: {
               trigger: card,
