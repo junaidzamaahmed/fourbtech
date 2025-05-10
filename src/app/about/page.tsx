@@ -5,9 +5,18 @@ import CompanyProfile from "@/components/pages/main/Company Profile";
 import Employees from "@/components/pages/main/Employess";
 import Insides from "@/components/pages/main/Insides";
 import { services } from "@/constants";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "FourBtech | About US",
+  description: "Tech Service Provider",
+  icons: {
+    icon: "/Primary logo.svg",
+  },
+};
 
 const page = () => {
   return (

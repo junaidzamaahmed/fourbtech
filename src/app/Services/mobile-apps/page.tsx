@@ -3,9 +3,18 @@ import Benefites from "@/components/pages/app-dev/Benifites";
 import OurExparties from "@/components/pages/app-dev/IndustryExparties";
 import Minds_Apart from "@/components/pages/app-dev/MindsAprat";
 import { CheckCircle } from "lucide-react";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "FourBtech | Services",
+  description: "Tech Service Provider",
+  icons: {
+    icon: "/Primary logo.svg",
+  },
+};
 
 const page = () => {
   return (

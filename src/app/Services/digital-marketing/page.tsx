@@ -6,6 +6,15 @@ import { BoostRanking, SEO_Details } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "FourBtech | Services",
+  description: "Tech Service Provider",
+  icons: {
+    icon: "/Primary logo.svg",
+  },
+};
 
 const page = () => {
   return (
@@ -21,7 +30,7 @@ const page = () => {
             priority
           />
           <div className="relative z-10 text-center">
-            <h1 className="mb-2 font-semibold text-custom-white">
+            <h1 className="text-custom-white mb-2 font-semibold">
               Digital Marketing
             </h1>
             <div className="flex items-center justify-center gap-2 text-gray-300">
@@ -70,7 +79,9 @@ const page = () => {
       <MarketingAgencyService />
       {/* Get Inspired. Get Informed. Get Started. */}
       <section className="main-container flex-center mb-32 flex-col pb-32 text-center *:max-w-[95%]">
-        <h2  className="text-h2-color mb-3 text-4xl font-semibold">Get Inspired. Get Informed. Get Started.</h2>
+        <h2 className="text-h2-color mb-3 text-4xl font-semibold">
+          Get Inspired. Get Informed. Get Started.
+        </h2>
         <p className="">
           Discover powerful ideas, transparent pricing, and a clear path forward
           to help you achieve real, measurable results.
@@ -87,7 +98,7 @@ const page = () => {
       </section>
       {/* Boost Your Rankings and Drive Organic Traffic */}
       <section className="main-container">
-        <h1 className="text-h1-color mb-3 text-center  font-semibold">
+        <h1 className="text-h1-color mb-3 text-center font-semibold">
           Boost Your Rankings and Drive Organic Traffic
         </h1>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
