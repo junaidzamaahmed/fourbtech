@@ -155,7 +155,7 @@ export const employees: Employee[] = [
     image: "/members/kazi_rafiqual_islam.png",
     description:
       "B.Sc. Engr. MechanicalDET) <br/>M.Sc. Engr. PMRE - Non-thesis (BUET) <br/>MBA-SSM-Switzerland <br/>MSc Digital Marketing - I-JWL London <br/>Doctor of Business Administration <br/>(DBA) in progress)- I-JWL London.",
-    email: "https://twitter.com/kazirafiqual",
+    email: "kazi@fourbtech.com",
     linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
   },
   {
@@ -167,6 +167,7 @@ export const employees: Employee[] = [
     email: "himu.chowdhury@fourbtech.com",
     linkedin: "https://www.linkedin.com/in/himu-chowdhury/",
   },
+
   {
     name: "Junaid Ahmed Zama",
     role: "Software Engineer",
@@ -175,6 +176,15 @@ export const employees: Employee[] = [
       "Former Founder of Zobotics IT<br/>Former Web Developer at Raqamisuq<br/>BSc. in Computer Science and <br/>Engineering (BRAC University)",
     email: "junaid@fourbtech.com",
     linkedin: "https://www.linkedin.com/in/junaidahmedzama",
+  },
+  {
+    name: "Richard Costa",
+    role: "Business development executive",
+    image: "/members/RichardCosta.jpg",
+    description:
+      "Business development executive at FourBtech.<br/>Executive Officer at Costa outfitters.<br/>Worked at Jamuna group head Office.<br/>Front Desk Officer at Hotel Ashrafee.",
+    email: "richard@fourbtech.com",
+    linkedin: "https://www.linkedin.com/in/richard-costa-395210250/",
   },
   {
     name: "Mohammad Titon",
@@ -209,17 +219,8 @@ export const employees: Employee[] = [
     image: "/members/Muhib_Monoar.png",
     description:
       "UI Designer - MediMontro App <br/>Professional UI/UX Designer - Freelance <br/>Complete Web & Mobile Design - ZTM <br/>Academy, Toronto",
-    email: "",
+    email: "muhib@fourbtech.com",
     linkedin: "https://www.linkedin.com/in/muhibmonoar/",
-  },
-  {
-    name: "Richard Costa",
-    role: "Business development executive",
-    image: "",
-    description:
-      "Business development executive at FourBtech.<br/>Executive Officer at Costa outfitters.<br/>Worked at Jamuna group head Office.<br/>Front Desk Officer at Hotel Ashrafee.",
-    email: "",
-    linkedin: "https://www.linkedin.com/in/richard-costa-395210250/",
   },
 ];
 
@@ -229,14 +230,14 @@ export const services: Services[] = [
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
     icon: "/service/web dev.svg",
-    link: "/Services/web-development",
+    link: "/services/web-development",
   },
   {
-    title: "Mobile Development",
+    title: "Mobile Application Development",
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
     icon: "/service/app dev.svg",
-    link: "/Services/mobile-apps",
+    link: "/services/mobile-apps",
   },
   {
     title: "Digital Product Design",
@@ -250,7 +251,7 @@ export const services: Services[] = [
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
     icon: "/service/digital marketing.svg",
-    link: "/Services/digital-marketing",
+    link: "/services/digital-marketing",
   },
   {
     title: "SEO Optimisation",

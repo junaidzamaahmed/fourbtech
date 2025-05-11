@@ -3,7 +3,7 @@ import AboutFeedBack from "@/components/pages/about/AboutFeedBack";
 // import AboutMarquee from "@/components/pages/about/AboutMarquee";
 import CompanyProfile from "@/components/pages/main/Company Profile";
 import Employees from "@/components/pages/main/Employess";
-import Insides from "@/components/pages/main/Insides";
+// import Insides from "@/components/pages/main/Insides";
 import { services } from "@/constants";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -13,9 +13,6 @@ import React from "react";
 export const metadata: Metadata = {
   title: "FourBtech | About US",
   description: "Tech Service Provider",
-  icons: {
-    icon: "/Primary logo.svg",
-  },
 };
 
 const page = () => {
@@ -45,16 +42,16 @@ const page = () => {
       {/* What We Do*/}
       <section className="main-container grid grid-cols-1 gap-12 object-center !py-10 lg:grid-cols-2">
         <div className="flex flex-col items-start justify-center gap-4">
-          <p className="">What We Do</p>
+          <p>What We Do</p>
           <h1>
             Transforming Ideas Into Reality With Engaging Solutions by
             FourBTech.
           </h1>
           <p className="text-[clamp(.8rem, 2vw, 1rem)]">
-            At our IT Solutions & Services Agency agency, we specialize in
-            creating visually stunning and highly functional websites or mobile
-            apps that help businesses stand out in the digital world. Our team
-            of talented designers and developers are passionate about crafting
+            At our IT Solutions & Services Agency, we specialize in creating
+            visually stunning and highly functional websites or mobile apps that
+            help businesses stand out in the digital world. Our team of talented
+            designers and developers are passionate about crafting
           </p>
         </div>
         <div className="flex h-full w-full flex-col items-start justify-center gap-6">
@@ -71,13 +68,13 @@ const page = () => {
                       className="aspect-square object-contain p-[.6px]"
                     />
                   </div>
-                  <span className="text-gray-700">Website Development</span>
+                  <span className="text-gray-700">{service.title}</span>
                 </div>
               );
             })}
           </div>
           <ArrowButton variant="fill" className="!py-5" left size={24}>
-            <Link href={"/"}>See Our Products</Link>
+            <Link href={"/"}>See Our Services</Link>
           </ArrowButton>
         </div>
       </section>
@@ -120,7 +117,7 @@ const page = () => {
           <div className="**:text-[clamp(.7rem, 2vw, .9rem)] grid grid-cols-2 gap-4 pt-4 text-[.8rem] sm:text-[.9rem]">
             <div className="flex items-center gap-2">
               <Image src="/about/team.png" width={30} height={30} alt="html" />
-              <span className="text-gray-700">ALL-In-One Team</span>
+              <span className="text-gray-700">All-in-one Team</span>
             </div>
             <div className="flex items-center gap-2">
               <Image
@@ -168,7 +165,7 @@ const page = () => {
       <Employees isHome={false} />
       <AboutFeedBack />
       {/* Why us */}
-      <Insides />
+      {/* <Insides /> */}
       <div className="mb-24" />
     </main>
   );

@@ -4,14 +4,11 @@ import CompanyProfile from "@/components/pages/main/Company Profile";
 import ContactUS from "@/components/pages/main/ContactUS";
 import CustomerFeedBack from "@/components/pages/main/CustomerFeedBack";
 import Employess from "@/components/pages/main/Employess";
-import Insides from "@/components/pages/main/Insides";
+// import Insides from "@/components/pages/main/Insides";
 import Marquee from "@/components/pages/main/Marquee";
 import FaqSection from "@/components/pages/main/Questions";
 import Services from "@/components/pages/main/Services";
 import Link from "next/link";
-
-
-
 
 export default function Home() {
   return (
@@ -97,8 +94,11 @@ export default function Home() {
               left
               size={30}
             >
-              <Link href="/" className="text-base sm:text-lg">
-                See our products
+              <Link
+                href={{ pathname: "/", hash: "services" }}
+                className="text-base sm:text-lg"
+              >
+                See our services
               </Link>
             </ArrowButton>
             <ArrowButton
@@ -107,14 +107,17 @@ export default function Home() {
               className="!py-6 md:!py-8 lg:!py-8"
               size={30}
             >
-              <Link href="/" className="text-base sm:text-lg">
+              <Link
+                href={{ pathname: "/", hash: "contact" }}
+                className="text-base sm:text-lg"
+              >
                 Talk to us
               </Link>
             </ArrowButton>
           </div>
 
           {/* Marquee */}
-          <div className="mt-8 -mb-6 w-screen">
+          <div className="mt-8 -mb-6 w-[98vw]">
             <Marquee />
           </div>
         </div>
@@ -127,7 +130,7 @@ export default function Home() {
       <FaqSection />
       <ContactUS />
       <CustomerFeedBack />
-      <Insides />
+      {/* <Insides /> */}
     </main>
   );
 }

@@ -11,9 +11,6 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "FourBtech | Services",
   description: "Tech Service Provider",
-  icons: {
-    icon: "/Primary logo.svg",
-  },
 };
 
 const page = () => {
@@ -70,7 +67,9 @@ const page = () => {
           </p>
           <div className="">
             <ArrowButton variant="blueOutline" right className="!px-6 !py-6">
-              <Link href="/#contact">Get In touch</Link>
+              <Link href={{ pathname: "/", hash: "contact" }}>
+                Get In touch
+              </Link>
             </ArrowButton>
           </div>
         </div>
@@ -87,7 +86,9 @@ const page = () => {
           to help you achieve real, measurable results.
         </p>
         <ArrowButton variant="fill" size={20} left className="!py-5">
-          <Link href="/#contact">get free seo consultation</Link>
+          <Link href={{ pathname: "/", hash: "contact" }}>
+            get free seo consultation
+          </Link>
         </ArrowButton>
       </section>
       {/* SEO Explainded */}

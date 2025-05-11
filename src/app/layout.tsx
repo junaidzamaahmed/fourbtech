@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import Header from "@/components/global/Header";
 import Footer from "@/components/global/Footer";
-import SmoothScrollLayout from "@/components/global/SmoothScroll";
+// import SmoothScrollLayout from "@/components/global/SmoothScroll";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -16,9 +16,6 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "FourBtech",
   description: "Tech Service Provider",
-  icons: {
-    icon: "/Primary logo.svg",
-  },
 };
 
 export default function RootLayout({
@@ -27,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body className={`${poppins.className} antialiased`}>
         <ThemeProvider
           attribute="class"
@@ -36,10 +33,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <SmoothScrollLayout>
-            <div className="mt-24">{children}</div>
-            <Footer />
-          </SmoothScrollLayout>
+          {/* <SmoothScrollLayout> */}
+          <div className="mt-24">{children}</div>
+          <Footer />
+          {/* </SmoothScrollLayout> */}
         </ThemeProvider>
       </body>
     </html>

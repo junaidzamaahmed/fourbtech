@@ -11,9 +11,6 @@ import React from "react";
 export const metadata: Metadata = {
   title: "FourBtech | Services",
   description: "Tech Service Provider",
-  icons: {
-    icon: "/Primary logo.svg",
-  },
 };
 
 const page = () => {
@@ -120,7 +117,7 @@ const page = () => {
             alt="development"
           />
         </div>
-        <div className="order-2 flex flex-col items-start justify-center gap-4 h-full">
+        <div className="order-2 flex h-full flex-col items-start justify-center gap-4">
           <h1 className="text-h1-color mb-3 font-semibold">
             Development Tools
           </h1>
@@ -130,7 +127,7 @@ const page = () => {
             Devices And Pperating Systems, Enhancing Efficiency And Cutting Down
             Costs.
           </p>
-          <div className="flex w-full items-center gap-6 pt-4 text-[.8rem] sm:text-[.9rem] ">
+          <div className="flex w-full items-center gap-6 pt-4 text-[.8rem] sm:text-[.9rem]">
             <div className="relative h-20 w-20 md:h-16 md:w-16">
               <Image
                 src="/Icons/app/react-native.png"
@@ -148,7 +145,9 @@ const page = () => {
           </div>
           <div className="">
             <ArrowButton variant="outline" right className="!px-7 !py-5">
-              <Link href="/#contact">Get In touch</Link>
+              <Link href={{ pathname: "/", hash: "contact" }}>
+                Get In touch
+              </Link>
             </ArrowButton>
           </div>
         </div>
@@ -158,9 +157,7 @@ const page = () => {
       {/* Our Methodology */}
       <section className="main-container grid grid-cols-1 gap-12 object-center !pb-32 lg:grid-cols-2">
         <div className="flex flex-col items-start justify-center gap-6">
-          <h1 className="text-h1-color mb-3 font-semibold">
-            Our Methodology
-          </h1>
+          <h1 className="text-h1-color mb-3 font-semibold">Our Methodology</h1>
           <p className="text-[clamp(.8rem, 2vw, 1rem)]">
             Our approach sets us apart as the preferred partner for outsourced
             mobile application development and software engineering solutions.

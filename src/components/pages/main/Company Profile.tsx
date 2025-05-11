@@ -72,7 +72,7 @@ const CompanyProfile = ({ isHome = true }: { isHome?: boolean }) => {
         <ArrowButton
           left={true}
           variant="outline"
-          className="hover:!text-custom-white"
+          className="hover:!text-custom-white border-white/40 !text-white/60 hover:border-white"
         >
           <Link href="/about">MORE ABOUT US</Link>
         </ArrowButton>

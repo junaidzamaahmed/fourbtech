@@ -92,7 +92,10 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="main-container my-28 flex flex-col items-center justify-between gap-14">
+    <div
+      id="services"
+      className="main-container my-28 flex flex-col items-center justify-between gap-14"
+    >
       <div className="text-center">
         <h1 className="mb-3">Our Services</h1>
         <p>
