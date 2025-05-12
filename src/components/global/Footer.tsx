@@ -5,7 +5,7 @@ import { CiPaperplane } from "react-icons/ci";
 import { Input } from "../ui/input";
 import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { useState } from "react";
-import SecondaryLogo from "../../../public/Secondary logo.svg"
+import SecondaryLogo from "../../../public/Secondary logo.svg";
 
 const Footer = () => {
   const [sendMail, setSendMail] = useState("");
@@ -57,9 +57,24 @@ const Footer = () => {
         {/* Contact Info */}
         <div className="flex flex-col gap-4">
           <h3 className="text-lg font-semibold">Contact Us</h3>
-          <p className="text-custom-white/70 text-sm">info@fourbtech.com</p>
-          <p className="text-custom-white/70 text-sm">UK: +44 7424 438741</p>
-          <p className="text-custom-white/70 text-sm">BD: +880 1674 982831</p>
+          <Link
+            href={"mailto:info@fourbtech.com"}
+            className="text-custom-white/70 text-sm lowercase"
+          >
+            info@fourbtech.com
+          </Link>
+          <Link
+            href={"tel:+447424438741"}
+            className="text-custom-white/70 text-sm"
+          >
+            UK: +44 7424 438741
+          </Link>
+          <Link
+            href={"tel:+8801674982831"}
+            className="text-custom-white/70 text-sm"
+          >
+            BD: +880 1674 982831
+          </Link>
         </div>
 
         {/* Social Media */}
@@ -67,12 +82,14 @@ const Footer = () => {
           <h3 className="text-lg font-semibold">Follow Us</h3>
           <div className="flex gap-4">
             <Link
+              target="_blank"
               href="https://www.linkedin.com/company/fourbtech/"
               className="border-custom-white hover:bg-custom-white/20 rounded-full border p-2 transition"
             >
               <FaLinkedinIn className="text-xl" />
             </Link>
             <Link
+              target="_blank"
               href="https://www.facebook.com/fourbtech.ltd"
               className="border-custom-white hover:bg-custom-white/20 rounded-full border p-2 transition"
             >
