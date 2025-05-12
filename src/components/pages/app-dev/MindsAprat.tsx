@@ -7,26 +7,28 @@ import {
 } from "@/components/ui/card";
 import { MindsApart } from "@/constants";
 import { Team } from "@/types";
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
 
 const WorkForceCard = ({ image, title, desc }: Team) => {
   return (
-    <Card className="border-dark-bg-primary/10 transform-all border-[1px] shadow-none duration-500 hover:drop-shadow-xl">
+    <Card className="border-dark-bg-primary/10 transform-all group border-[1px] shadow-none duration-500 hover:drop-shadow-xl">
       <CardHeader className="w-full">
         <div className="relative rounded-xl">
-          <Image
+          <img
             src={image}
             alt={title}
             width={256}
             height={144}
-            className="aspect-video w-full rounded-xl object-cover"
+            className="aspect-video h-full w-full rounded-xl object-cover duration-500 group-hover:scale-105"
           />
         </div>
       </CardHeader>
       <CardContent className="flex flex-col gap-3 *:text-start">
         <CardTitle>{title}</CardTitle>
-        <CardDescription>{desc}</CardDescription>
+        <CardDescription className="duration-300 group-hover:text-black/90">
+          {desc}
+        </CardDescription>
       </CardContent>
     </Card>
   );

@@ -1,19 +1,19 @@
 import { Card, CardTitle } from "@/components/ui/card";
 import { OurIndustryExperties } from "@/constants";
 import { WhyUsType } from "@/types";
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
 
 const OurServicesTold = ({ icon, title }: WhyUsType) => {
   return (
-    <Card className="border-dark-bg-primary/10 flex min-h-52 items-center justify-center border-[1px] p-5 shadow-none transition-all duration-500 hover:drop-shadow-xl">
+    <Card className="border-dark-bg-primary/10 group flex min-h-52 items-center justify-center border-[1px] p-5 shadow-none transition-all duration-500 hover:drop-shadow-xl">
       <div className="h-full w-full">
-        <Image
+        <img
           src={icon}
           width={300}
           height={120}
           alt={title}
-          className="object-cover transition-transform duration-500 hover:scale-105"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
       <div>

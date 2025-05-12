@@ -8,7 +8,7 @@ import Link from "next/link";
 import React from "react";
 import CodingPng from "../../../../public/coding.png";
 import webDev from "../../../../public/webDev/pwds.png";
-import frontend from "../../../../public/webDev/frontend.png";
+import frontend from "../../../../public/webDev/front_end.png";
 import htmlIcon from "../../../../public/Icons/Web/html.png";
 import react from "../../../../public/Icons/Web/react.png";
 import CSSDev from "../../../../public/Icons/Web/css.png";
@@ -38,10 +38,10 @@ const page = () => {
     <main className="bg-custom-white">
       {/* Video and header  */}
       <section className="relative mb-14">
-        <div className="relative flex h-[300px] w-full items-center justify-center bg-gray-900">
+        <div className="relative flex h-[300px] sm:h-[400px] w-full items-center justify-center bg-gray-900">
           <Image
             src={CodingPng}
-            alt="Code background"
+            alt="Web Development"
             fill
             className="object-cover opacity-50"
             priority
@@ -62,9 +62,9 @@ const page = () => {
       </section>
       {/* Comprehensove custom full-stack service */}
       <section className="main-container flex-center flex-center mb-32 flex-col text-center *:max-w-[95%]">
-        <h2 className="mb-5">
+        <h1 className="mb-5">
           Comprehensive Custom Full-Stack Web Development Services
-        </h2>
+        </h1>
         <p className="leading-6">
           Need A Tailored Web Solution For Your Project? Fourbtech Provides
           Full-Stack Development Services Across The I-JK, Catering TO
@@ -75,10 +75,10 @@ const page = () => {
       {/* Professional web development */}
       <section className="main-container grid grid-cols-1 gap-12 object-center !pb-32 lg:grid-cols-2">
         <div className="order-2 flex flex-col items-start justify-center gap-4">
-          <h3 className="text-h2-color mb-3 text-4xl font-semibold">
+          <h1 className="text-h1-color">
             Professional Web Development Services
-          </h3>
-          <p className="text-[clamp(.8rem, 2vw, 1rem)]">
+          </h1>
+          <p className="">
             We&apos;ve Crafted A Range Ot Innovative Web Solutions For Startups.
             Established Businessesr And Entrepreneurs Alike. As A Dedicated Web
             Development Company, Our Mission Is TO Harness The Potential Of The
@@ -125,7 +125,7 @@ const page = () => {
             width={300}
             height={300}
             className="h-full w-full object-cover"
-            alt="development"
+            alt="Professional Web Development Services"
           />
         </div>
       </section>
@@ -141,10 +141,8 @@ const page = () => {
           />
         </div>
         <div className="order-2 flex flex-col items-start justify-center gap-4">
-          <h3 className="text-h2-color mb-3 text-4xl font-semibold">
-            Front-End Development Services
-          </h3>
-          <p className="text-[clamp(.8rem, 2vw, 1rem)]">
+          <h1 className="text-h1-color">Front-End Development Services</h1>
+          <p className="">
             Your website&apos;s frontend is the first and only point of contact
             with your potential customers. That&apos;s why a compelling design
             is essential to engage visitors, keep them interested, and drive
@@ -152,27 +150,57 @@ const page = () => {
           </p>
           <div className="**:text-[clamp(.7rem, 2vw, .9rem)] grid grid-cols-2 gap-4 pt-4 text-[.8rem] sm:text-[.9rem]">
             <div className="flex items-center gap-2">
-              <Image src={htmlIcon} width={20} height={20} alt="html" />
+              <Image
+                src={htmlIcon}
+                width={20}
+                height={20}
+                alt="html Development"
+              />
               <span className="text-gray-700">HTML Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src={react} width={20} height={20} alt="react" />
+              <Image
+                src={react}
+                width={20}
+                height={20}
+                alt="react Development"
+              />
               <span className="text-gray-700">React Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src={CSSDev} width={20} height={20} alt="html" />
+              <Image
+                src={CSSDev}
+                width={20}
+                height={20}
+                alt="CSS Development"
+              />
               <span className="text-gray-700">CSS Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src={bootstrap} width={20} height={20} alt="html" />
+              <Image
+                src={bootstrap}
+                width={20}
+                height={20}
+                alt="Bootstrap Development"
+              />
               <span className="text-gray-700">Bootstrap Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src={Js} width={20} height={20} alt="html" />
+              <Image
+                src={Js}
+                width={20}
+                height={20}
+                alt="JavaScript Development"
+              />
               <span className="text-gray-700">JavaScript Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src={Wordpress} width={20} height={20} alt="html" />
+              <Image
+                src={Wordpress}
+                width={20}
+                height={20}
+                alt="WordPress Development"
+              />
               <span className="text-gray-700">WordPress Development</span>
             </div>
           </div>
@@ -180,21 +208,21 @@ const page = () => {
       </section>
       {/* Looking to create - Let's talk */}
       <section className="main-container flex-center mb-32 flex-col pb-32 text-center *:max-w-[95%]">
-        <h2 className="mb-5">
+        <h1 className="mb-5">
           Looking to create user-focused websites that showcase your products
           effectively? Get in touch with us for responsive front-end development
           solutions.
-        </h2>
-        <ArrowButton variant="fill" size={20} left className="!py-5">
-          <Link href={{ pathname: "/", hash: "contact" }}>Let&apos;s Talk</Link>
-        </ArrowButton>
+        </h1>
+        <Link href={{ pathname: "/", hash: "contact" }}>
+          <ArrowButton variant="fill" size={20} left className="!py-5">
+            Let&apos;s Talk
+          </ArrowButton>
+        </Link>
       </section>
       {/* Backend Development servie */}
       <section className="main-container grid grid-cols-1 gap-12 object-center !pb-32 lg:grid-cols-2">
         <div className="order-2 flex flex-col items-start justify-center gap-6">
-          <h3 className="text-h2-color mb-3 text-4xl font-semibold">
-            Backend Development Services
-          </h3>
+          <h1 className="text-h1-color">Backend Development Services</h1>
           <p className="text-[clamp(.8rem, 2vw, 1rem)]">
             A well-optimised backend lays the foundation for sustainable and
             future- ready web applications. We design your web app&apos;s
@@ -207,28 +235,53 @@ const page = () => {
           </p>
           <div className="**:text-[clamp(.7rem, 2vw, .9rem)] grid grid-cols-2 gap-4 pt-4 text-[.8rem] sm:text-[.9rem]">
             <div className="flex items-center gap-2">
-              <Image src={PHP} width={20} height={20} alt="html" />
+              <Image src={PHP} width={20} height={20} alt="PHP Development" />
               <span className="text-gray-700">PHP Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src={torch} width={20} height={20} alt="react" />
+              <Image
+                src={torch}
+                width={20}
+                height={20}
+                alt="CodeIgniter Development"
+              />
               <span className="text-gray-700">CodeIgniter Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src={Python} width={20} height={20} alt="html" />
+              <Image
+                src={Python}
+                width={20}
+                height={20}
+                alt="Python Development"
+              />
               <span className="text-gray-700">Python Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src={redis} width={20} height={20} alt="html" />
+              <Image
+                src={redis}
+                width={20}
+                height={20}
+                alt="CakePHP Development"
+              />
               <span className="text-gray-700">CakePHP Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src={laravel} width={20} height={20} alt="html" />
+              <Image
+                src={laravel}
+                width={20}
+                height={20}
+                alt="Laravel Development"
+              />
               <span className="text-gray-700">Laravel Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src={nodejs} width={40} height={40} alt="html" />
-              <span className="text-gray-700">Node Js Development</span>
+              <Image
+                src={nodejs}
+                width={40}
+                height={40}
+                alt="Node Js Development"
+              />
+              <span className="text-gray-700">NodeJs Development</span>
             </div>
           </div>
         </div>
@@ -238,7 +291,7 @@ const page = () => {
             width={300}
             height={300}
             className="h-full w-full object-cover"
-            alt="development"
+            alt="Backend Development Services"
           />
         </div>
       </section>
@@ -250,14 +303,12 @@ const page = () => {
             width={300}
             height={300}
             className="h-full w-full object-cover"
-            alt="development"
+            alt="Web Consulting Service Services"
           />
         </div>
         <div className="order-2 flex flex-col items-start justify-center gap-6">
-          <h3 className="text-h2-color mb-3 text-4xl font-semibold">
-            Web Consulting Service Services
-          </h3>
-          <p className="text-[clamp(.8rem, 2vw, 1rem)]">
+          <h1 className="text-h2-color">Web Consulting Service Services</h1>
+          <p className="">
             Receive expert web development advice from seasoned industry
             professionals —partner with us to craft an effective development
             roadmap and growth strategy tailored to your business. Our
@@ -271,8 +322,8 @@ const page = () => {
                 src={Cloud}
                 width={30}
                 height={30}
-                alt="html"
-                className="bg-dark-bg-primary/10 aspect-square rounded-full p-1"
+                alt="Cloud Consulting"
+                className="bg-dark-bg-primary/10 aspect-square rounded-full object-contain p-1"
               />
               <span className="text-gray-700">Cloud Consulting</span>
             </div>
@@ -281,8 +332,8 @@ const page = () => {
                 src={globe}
                 width={30}
                 height={30}
-                alt="html"
-                className="bg-dark-bg-primary/10 aspect-square rounded-full p-1"
+                alt="Web Consulting"
+                className="bg-dark-bg-primary/10 aspect-square rounded-full object-contain p-1"
               />
               <span className="text-gray-700">Web Consulting</span>
             </div>
@@ -291,8 +342,8 @@ const page = () => {
                 src={technology}
                 width={30}
                 height={30}
-                alt="html"
-                className="bg-dark-bg-primary/10 aspect-square rounded-full p-1"
+                alt="Techonology Consultants"
+                className="bg-dark-bg-primary/10 aspect-square rounded-full object-contain p-1"
               />
               <span className="text-gray-700">Techonology Consultants</span>
             </div>
@@ -302,10 +353,8 @@ const page = () => {
       {/* Hire Dedicated Developers */}
       <section className="main-container grid grid-cols-1 gap-12 object-center !pb-32 lg:grid-cols-2">
         <div className="order-2 flex flex-col items-start justify-center gap-6">
-          <h3 className="text-h2-color mb-3 text-4xl font-semibold">
-            Hire Dedicated Web Developers
-          </h3>
-          <p className="text-[clamp(.8rem, 2vw, 1rem)]">
+          <h1 className="text-h2-color">Hire Dedicated Web Developers</h1>
+          <p className="">
             We&apos;ve Crafted A Range Of Innovative Web Solutions For Startups,
             Established Businesses, And Entrepreneurs Alike. AS A Dedicated Web
             Development Company, Our Mission IS To Harness The Potential Of The
@@ -347,26 +396,30 @@ const page = () => {
       </section>
       {/* Get In Touch */}
       <section className="main-container flex-center mb-32 flex-col pb-32 text-center *:max-w-[95%]">
-        <h2 className="mb-5">
+        <h1 className="mb-5">
           Our expert team can transform your vision into a cutting-edge web
           application
-        </h2>
-        <ArrowButton variant="fill" size={20} left className="!py-5">
-          <Link href={{ pathname: "/", hash: "contact" }}>Get In touch</Link>
-        </ArrowButton>
+        </h1>
+        <Link href={{ pathname: "/", hash: "contact" }}>
+          <ArrowButton variant="fill" size={20} left className="!py-5">
+            Get In touch
+          </ArrowButton>
+        </Link>
       </section>
       {/* Industry Support */}
       <IndustrySolution />
       {/* Partnering */}
-      <section className="main-container mb-32 flex flex-col items-center pb-32 text-center">
+      <section className="main-container my-24 flex flex-col items-center text-center">
         <h2 className="mb-5">
           Looking for a partner who truly understands your business? Get in
           touch with us —we&apos;re dedicated to providing top-tier custom web
           development services.
         </h2>
-        <ArrowButton variant="fill" size={20} left>
-          <Link href={{ pathname: "/", hash: "contact" }}>Get In touch</Link>
-        </ArrowButton>
+        <Link href={{ pathname: "/", hash: "contact" }}>
+          <ArrowButton variant="fill" size={20} left>
+            Get In touch
+          </ArrowButton>
+        </Link>
       </section>
       {/* Why us */}
       <WhyUs />

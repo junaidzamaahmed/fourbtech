@@ -154,7 +154,7 @@ export const employees: Employee[] = [
     role: "Co-Founder & Chairma",
     image: "/members/kazi_rafiqual_islam.png",
     description:
-      "B.Sc. Engr. MechanicalDET) <br/>M.Sc. Engr. PMRE - Non-thesis (BUET) <br/>MBA-SSM-Switzerland <br/>MSc Digital Marketing - I-JWL London <br/>Doctor of Business Administration <br/>(DBA) in progress)- I-JWL London.",
+      "Kazi Md R. Islam<br/>Co-Founder & Chairman<br/>B.Sc. Engr. Mech (DUET)<br/>M.Sc. Engr. (BUET) - Non-Thesis<br/>MBA-SSM-Switzerland<br/>MSc in Digital Marketing - UWL, London<br/>Doctorate of Business Administration <br/>In progress - UWL, London",
     email: "kazi@fourbtech.com",
     linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
   },

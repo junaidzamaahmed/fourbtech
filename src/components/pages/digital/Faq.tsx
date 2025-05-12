@@ -93,7 +93,7 @@ export default function FaqSeo() {
           {faqs.map((faq) => (
             <div
               key={faq.question}
-              className={`cursor-pointer p-4 ${activeQuestion === faq.question ? "bg-dark-bg-primary/10 border-blue-500 sm:border-r-4" : ""}`}
+              className={`p-4 ${activeQuestion === faq.question ? "bg-dark-bg-primary/10 border-blue-500 sm:border-r-4" : ""}`}
               onClick={() => setActiveQuestion(faq.question)}
             >
               <h3 className="font-medium">{faq.question}</h3>

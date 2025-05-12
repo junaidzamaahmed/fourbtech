@@ -7,8 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Metadata } from "next";
-import digital from "../../../public/digital/digital.png";
-import strategy from "../../../public/digital/strategy.png";
+import digital from "../../../../public/digital/digital.png";
+import strategy from "../../../../public/digital/strategy.png";
 
 export const metadata: Metadata = {
   title: "FourBtech | Services",
@@ -20,10 +20,10 @@ const page = () => {
     <main className="bg-custom-white">
       {/* Video and header  */}
       <section className="relative mb-14">
-        <div className="relative flex h-[300px] w-full items-center justify-center bg-gray-900">
+        <div className="relative flex h-[300px] w-full items-center justify-center bg-gray-900 sm:h-[400px]">
           <Image
             src={digital}
-            alt="Code background"
+            alt="Digital Marketing"
             fill
             className="object-cover opacity-50"
             priority
@@ -51,7 +51,7 @@ const page = () => {
             width={300}
             height={300}
             className="h-full w-full object-cover"
-            alt="development"
+            alt="Premium SEO Services"
           />
         </div>
         <div className="order-2 flex flex-col items-start justify-center gap-4 md:order-1">
@@ -68,11 +68,11 @@ const page = () => {
             creation, blogging, and much more to maximise
           </p>
           <div className="">
-            <ArrowButton variant="blueOutline" right className="!px-6 !py-6">
-              <Link href={{ pathname: "/", hash: "contact" }}>
+            <Link href={{ pathname: "/", hash: "contact" }}>
+              <ArrowButton variant="blueOutline" right className="!px-6 !py-6">
                 Get In touch
-              </Link>
-            </ArrowButton>
+              </ArrowButton>
+            </Link>
           </div>
         </div>
       </section>
@@ -87,11 +87,11 @@ const page = () => {
           Discover powerful ideas, transparent pricing, and a clear path forward
           to help you achieve real, measurable results.
         </p>
-        <ArrowButton variant="fill" size={20} left className="!py-5">
-          <Link href={{ pathname: "/", hash: "contact" }}>
+        <Link href={{ pathname: "/", hash: "contact" }}>
+          <ArrowButton variant="fill" size={20} left className="!py-5">
             get free seo consultation
-          </Link>
-        </ArrowButton>
+          </ArrowButton>
+        </Link>
       </section>
       {/* SEO Explainded */}
       <section className="main-container mb-20 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">

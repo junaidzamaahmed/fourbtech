@@ -11,9 +11,10 @@ import { employees } from "@/constants";
 import type { Employee } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
-import { CiMail } from "react-icons/ci";
-import { FiLinkedin } from "react-icons/fi";
+import {FiMail , FiLinkedin } from "react-icons/fi";
 import { useEffect, useRef } from "react";
+
+import palaceholder from "../../../../public/placeholders/palaceholder2.png";
 
 // Import Swiper and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -33,11 +34,10 @@ const EmployeeCard = ({
     <Card className="border-dark-bg-primary/10 bg-custom-white flex h-full flex-col border-[1px] transition-all duration-300 hover:shadow-lg">
       <CardHeader className="flex flex-col items-center justify-center space-y-3">
         <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
-          <Image
+          <img
             src={image || `https://placehold.co/600x400?text=${name}`}
-            fill
             alt={name}
-            className="object-cover object-center"
+            className="h-full w-full object-cover object-center"
             sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
           />
         </div>
@@ -61,7 +61,7 @@ const EmployeeCard = ({
           className="bg-p-color/20 hover:bg-accent-hover group flex h-9 w-9 items-center justify-center rounded-full transition-all duration-300"
           aria-label={`Email ${name}`}
         >
-          <CiMail
+          <FiMail
             size={18}
             className="text-dark-bg-primary group-hover:text-custom-white"
           />
@@ -148,7 +148,7 @@ const Employees = ({ isHome = true }: { isHome?: boolean }) => {
           <div className="h-[300px] w-full sm:h-[350px] lg:min-h-full">
             <div className="relative h-full w-full overflow-hidden rounded-xl">
               <Image
-                src="/placeholders/palaceholder2.png"
+                src={palaceholder}
                 alt="Our team at work"
                 fill
                 className="object-cover object-center"

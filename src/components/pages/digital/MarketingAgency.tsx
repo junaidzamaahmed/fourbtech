@@ -6,18 +6,17 @@ import {
 } from "@/components/ui/card";
 import { DigitalServiceAgency } from "@/constants";
 import { AppBenifitesType } from "@/types";
-import Image from "next/image";
 import React from "react";
 
 export const MarketAgencyCard = ({ icon, title, desc }: AppBenifitesType) => (
   <Card className="border-dark-bg-primary/10 transform-all flex flex-col items-center justify-center border-[1px] shadow-none duration-500 hover:drop-shadow-xl">
     <div className="bg-p-color/20 flex-center relative flex h-12 w-12 rounded-full">
-      <Image
+      <img
         src={icon}
         width={30}
         height={30}
         alt={title}
-        className="aspect-square object-contain"
+        className="aspect-square h-full w-full object-contain p-2"
       />
     </div>
     <CardContent className="flex flex-col gap-3 *:text-center">

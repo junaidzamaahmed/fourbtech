@@ -9,15 +9,15 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import CodingPng from "../../../public/coding.png";
+import aboutUs from "../../../public/about/aboutUs.png";
 import Collaboration from "../../../public/about/colaboration.png";
 import team from "../../../public/about/team.png";
 import results from "../../../public/about/results.png";
-import collaborationIcon from "../../../public/about/collaboration.png";
+import collaborationIcon from "../../../public/about/colaboration-Icon.png";
 import tools from "../../../public/about/tools.png";
 import data from "../../../public/about/data.png";
 import story from "../../../public/about/story.png";
-import whyChooseUs from "../../../public/about/why-choose-us.png";
+import whyChooseUs from "../../../public/about/whyChooseUs.png";
 
 export const metadata: Metadata = {
   title: "FourBtech | About US",
@@ -28,12 +28,12 @@ const page = () => {
   return (
     <main className="bg-custom-white">
       <section className="relative mb-14">
-        <div className="relative flex h-[300px] w-full items-center justify-center bg-gray-900">
+        <div className="relative flex h-[300px] sm:h-[360px] w-full items-center justify-center bg-gray-900">
           <Image
-            src={CodingPng}
+            src={aboutUs}
             alt="Code background"
             fill
-            className="object-cover opacity-50"
+            className="h-full w-full object-cover opacity-50"
             priority
           />
           <div className="relative z-10 text-center">
@@ -69,12 +69,12 @@ const page = () => {
               return (
                 <div className="flex items-center gap-2" key={index}>
                   <div className="bg-dark-bg-primary/10 flex-center relative h-8 w-8 rounded-full p-1">
-                    <Image
+                    <img
                       src={service.icon}
                       alt={service.title}
                       width={30}
                       height={30}
-                      className="aspect-square object-contain p-[.6px]"
+                      className="aspect-square h-full w-full object-contain p-[.6px]"
                     />
                   </div>
                   <span className="text-gray-700">{service.title}</span>
@@ -82,9 +82,11 @@ const page = () => {
               );
             })}
           </div>
+            <Link href={"/"}>
           <ArrowButton variant="fill" className="!py-5" left size={24}>
-            <Link href={"/"}>See Our Services</Link>
+            See Our Services
           </ArrowButton>
+            </Link>
         </div>
       </section>
       <CompanyProfile isHome={false} />
@@ -96,7 +98,7 @@ const page = () => {
             width={300}
             height={300}
             className="h-full w-full border-0 object-cover"
-            alt="development"
+            alt="Our Mission"
           />
         </div>
         <div className="order-1 flex flex-col items-start justify-center gap-4">
@@ -125,11 +127,16 @@ const page = () => {
           </p>
           <div className="**:text-[clamp(.7rem, 2vw, .9rem)] grid grid-cols-2 gap-4 pt-4 text-[.8rem] sm:text-[.9rem]">
             <div className="flex items-center gap-2">
-              <Image src={team} width={30} height={30} alt="html" />
+              <Image src={team} width={30} height={30} alt="All-in-one Team" />
               <span className="text-gray-700">All-in-one Team</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src={results} width={30} height={30} alt="react" />
+              <Image
+                src={results}
+                width={30}
+                height={30}
+                alt="Proven Results"
+              />
               <span className="text-gray-700">Proven Results</span>
             </div>
             <div className="flex items-center gap-2">
@@ -137,20 +144,35 @@ const page = () => {
                 src={collaborationIcon}
                 width={30}
                 height={30}
-                alt="html"
+                alt="Transparent Collaboration"
               />
               <span className="text-gray-700">Transparent Collaboration</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src={tools} width={30} height={30} alt="html" />
+              <Image
+                src={tools}
+                width={30}
+                height={30}
+                alt="Cutting-Edge Tools"
+              />
               <span className="text-gray-700">Cutting-Edge Tools</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src={data} width={30} height={30} alt="html" />
+              <Image
+                src={data}
+                width={30}
+                height={30}
+                alt="Data-First Strategies"
+              />
               <span className="text-gray-700">Data-First Strategies</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src={story} width={30} height={30} alt="html" />
+              <Image
+                src={story}
+                width={30}
+                height={30}
+                alt="Compelling Storytelling"
+              />
               <span className="text-gray-700">Compelling Storytelling</span>
             </div>
           </div>
@@ -161,7 +183,7 @@ const page = () => {
             width={300}
             height={300}
             className="h-full w-full object-cover"
-            alt="development"
+            alt="whyChooseUs"
           />
         </div>
       </section>
