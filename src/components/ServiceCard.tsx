@@ -24,7 +24,7 @@ const ServiceCard = ({ link, icon, description, title }: Services) => {
         />
       </CardHeader>
       <CardContent>
-        <CardTitle className="text-h1-color group-hover:text-custom-white mb-3  md:text-3xl transition-all text-sm sm:text-xl">
+        <CardTitle className="text-h1-color group-hover:text-custom-white mb-3 text-sm transition-all sm:text-xl md:text-3xl">
           {title}
         </CardTitle>
         <CardDescription className="text-[.6rem] font-normal transition-all sm:text-[1rem]">

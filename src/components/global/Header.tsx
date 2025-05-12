@@ -105,6 +105,13 @@ const Header = () => {
       <header className="bsolute absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex-between main-container bg-custom-white">
           <Link href="/" className="relative w-20 sm:w-28 md:w-32">
+            {/* <img
+              src="/Primary logo.svg"
+              alt="Logo"
+              width={200}
+              height={200}
+              className="origin-center object-cover object-center"
+            /> */}
             <Image
               src="/Primary logo.svg"
               alt="Logo"

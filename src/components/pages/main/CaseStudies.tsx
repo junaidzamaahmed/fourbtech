@@ -75,7 +75,7 @@ const CaseStudies = () => {
                     src={data.imageUrl}
                     fill
                     alt={data.title}
-                    className="origin-center object-center object-cover "
+                    className="origin-center object-cover object-center"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>

@@ -7,6 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Metadata } from "next";
+import digital from "../../../public/digital/digital.png";
+import strategy from "../../../public/digital/strategy.png";
 
 export const metadata: Metadata = {
   title: "FourBtech | Services",
@@ -20,7 +22,7 @@ const page = () => {
       <section className="relative mb-14">
         <div className="relative flex h-[300px] w-full items-center justify-center bg-gray-900">
           <Image
-            src="/digital/digital.png"
+            src={digital}
             alt="Code background"
             fill
             className="object-cover opacity-50"
@@ -45,7 +47,7 @@ const page = () => {
       <section className="main-container grid grid-cols-1 gap-12 object-center !pb-32 lg:grid-cols-2">
         <div className="order-1 h-full w-full lg:order-2">
           <Image
-            src="/digital/strategy.png"
+            src={strategy}
             width={300}
             height={300}
             className="h-full w-full object-cover"

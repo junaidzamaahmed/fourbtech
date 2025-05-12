@@ -6,6 +6,27 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import CodingPng from "../../../../public/coding.png";
+import webDev from "../../../../public/webDev/pwds.png";
+import frontend from "../../../../public/webDev/frontend.png";
+import htmlIcon from "../../../../public/Icons/Web/html.png";
+import react from "../../../../public/Icons/Web/react.png";
+import CSSDev from "../../../../public/Icons/Web/css.png";
+import bootstrap from "../../../../public/Icons/Web/bootstrap.png";
+import Js from "../../../../public/Icons/Web/js.png";
+import Wordpress from "../../../../public/Icons/Web/wardpress.png";
+import PHP from "../../../../public/Icons/Web/php.png";
+import torch from "../../../../public/Icons/Web/torch.png";
+import redis from "../../../../public/Icons/Web/redis.png";
+import laravel from "../../../../public/Icons/Web/laravel.png";
+import nodejs from "../../../../public/Icons/Web/nodejs.png";
+import backend from "../../../../public/webDev/backend.png";
+import consulting from "../../../../public/webDev/consulting.png";
+import Cloud from "../../../../public/Icons/Web/cloud.png";
+import globe from "../../../../public/Icons/Web/globe.png";
+import technology from "../../../../public/Icons/Web/technology.png";
+import pWebDev from "../../../../public/webDev/pWebDev.png";
+import Python from "../../../../public/Icons/Web/python.png";
 
 export const metadata: Metadata = {
   title: "FourBtech | Services",
@@ -19,7 +40,7 @@ const page = () => {
       <section className="relative mb-14">
         <div className="relative flex h-[300px] w-full items-center justify-center bg-gray-900">
           <Image
-            src="/coding.png"
+            src={CodingPng}
             alt="Code background"
             fill
             className="object-cover opacity-50"
@@ -100,7 +121,7 @@ const page = () => {
         </div>
         <div className="order-1 h-full w-full lg:order-2">
           <Image
-            src="/webDev/pwds.png"
+            src={webDev}
             width={300}
             height={300}
             className="h-full w-full object-cover"
@@ -112,7 +133,7 @@ const page = () => {
       <section className="main-container grid grid-cols-1 gap-12 object-center !pb-32 lg:grid-cols-2">
         <div className="order-1 h-full w-full lg:order-2">
           <Image
-            src="/webDev/front_end.png"
+            src={frontend}
             width={300}
             height={300}
             className="h-full w-full object-cover"
@@ -131,57 +152,27 @@ const page = () => {
           </p>
           <div className="**:text-[clamp(.7rem, 2vw, .9rem)] grid grid-cols-2 gap-4 pt-4 text-[.8rem] sm:text-[.9rem]">
             <div className="flex items-center gap-2">
-              <Image
-                src="/Icons/Web/html.png"
-                width={20}
-                height={20}
-                alt="html"
-              />
+              <Image src={htmlIcon} width={20} height={20} alt="html" />
               <span className="text-gray-700">HTML Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image
-                src="/Icons/Web/react.png"
-                width={20}
-                height={20}
-                alt="react"
-              />
+              <Image src={react} width={20} height={20} alt="react" />
               <span className="text-gray-700">React Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image
-                src="/Icons/Web/css.png"
-                width={20}
-                height={20}
-                alt="html"
-              />
+              <Image src={CSSDev} width={20} height={20} alt="html" />
               <span className="text-gray-700">CSS Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image
-                src="/Icons/Web/bootstrap.png"
-                width={20}
-                height={20}
-                alt="html"
-              />
+              <Image src={bootstrap} width={20} height={20} alt="html" />
               <span className="text-gray-700">Bootstrap Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image
-                src="/Icons/Web/js.png"
-                width={20}
-                height={20}
-                alt="html"
-              />
+              <Image src={Js} width={20} height={20} alt="html" />
               <span className="text-gray-700">JavaScript Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image
-                src="/Icons/Web/wardpress.png"
-                width={20}
-                height={20}
-                alt="html"
-              />
+              <Image src={Wordpress} width={20} height={20} alt="html" />
               <span className="text-gray-700">WordPress Development</span>
             </div>
           </div>
@@ -216,64 +207,34 @@ const page = () => {
           </p>
           <div className="**:text-[clamp(.7rem, 2vw, .9rem)] grid grid-cols-2 gap-4 pt-4 text-[.8rem] sm:text-[.9rem]">
             <div className="flex items-center gap-2">
-              <Image
-                src="/Icons/Web/php.png"
-                width={20}
-                height={20}
-                alt="html"
-              />
+              <Image src={PHP} width={20} height={20} alt="html" />
               <span className="text-gray-700">PHP Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image
-                src="/Icons/Web/torch.png"
-                width={20}
-                height={20}
-                alt="react"
-              />
+              <Image src={torch} width={20} height={20} alt="react" />
               <span className="text-gray-700">CodeIgniter Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image
-                src="/Icons/Web/python.png"
-                width={20}
-                height={20}
-                alt="html"
-              />
+              <Image src={Python} width={20} height={20} alt="html" />
               <span className="text-gray-700">Python Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image
-                src="/Icons/Web/redis.png"
-                width={20}
-                height={20}
-                alt="html"
-              />
+              <Image src={redis} width={20} height={20} alt="html" />
               <span className="text-gray-700">CakePHP Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image
-                src="/Icons/Web/laravel.png"
-                width={20}
-                height={20}
-                alt="html"
-              />
+              <Image src={laravel} width={20} height={20} alt="html" />
               <span className="text-gray-700">Laravel Development</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image
-                src="/Icons/Web/nodejs.png"
-                width={40}
-                height={40}
-                alt="html"
-              />
+              <Image src={nodejs} width={40} height={40} alt="html" />
               <span className="text-gray-700">Node Js Development</span>
             </div>
           </div>
         </div>
         <div className="order-1 h-full w-full lg:order-2">
           <Image
-            src="/webDev/backend.png"
+            src={backend}
             width={300}
             height={300}
             className="h-full w-full object-cover"
@@ -285,7 +246,7 @@ const page = () => {
       <section className="main-container grid grid-cols-1 gap-12 object-center !pb-32 lg:grid-cols-2">
         <div className="order-1 h-full w-full lg:order-2">
           <Image
-            src="/webDev/consulting.png"
+            src={consulting}
             width={300}
             height={300}
             className="h-full w-full object-cover"
@@ -307,7 +268,7 @@ const page = () => {
           <div className="**:text-[clamp(.7rem, 2vw, .9rem)] grid grid-cols-2 gap-4 pt-4 text-[.8rem] sm:text-[.9rem]">
             <div className="flex items-center gap-2">
               <Image
-                src="/Icons/Web/cloud.png"
+                src={Cloud}
                 width={30}
                 height={30}
                 alt="html"
@@ -317,7 +278,7 @@ const page = () => {
             </div>
             <div className="flex items-center gap-2">
               <Image
-                src="/Icons/Web/globe.png"
+                src={globe}
                 width={30}
                 height={30}
                 alt="html"
@@ -327,7 +288,7 @@ const page = () => {
             </div>
             <div className="flex items-center gap-2">
               <Image
-                src="/Icons/Web/techonology.png"
+                src={technology}
                 width={30}
                 height={30}
                 alt="html"
@@ -376,7 +337,7 @@ const page = () => {
         </div>
         <div className="order-1 h-full w-full lg:order-2">
           <Image
-            src="/webDev/pWebDev.png"
+            src={pWebDev}
             width={300}
             height={300}
             className="h-full w-full object-cover"

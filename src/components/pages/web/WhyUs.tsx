@@ -21,7 +21,7 @@ const OurServicesTold = ({ icon, title }: WhyUsType) => {
 
 const WhyUs = () => {
   return (
-    <section className="main-container flex flex-col items-center pb-32 text-center mb-44">
+    <section className="main-container mb-44 flex flex-col items-center pb-32 text-center">
       <h2 className="mb-5">
         Why Fourbtech is the Perfect Partner for Your Web Technology Needs
       </h2>

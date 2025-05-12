@@ -28,17 +28,17 @@ export default function InfiniteCardCarousel({
       }}
       allowTouchMove={false}
       grabCursor={true}
-      className="max-w-full z-50"
+      className="z-50 max-w-full"
     >
       {services.map((service, index) => (
         <SwiperSlide key={index}>
-          <div className="flex items-center gap-2 ">
+          <div className="flex items-center gap-2">
             <Image
               src={service.icon}
               alt={service.title}
               width={24}
               height={24}
-              className="rounded-full bg-h1-color/20 p-1 min-lg:"
+              className="bg-h1-color/20 min-lg: rounded-full p-1"
             />
             <h2 className="text-sm font-medium text-gray-700 min-lg:text-2xl">
               {service.title}

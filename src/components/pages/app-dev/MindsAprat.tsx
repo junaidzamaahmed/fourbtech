@@ -13,7 +13,7 @@ import React from "react";
 const WorkForceCard = ({ image, title, desc }: Team) => {
   return (
     <Card className="border-dark-bg-primary/10 transform-all border-[1px] shadow-none duration-500 hover:drop-shadow-xl">
-      <CardHeader className="w-full ">
+      <CardHeader className="w-full">
         <div className="relative rounded-xl">
           <Image
             src={image}

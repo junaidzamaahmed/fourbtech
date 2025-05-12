@@ -9,6 +9,15 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import CodingPng from "../../../public/coding.png";
+import Collaboration from "../../../public/about/colaboration.png";
+import team from "../../../public/about/team.png";
+import results from "../../../public/about/results.png";
+import collaborationIcon from "../../../public/about/collaboration.png";
+import tools from "../../../public/about/tools.png";
+import data from "../../../public/about/data.png";
+import story from "../../../public/about/story.png";
+import whyChooseUs from "../../../public/about/why-choose-us.png";
 
 export const metadata: Metadata = {
   title: "FourBtech | About US",
@@ -21,7 +30,7 @@ const page = () => {
       <section className="relative mb-14">
         <div className="relative flex h-[300px] w-full items-center justify-center bg-gray-900">
           <Image
-            src="/coding.png"
+            src={CodingPng}
             alt="Code background"
             fill
             className="object-cover opacity-50"
@@ -83,7 +92,7 @@ const page = () => {
       <section className="main-container grid grid-cols-1 gap-12 object-center !py-10 lg:grid-cols-2">
         <div className="order-2 h-full w-full lg:order-2">
           <Image
-            src="/about/colaboration.png"
+            src={Collaboration}
             width={300}
             height={300}
             className="h-full w-full border-0 object-cover"
@@ -116,21 +125,16 @@ const page = () => {
           </p>
           <div className="**:text-[clamp(.7rem, 2vw, .9rem)] grid grid-cols-2 gap-4 pt-4 text-[.8rem] sm:text-[.9rem]">
             <div className="flex items-center gap-2">
-              <Image src="/about/team.png" width={30} height={30} alt="html" />
+              <Image src={team} width={30} height={30} alt="html" />
               <span className="text-gray-700">All-in-one Team</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image
-                src="/about/results.png"
-                width={30}
-                height={30}
-                alt="react"
-              />
+              <Image src={results} width={30} height={30} alt="react" />
               <span className="text-gray-700">Proven Results</span>
             </div>
             <div className="flex items-center gap-2">
               <Image
-                src="/about/collaborationIcon.png"
+                src={collaborationIcon}
                 width={30}
                 height={30}
                 alt="html"
@@ -138,22 +142,22 @@ const page = () => {
               <span className="text-gray-700">Transparent Collaboration</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src="/about/tools.png" width={30} height={30} alt="html" />
+              <Image src={tools} width={30} height={30} alt="html" />
               <span className="text-gray-700">Cutting-Edge Tools</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src="/about/data.png" width={30} height={30} alt="html" />
+              <Image src={data} width={30} height={30} alt="html" />
               <span className="text-gray-700">Data-First Strategies</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src="/about/story.png" width={30} height={30} alt="html" />
+              <Image src={story} width={30} height={30} alt="html" />
               <span className="text-gray-700">Compelling Storytelling</span>
             </div>
           </div>
         </div>
         <div className="order-1 h-full w-full lg:order-2">
           <Image
-            src="/about/whyChooseUs.png"
+            src={whyChooseUs}
             width={300}
             height={300}
             className="h-full w-full object-cover"

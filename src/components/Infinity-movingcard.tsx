@@ -84,7 +84,10 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item, idx) => (
-          <li key={idx} className="flex w-max items-center gap-2 cursor-pointer">
+          <li
+            key={idx}
+            className="flex w-max cursor-pointer items-center gap-2"
+          >
             <Image
               src={item.icon}
               alt="icon"
@@ -92,7 +95,9 @@ export const InfiniteMovingCards = ({
               height={20}
               className="bg-p-color/20 rounded-full p-1"
             />
-            <h1 className="text-h1-color font-light text-base sm:text-2xl">{item.title}</h1>
+            <h1 className="text-h1-color text-base font-light sm:text-2xl">
+              {item.title}
+            </h1>
           </li>
         ))}
       </ul>

@@ -1,15 +1,15 @@
-"use client"
-import { useEffect, useRef, useState, useCallback } from "react"
-import gsap from "gsap"
-import Image from "next/image"
-import { services } from "@/constants"
+"use client";
+import { useEffect, useRef, useState, useCallback } from "react";
+import gsap from "gsap";
+import Image from "next/image";
+import { services } from "@/constants";
 
 export const MarqueeCard = ({
   title,
   icon,
 }: {
-  title: string
-  icon: string
+  title: string;
+  icon: string;
 }) => {
   return (
     <div className="text-h1-color marquee-item mx-10 flex items-center gap-2">
@@ -24,62 +24,70 @@ export const MarqueeCard = ({
       </div>
       <h3 className="text-h1-color">{title}</h3>
     </div>
-  )
-}
+  );
+};
 
 interface MarqueeProps {
-  speed?: number
-  direction?: "left" | "right"
+  speed?: number;
+  direction?: "left" | "right";
 }
 
 // Move debounce function outside component to avoid ESLint warnings
-const debounce = <T extends (...args: unknown[]) => void>(func: T, wait: number): ((...args: Parameters<T>) => void) => {
-  let timeout: ReturnType<typeof setTimeout> | null = null
+const debounce = <T extends (...args: unknown[]) => void>(
+  func: T,
+  wait: number,
+): ((...args: Parameters<T>) => void) => {
+  let timeout: ReturnType<typeof setTimeout> | null = null;
 
   return (...args: Parameters<T>) => {
     const later = () => {
-      timeout = null
-      func(...args)
-    }
+      timeout = null;
+      func(...args);
+    };
 
     if (timeout) {
-      clearTimeout(timeout)
+      clearTimeout(timeout);
     }
-    timeout = setTimeout(later, wait)
-  }
-}
+    timeout = setTimeout(later, wait);
+  };
+};
 
-export default function Marquee({ speed = 20, direction = "left" }: MarqueeProps = {}) {
-  const marqueeRef = useRef<HTMLDivElement | null>(null)
-  const animationRef = useRef<gsap.core.Tween | null>(null)
-  const [itemsCount, setItemsCount] = useState(2) // Start with 2 copies
+export default function Marquee({
+  speed = 20,
+  direction = "left",
+}: MarqueeProps = {}) {
+  const marqueeRef = useRef<HTMLDivElement | null>(null);
+  const animationRef = useRef<gsap.core.Tween | null>(null);
+  const [itemsCount, setItemsCount] = useState(2); // Start with 2 copies
 
   // Function to setup the animation
   const setupAnimation = useCallback(() => {
-    if (!marqueeRef.current) return
+    if (!marqueeRef.current) return;
 
     // Kill any existing animation
     if (animationRef.current) {
-      animationRef.current.kill()
+      animationRef.current.kill();
     }
 
-    const items = marqueeRef.current.querySelectorAll(".marquee-item")
-    if (!items || items.length === 0) return
+    const items = marqueeRef.current.querySelectorAll(".marquee-item");
+    if (!items || items.length === 0) return;
 
     // Get the width of a single set of items
-    const singleSetWidth = marqueeRef.current.scrollWidth / itemsCount
+    const singleSetWidth = marqueeRef.current.scrollWidth / itemsCount;
 
     // Determine if we need more copies for a seamless loop
-    const containerWidth = marqueeRef.current.parentElement?.clientWidth || window.innerWidth
+    const containerWidth =
+      marqueeRef.current.parentElement?.clientWidth || window.innerWidth;
 
     if (singleSetWidth < containerWidth * 2 && itemsCount < 4) {
       // We need more copies to ensure a seamless loop
-      setItemsCount((prev) => prev + 1)
-      return // Will trigger a re-render and call this function again
+      setItemsCount((prev) => prev + 1);
+      return; // Will trigger a re-render and call this function again
     }
 
     // Set the direction
-    const xValue = direction === "left" ? `-=${singleSetWidth}` : `+=${singleSetWidth}`
+    const xValue =
+      direction === "left" ? `-=${singleSetWidth}` : `+=${singleSetWidth}`;
 
     // Create the animation
     animationRef.current = gsap.to(items, {
@@ -90,44 +98,48 @@ export default function Marquee({ speed = 20, direction = "left" }: MarqueeProps
       modifiers: {
         x: gsap.utils.unitize((x) => {
           // Ensure the modulo operation works correctly for both directions
-          const offset = Number.parseFloat(x) % singleSetWidth
-          return offset // Same return for both directions as modulo handles it
+          const offset = Number.parseFloat(x) % singleSetWidth;
+          return offset; // Same return for both directions as modulo handles it
         }),
       },
-    })
-  }, [direction, itemsCount, speed])
+    });
+  }, [direction, itemsCount, speed]);
 
   // Setup animation on mount and when dependencies change
   useEffect(() => {
-    setupAnimation()
+    setupAnimation();
 
     // Create debounced resize handler
     const debouncedResize = debounce(() => {
-      setupAnimation()
-    }, 200)
+      setupAnimation();
+    }, 200);
 
-    window.addEventListener("resize", debouncedResize)
+    window.addEventListener("resize", debouncedResize);
 
     return () => {
       if (animationRef.current) {
-        animationRef.current.kill()
+        animationRef.current.kill();
       }
-      window.removeEventListener("resize", debouncedResize)
-    }
-  }, [setupAnimation]) // setupAnimation already includes all the dependencies
+      window.removeEventListener("resize", debouncedResize);
+    };
+  }, [setupAnimation]); // setupAnimation already includes all the dependencies
 
   // Create multiple copies of items for a seamless loop
   const marqueeItems = Array(itemsCount)
     .fill(null)
-    .flatMap(() => services)
+    .flatMap(() => services);
 
   return (
     <div className="relative w-full overflow-hidden">
       <div className="flex whitespace-nowrap" ref={marqueeRef}>
         {marqueeItems.map((item, index) => (
-          <MarqueeCard title={item.title} key={`marquee-${index}`} icon={item.icon} />
+          <MarqueeCard
+            title={item.title}
+            key={`marquee-${index}`}
+            icon={item.icon}
+          />
         ))}
       </div>
     </div>
-  )
+  );
 }
