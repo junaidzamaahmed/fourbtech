@@ -5,6 +5,7 @@ import { CiPaperplane } from "react-icons/ci";
 import { Input } from "../ui/input";
 import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { useState } from "react";
+import SecondaryLogo from "../../../public/Secondary logo.svg"
 
 const Footer = () => {
   const [sendMail, setSendMail] = useState("");
@@ -18,7 +19,7 @@ const Footer = () => {
         <div className="flex flex-col gap-6">
           <Link href="/" className="relative h-10 w-40">
             <Image
-              src="/Secondary logo.svg"
+              src={SecondaryLogo}
               alt="FourBtech Logo"
               fill
               priority

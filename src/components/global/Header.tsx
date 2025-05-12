@@ -7,6 +7,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import gsap from "gsap";
 import { useWindowScroll } from "react-use";
 import Link from "next/link";
+import PrimaryLogo from "../../../public/Primary logo.svg"
 
 const links = [
   { title: "Home", path: "/", sub: [] },
@@ -113,7 +114,7 @@ const Header = () => {
               className="origin-center object-cover object-center"
             /> */}
             <Image
-              src="/Primary logo.svg"
+              src={PrimaryLogo}
               alt="Logo"
               width={200}
               height={200}
@@ -193,14 +194,14 @@ const Header = () => {
           </div>
           <div className="flex-center">
             <div className="hidden sm:block">
-              <ArrowButton left={true} size={30} className="h-1/2 md:h-1/3">
-                <Link
-                  href={{ pathname: "/", hash: "contact" }}
-                  className="w-full"
-                >
+              <Link
+                href={{ pathname: "/", hash: "contact" }}
+                className="w-full"
+              >
+                <ArrowButton left={true} size={30} className="h-1/2 md:h-1/3">
                   Let&apos;s talk
-                </Link>
-              </ArrowButton>
+                </ArrowButton>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -296,20 +297,20 @@ const Header = () => {
                   })}
 
                   <li className="w-full pt-4">
-                    <ArrowButton
-                      left={true}
-                      size={30}
-                      className="w-full !border-none"
-                      variant="fill"
+                    <Link
+                      href={{ pathname: "/", hash: "contact" }}
+                      className="text-center w-full"
+                      onClick={closeMobileMenu}
                     >
-                      <Link
-                        href={{ pathname: "/", hash: "contact" }}
-                        className="text-cente w-full"
-                        onClick={closeMobileMenu}
+                      <ArrowButton
+                        left={true}
+                        size={30}
+                        className="w-full"
+                        variant="fill"
                       >
                         Let&apos;s talk
-                      </Link>
-                    </ArrowButton>
+                      </ArrowButton>
+                    </Link>
                   </li>
                 </ul>
               </div>

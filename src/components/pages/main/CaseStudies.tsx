@@ -1,8 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import ArrowButton from "@/components/global/ArrowButton";
 import { projectShowcaseData } from "@/constants";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 
@@ -71,12 +72,10 @@ const CaseStudies = () => {
             <SwiperSlide key={index}>
               <div className="grid grid-cols-1 overflow-hidden rounded-xl shadow-lg sm:grid-cols-2">
                 <div className="relative h-56 w-full sm:h-full">
-                  <Image
+                  <img
                     src={data.imageUrl}
-                    fill
                     alt={data.title}
-                    className="origin-center object-cover object-center"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="h-full w-full origin-center object-cover object-center"
                   />
                 </div>
                 <div className="bg-custom-white flex flex-col justify-between gap-4 p-6 md:p-8 lg:p-10">
