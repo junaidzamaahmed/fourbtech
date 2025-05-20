@@ -150,11 +150,11 @@ export const insights: Insight[] = [
 
 export const employees: Employee[] = [
   {
-    name: "Kazi Rafiqual Islam",
-    role: "Co-Founder & Chairma",
+    name: "Kazi Md R. Islam",
+    role: "Co-Founder & Chairman",
     image: "/members/kazi_rafiqual_islam.png",
     description:
-      "Kazi Md R. Islam<br/>Co-Founder & Chairman<br/>B.Sc. Engr. Mech (DUET)<br/>M.Sc. Engr. (BUET) - Non-Thesis<br/>MBA-SSM-Switzerland<br/>MSc in Digital Marketing - UWL, London<br/>Doctorate of Business Administration <br/>In progress - UWL, London",
+      "B.Sc. Engr. Mech (DUET)<br/>M.Sc. Engr. (BUET) - Non-Thesis<br/>MBA-SSM-Switzerland<br/>MSc in Digital Marketing - UWL, London<br/>Doctorate of Business Administration In progress - UWL, London",
     email: "kazi@fourbtech.com",
     linkedin: "https://www.linkedin.com/in/kazi-rafiqual-islam-4btech",
   },

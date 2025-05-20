@@ -12,12 +12,12 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="-mt-24">
+    <main className="mt-10 md:-mt-10">
       <section className="relative flex min-h-screen flex-col items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
         {/* Background Video */}
         <div className="absolute inset-0 -z-10 opacity-40">
           <video
-            src="/herobg.mp4"
+            src="/herobg.webm"
             autoPlay
             playsInline
             controls={false}
