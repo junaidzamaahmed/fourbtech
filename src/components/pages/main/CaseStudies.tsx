@@ -86,7 +86,7 @@ const CaseStudies = () => {
                     <p className="text-lg font-medium md:text-xl">
                       {data.title}
                     </p>
-                    <p className="text-sm text-gray-700 md:text-base">
+                    <p className="text-sm text-gray-700 lowercase md:text-base">
                       {data.description}
                     </p>
                   </div>

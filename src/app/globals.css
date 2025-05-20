@@ -154,19 +154,19 @@
     @apply bg-custom-white font-normal transition-all duration-200;
   }
   h1 {
-    @apply text-h1-color text-3xl font-semibold capitalize md:text-4xl lg:text-5xl;
+    @apply text-h1-color text-3xl font-semibold md:text-4xl lg:text-5xl;
   }
   h2 {
-    @apply text-h1-color text-xl font-semibold capitalize md:text-3xl lg:text-4xl;
+    @apply text-h1-color text-xl font-semibold md:text-3xl lg:text-4xl;
   }
   h3 {
-    @apply text-p-color text-base font-normal capitalize md:text-lg lg:text-xl;
+    @apply text-p-color text-base font-normal md:text-lg lg:text-xl;
   }
   h4 {
-    @apply text-sm font-normal capitalize md:text-base;
+    @apply text-sm font-normal md:text-base;
   }
   p {
-    @apply text-p-color text-sm font-normal capitalize md:text-base;
+    @apply text-p-color text-sm font-normal md:text-base;
   }
 }
 

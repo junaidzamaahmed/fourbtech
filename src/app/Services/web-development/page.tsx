@@ -235,7 +235,7 @@ const page = () => {
           </p>
           <div className="**:text-[clamp(.7rem, 2vw, .9rem)] grid grid-cols-2 gap-4 pt-4 text-[.8rem] sm:text-[.9rem]">
             <div className="flex items-center gap-2">
-              <Image src={PHP} width={20} height={20} alt="PHP Development" />
+              <Image src={PHP} width={25} height={25} alt="PHP Development" />
               <span className="text-gray-700">PHP Development</span>
             </div>
             <div className="flex items-center gap-2">
