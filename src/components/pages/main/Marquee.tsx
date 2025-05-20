@@ -3,27 +3,32 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import gsap from "gsap";
 import Image from "next/image";
 import { services } from "@/constants";
+import Link from "next/link";
 
 export const MarqueeCard = ({
   title,
   icon,
+  link,
 }: {
   title: string;
   icon: string;
+  link: string;
 }) => {
   return (
-    <div className="text-h1-color marquee-item mx-10 flex items-center gap-2">
-      <div className="bg-dark-bg-primary/20 flex h-7 w-7 items-center justify-center rounded-full p-[3px] sm:h-8 sm:w-8">
-        <Image
-          src={icon || "/placeholder.svg"}
-          alt={title}
-          width={30}
-          height={30}
-          className="aspect-square object-contain object-center p-1"
-        />
+    <Link href={link}>
+      <div className="text-h1-color marquee-item mx-10 flex items-center gap-2">
+        <div className="bg-dark-bg-primary/20 flex h-7 w-7 items-center justify-center rounded-full p-[3px] sm:h-8 sm:w-8">
+          <Image
+            src={icon || "/placeholder.svg"}
+            alt={title}
+            width={30}
+            height={30}
+            className="aspect-square object-contain object-center p-1"
+          />
+        </div>
+        <h3 className="text-h1-color">{title}</h3>
       </div>
-      <h3 className="text-h1-color">{title}</h3>
-    </div>
+    </Link>
   );
 };
 
@@ -137,6 +142,7 @@ export default function Marquee({
             title={item.title}
             key={`marquee-${index}`}
             icon={item.icon}
+            link={item.link}
           />
         ))}
       </div>

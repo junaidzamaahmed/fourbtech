@@ -60,12 +60,7 @@ const page = () => {
             Digital marketing agency for a service provider
           </h3>
           <p className="text-[clamp(.8rem, 2vw, 1rem)]">
-            At our Digital Marketing, we deliver results-driven SEO strategies
-            that boost your search rankings and drive targeted organic traffic
-            to your website. Fourbtech comprehensive SEO campaigns include
-            in-depth audits, keyword research, on-page and technical
-            optimization, authority building, citations, link building, content
-            creation, blogging, and much more to maximise
+            At Fourbtech Digital Marketing, we specialize in results-focused SEO strategies designed to improve your search engine rankings and attract high-quality organic traffic to your website. Our comprehensive SEO services include detailed site audits, strategic keyword research, on-page and technical optimization, authority development, citation management, link building, content creation, blogging, and more — all aimed at maximizing your online visibility and growth.
           </p>
           <div className="">
             <Link href={{ pathname: "/", hash: "contact" }}>

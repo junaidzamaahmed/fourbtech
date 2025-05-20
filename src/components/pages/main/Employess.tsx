@@ -11,7 +11,7 @@ import { employees } from "@/constants";
 import type { Employee } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
-import {FiMail , FiLinkedin } from "react-icons/fi";
+import { FiMail, FiLinkedin } from "react-icons/fi";
 import { useEffect, useRef } from "react";
 
 import palaceholder from "../../../../public/placeholders/palaceholder2.png";
@@ -132,8 +132,8 @@ const Employees = ({ isHome = true }: { isHome?: boolean }) => {
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Who We Are
             </h2>
-            <p className="text-muted-foreground text-base leading-relaxed">
-              At Our IT Solutions & Services Agency, we specialize in creating
+            <p className="text-muted-foreground text-base leading-relaxed ">
+              At our IT solutions & services agency, we specialize in creating
               visually stunning and highly functional websites or mobile apps
               that help businesses stand out in the digital world. Our team of
               talented designers and developers are passionate about crafting
