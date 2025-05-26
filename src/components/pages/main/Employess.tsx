@@ -174,7 +174,7 @@ const Employees = ({ isHome = true }: { isHome?: boolean }) => {
             },
             // Medium devices (768px and up)
             768: {
-              slidesPerView: 2,
+              slidesPerView: 3,
               spaceBetween: 24,
             },
             // Large devices (1024px and up)
@@ -182,6 +182,10 @@ const Employees = ({ isHome = true }: { isHome?: boolean }) => {
               slidesPerView: 4,
               spaceBetween: 24,
             },
+            2048:{
+              slidesPerView: 5,
+              spaceBetween: 24,
+            }
           }}
           className="w-full"
           onInit={(swiper) => {

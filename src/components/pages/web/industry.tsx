@@ -38,7 +38,7 @@ const IndustrySolution = () => {
       <h1 className="mb-10">
         Industries We Support with Web Development Solutions
       </h1>
-      <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
         {IndustrySolutionData.map((items, index) => (
           <IndustryCard key={index} {...items} />
         ))}

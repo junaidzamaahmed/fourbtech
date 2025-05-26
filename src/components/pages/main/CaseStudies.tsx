@@ -73,7 +73,7 @@ const CaseStudies = () => {
           {projectShowcaseData.map((data, index) => (
             <SwiperSlide key={index}>
               <div className="grid grid-cols-1 overflow-hidden rounded-xl shadow-lg lg:grid-cols-2">
-                <div className="relative !aspect-square h-56 !w-full sm:h-[400px] sm:max-h-[500px] lg:!aspect-auto lg:h-full">
+                <div className="relative !aspect-square h-56 !w-full sm:h-[400px]  max-h-[480px] md:!aspect-auto md:h-full">
                   <img
                     src={data.imageUrl}
                     alt={data.title}

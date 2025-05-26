@@ -42,9 +42,9 @@ const ServiceCard = ({
         </CardHeader>
         <CardContent>
           <CardTitle>
-            <h3 className="group-hover:text-custom-white text-h1-color titleHeader mb-4">
+            <h1 className="group-hover:text-custom-white text-h1-color titleHeader mb-4">
               {title}
-            </h3>
+            </h1>
           </CardTitle>
           <CardDescription className="group-hover:!text-custom-white cardParagraph !text-h1-color">
             {description}

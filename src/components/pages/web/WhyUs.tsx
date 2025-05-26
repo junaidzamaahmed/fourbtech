@@ -31,7 +31,7 @@ const WhyUs = () => {
         innovative technology. Our team delivers scalable and budget-friendly
         web solutions tailored to address your unique challenges.
       </p>
-      <div className="grid grid-cols-2 gap-5 md:grid-cols-3">
+      <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
         {WhyUsData.map((items, index) => (
           <OurServicesTold key={index} {...items} />
         ))}
