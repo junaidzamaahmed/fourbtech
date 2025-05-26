@@ -1,12 +1,11 @@
 import { Card, CardTitle } from "@/components/ui/card";
 import { OurIndustryExperties } from "@/constants";
 import { WhyUsType } from "@/types";
-// import Image from "next/image";
 import React from "react";
 
 const OurServicesTold = ({ icon, title }: WhyUsType) => {
   return (
-    <Card className="border-dark-bg-primary/10 group flex min-h-52 items-center justify-center border-[1px] p-5 shadow-none transition-all duration-500 hover:drop-shadow-xl">
+    <Card className="border-dark-bg-primary/10 group flex items-center justify-center border-[1px] p-5 shadow-none transition-all duration-500 hover:drop-shadow-xl">
       <div className="h-full w-full">
         <img
           src={icon}
@@ -35,7 +34,7 @@ const OurExparties = () => {
         Wide Range Of Industries. Our Apps Run Smoothly Across Different Devices
         And Platforms. Helping Businesses Stay Competitive And Connected.
       </h3>
-      <div className="grid origin-center grid-cols-3 gap-5">
+      <div className="grid origin-center grid-cols-2 md:grid-cols-4 gap-5">
         {OurIndustryExperties.map((items, index) => (
           <OurServicesTold key={index} {...items} />
         ))}

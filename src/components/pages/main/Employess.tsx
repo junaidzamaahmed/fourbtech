@@ -37,8 +37,7 @@ const EmployeeCard = ({
           <img
             src={image || `https://placehold.co/600x400?text=${name}`}
             alt={name}
-            className="h-full w-full object-cover object-center"
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
+            className="h-full w-full !object-cover !object-center "
           />
         </div>
         <CardTitle className="w-full text-start">

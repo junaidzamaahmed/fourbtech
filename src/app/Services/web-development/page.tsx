@@ -124,7 +124,7 @@ const page = () => {
             src={webDev}
             width={300}
             height={300}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
             alt="Professional Web Development Services"
           />
         </div>
@@ -136,7 +136,7 @@ const page = () => {
             src={frontend}
             width={300}
             height={300}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
             alt="development"
           />
         </div>
@@ -290,7 +290,7 @@ const page = () => {
             src={backend}
             width={300}
             height={300}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
             alt="Backend Development Services"
           />
         </div>
@@ -302,7 +302,7 @@ const page = () => {
             src={consulting}
             width={300}
             height={300}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
             alt="Web Consulting Service Services"
           />
         </div>
@@ -389,7 +389,7 @@ const page = () => {
             src={pWebDev}
             width={300}
             height={300}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
             alt="development"
           />
         </div>

@@ -1,10 +1,8 @@
 "use client";
-import ArrowButton from "@/components/global/ArrowButton";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -29,39 +27,31 @@ const ServiceCard = ({
   link: string;
 }) => {
   return (
-    <Card className="group bg-custom-white hover:bg-dark-bg-primary border-dark-bg-primary/10 flex h-full flex-col items-start justify-between transition-all duration-500">
-      <CardHeader>
-        <div className="group-hover:bg-accent-hover bg-dark-bg-primary/20 flex h-10 w-10 items-center justify-center rounded-full">
-          <Image
-            src={icon}
-            alt={title}
-            width={30}
-            height={30}
-            className="aspect-square object-contain object-center p-1 group-hover:brightness-0 group-hover:invert"
-          />
-        </div>
-      </CardHeader>
-      <CardContent>
-        <CardTitle>
-          <h3 className="group-hover:text-custom-white text-h1-color titleHeader mb-4">
-            {title}
-          </h3>
-        </CardTitle>
-        <CardDescription className="group-hover:!text-custom-white cardParagraph !text-h1-color">
-          {description}
-        </CardDescription>
-      </CardContent>
-      <CardFooter>
-        <ArrowButton
-          right={true}
-          variant="noOutline"
-          className="group-hover:!text-custom-white"
-          size={20}
-        >
-          <Link href={link}>Learn more</Link>
-        </ArrowButton>
-      </CardFooter>
-    </Card>
+    <Link href={link} >
+      <Card className="group bg-custom-white hover:bg-dark-bg-primary border-dark-bg-primary/10 flex h-full flex-col items-start justify-center transition-all duration-500 ">
+        <CardHeader>
+          <div className="group-hover:bg-accent-hover bg-dark-bg-primary/20 flex h-10 w-10 items-center justify-center rounded-full">
+            <Image
+              src={icon}
+              alt={title}
+              width={30}
+              height={30}
+              className="aspect-square object-contain object-center p-1 group-hover:brightness-0 group-hover:invert"
+            />
+          </div>
+        </CardHeader>
+        <CardContent>
+          <CardTitle>
+            <h3 className="group-hover:text-custom-white text-h1-color titleHeader mb-4">
+              {title}
+            </h3>
+          </CardTitle>
+          <CardDescription className="group-hover:!text-custom-white cardParagraph !text-h1-color">
+            {description}
+          </CardDescription>
+        </CardContent>
+      </Card>
+    </Link>
   );
 };
 

@@ -4,8 +4,8 @@ import CompanyProfile from "@/components/pages/main/Company Profile";
 import ContactUS from "@/components/pages/main/ContactUS";
 import CustomerFeedBack from "@/components/pages/main/CustomerFeedBack";
 import Employess from "@/components/pages/main/Employess";
+import { HeroMarqee } from "@/components/pages/main/FadingMarquee";
 // import Insides from "@/components/pages/main/Insides";
-import Marquee from "@/components/pages/main/Marquee";
 import FaqSection from "@/components/pages/main/Questions";
 import Services from "@/components/pages/main/Services";
 import Link from "next/link";
@@ -42,37 +42,31 @@ export default function Home() {
 
           {/* Buttons */}
           <div className="grid gap-4 sm:grid-cols-2 md:w-[60%]">
-            <ArrowButton
-              variant="fill"
-              className="!py-6 md:!py-8 lg:!py-8"
-              left
-              size={30}
-            >
-              <Link
-                href={{ pathname: "/", hash: "services" }}
-                className="text-base sm:text-lg"
+            <Link href={{ pathname: "/", hash: "services" }} className="w-full">
+              <ArrowButton
+                variant="fill"
+                className="!w-full !py-6 !text-base sm:!text-lg md:!py-8 lg:!py-8"
+                left
+                size={30}
               >
                 See our services
-              </Link>
-            </ArrowButton>
-            <ArrowButton
-              variant="blueOutline"
-              left
-              className="!py-6 md:!py-8 lg:!py-8"
-              size={30}
-            >
-              <Link
-                href={{ pathname: "/", hash: "contact" }}
-                className="text-base sm:text-lg"
+              </ArrowButton>
+            </Link>
+            <Link href={{ pathname: "/", hash: "contact" }} className="!w-full">
+              <ArrowButton
+                variant="blueOutline"
+                className="!w-full !py-6 !text-base sm:!text-lg md:!py-8 lg:!py-8"
+                left
+                size={30}
               >
                 Talk to us
-              </Link>
-            </ArrowButton>
+              </ArrowButton>
+            </Link>
           </div>
 
           {/* Marquee */}
-          <div className="mt-8 -mb-6 w-[98vw]">
-            <Marquee />
+          <div className="mt-8 -mb-6">
+            <HeroMarqee />
           </div>
         </div>
       </section>

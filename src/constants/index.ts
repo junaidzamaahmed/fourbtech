@@ -197,7 +197,7 @@ export const employees: Employee[] = [
   },
   {
     name: "Hirok Roy Rahul",
-    role: "frontend Developer",
+    role: "Frontend Developer",
     image: "/members/Hirok_Roy_Rahul.png",
     description:
       "Former Web Developer at  Nebulae-Soft<br/>Junior Machine Vision Engineer at BRACU  Duburi<br/>BS.c in computer science & Engineering (BRAC University) ",
@@ -215,7 +215,7 @@ export const employees: Employee[] = [
   },
   {
     name: "Md Muhib Monowar",
-    role: "UI UX Designer",
+    role: "UI/UX Designer",
     image: "/members/Muhib_Monoar.png",
     description:
       "UI Designer - MediMontro App <br/>Professional UI/UX Designer - Freelance <br/>Complete Web & Mobile Design - ZTM <br/>Academy, Toronto",
@@ -290,11 +290,6 @@ export const IndustrySolutionData: IndustrySolutionType[] = [
     title: "Travel",
     desc: "Looking to create a comprehensive  travel booking platform? We build  dynamic travel web apps for everything  from navigation and event booking to  transport scheduling and management,  tailored to your specific needs.",
   },
-  {
-    icon: "/Icons/Web/education.png",
-    title: "Education",
-    desc: "We design custom eLearning platforms  to make education more accessible.  From virtual classrooms and study  resources to live chat and automated  exams, we help you create complete  online learning environments.",
-  },
 ];
 
 export const WhyUsData: WhyUsType[] = [
@@ -330,10 +325,10 @@ export const WhyUsData: WhyUsType[] = [
     icon: "/Icons/Web/need/varified.png",
     title: "Highest Code Quality",
   },
-  {
-    icon: "/Icons/Web/need/support.png",
-    title: "90 Days Maintainace Support",
-  },
+  // {
+  //   icon: "/Icons/Web/need/support.png",
+  //   title: "90 Days Maintainace Support",
+  // },
 ];
 
 export const AppBenifitesData: AppBenifitesType[] = [
@@ -364,7 +359,6 @@ export const OurIndustryExperties: WhyUsType[] = [
   { icon: "/Icons/app/healthcare.png", title: "Healthcare" },
   { icon: "/Icons/app/education.png", title: "Eductaion" },
   { icon: "/Icons/app/travel.png", title: "Travel & Hospitality" },
-  { icon: "/Icons/app/realEstate.png", title: "Real Estate" },
 ];
 
 export const MindsApart: Team[] = [

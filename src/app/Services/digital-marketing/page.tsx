@@ -25,7 +25,7 @@ const page = () => {
             src={digital}
             alt="Digital Marketing"
             fill
-            className="object-cover opacity-50"
+            className="object-cover opacity-50 "
             priority
           />
           <div className="relative z-10 text-center">
@@ -50,7 +50,7 @@ const page = () => {
             src={strategy}
             width={300}
             height={300}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
             alt="Premium SEO Services"
           />
         </div>
@@ -96,7 +96,7 @@ const page = () => {
       </section>
       {/* Boost Your Rankings and Drive Organic Traffic */}
       <section className="main-container">
-        <h1 className="text-h1-color mb-3 text-center font-semibold">
+        <h1 className="text-h1-color my-10 text-center font-semibold">
           Boost Your Rankings and Drive Organic Traffic
         </h1>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
