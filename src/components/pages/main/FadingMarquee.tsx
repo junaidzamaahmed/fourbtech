@@ -9,7 +9,7 @@ import { services } from "@/constants";
 
 export const HeroMarqee = ({
   direction = "left",
-  speed = "fast",
+  speed = "normal",
   pauseOnHover = true,
   className,
 }: {

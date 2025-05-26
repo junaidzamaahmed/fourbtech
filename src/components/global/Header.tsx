@@ -7,7 +7,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import gsap from "gsap";
 import { useWindowScroll } from "react-use";
 import Link from "next/link";
-import PrimaryLogo from "../../../public/Primary logo.svg"
+import PrimaryLogo from "../../../public/Primary logo.svg";
 
 const links = [
   { title: "Home", path: "/", sub: [] },
@@ -24,12 +24,18 @@ const links = [
       { title: "Digital Marketing", path: "/services/digital-marketing" },
     ],
   },
-  // {
-  //   title: "Blogs",
-  //   path: "/blogs",
-  //   sub: [],
-  // },
-  // { title: "Projects", path: "/projects", sub: [] },
+  {
+    title: "Products",
+    path: "/products",
+    sub: [
+      { title: "HomeX", path: "https://homex-properties.netlify.app/" },
+      {
+        title: "OMS",
+        path: "https://oms-landing-page.vercel.app/",
+      },
+      { title: "Bangla Bazar", path: "https://bangla-bazar.smartmux.com/" },
+    ],
+  },
 ];
 
 const Header = () => {
@@ -299,7 +305,7 @@ const Header = () => {
                   <li className="w-full pt-4">
                     <Link
                       href={{ pathname: "/", hash: "contact" }}
-                      className="text-center w-full"
+                      className="w-full text-center"
                       onClick={closeMobileMenu}
                     >
                       <ArrowButton

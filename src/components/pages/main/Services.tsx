@@ -28,7 +28,7 @@ const ServiceCard = ({
 }) => {
   return (
     <Link href={link} >
-      <Card className="group bg-custom-white hover:bg-dark-bg-primary border-dark-bg-primary/10 flex h-full flex-col items-start justify-center transition-all duration-500 ">
+      <Card className="group bg-custom-white hover:bg-dark-bg-primary border-dark-bg-primary/10 h-full transition-all duration-500 ">
         <CardHeader>
           <div className="group-hover:bg-accent-hover bg-dark-bg-primary/20 flex h-10 w-10 items-center justify-center rounded-full">
             <Image
