@@ -174,7 +174,7 @@ const Employees = ({ isHome = true }: { isHome?: boolean }) => {
             },
             // Medium devices (768px and up)
             768: {
-              slidesPerView: 3,
+              slidesPerView: 2,
               spaceBetween: 24,
             },
             // Large devices (1024px and up)

@@ -46,14 +46,14 @@ const CaseStudies = () => {
           </p>
         </span>
         <Link href="/about">
-        <ArrowButton
-          right
-          variant="outline"
-          size={24}
-          className="!border-custom-white !text-custom-white/70 hover:!text-custom-white self-start !py-6 sm:self-center"
-        >
-          view all
-        </ArrowButton>
+          <ArrowButton
+            right
+            variant="outline"
+            size={24}
+            className="!border-custom-white !text-custom-white/70 hover:!text-custom-white self-start !py-6 sm:self-center"
+          >
+            view all
+          </ArrowButton>
         </Link>
       </div>
       <div className="relative">
@@ -72,8 +72,8 @@ const CaseStudies = () => {
         >
           {projectShowcaseData.map((data, index) => (
             <SwiperSlide key={index}>
-              <div className="grid grid-cols-1 overflow-hidden rounded-xl shadow-lg sm:grid-cols-2">
-                <div className="relative h-56 w-full sm:h-full">
+              <div className="grid grid-cols-1 overflow-hidden rounded-xl shadow-lg lg:grid-cols-2">
+                <div className="relative !aspect-square h-56 !w-full sm:h-[400px] sm:max-h-[500px] lg:!aspect-auto lg:h-full">
                   <img
                     src={data.imageUrl}
                     alt={data.title}
@@ -96,12 +96,16 @@ const CaseStudies = () => {
                     </p>
                   </div>
                   <div className="mt-4">
-                    <Link href={data.projectLink}>
+                    <Link
+                      href={data.projectLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <ArrowButton
                         right
                         variant="outline"
                         size={20}
-                        className="hover:!bg-accent-hover inline-flex hover:!text-white hover:!border-accent-hover"
+                        className="hover:!bg-accent-hover hover:!border-accent-hover inline-flex hover:!text-white"
                       >
                         View
                       </ArrowButton>
