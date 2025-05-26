@@ -15,9 +15,9 @@ export default function Home() {
     <main className="mt-10 md:-mt-10">
       <section className="relative flex min-h-screen flex-col items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
         {/* Background Video */}
-        <div className="absolute inset-0 -z-10 opacity-40">
+        <div className="absolute inset-0 -z-10 opacity-80">
           <video
-            src="/herobg.webm"
+            src="/HeroBG.webm"
             autoPlay
             playsInline
             controls={false}
