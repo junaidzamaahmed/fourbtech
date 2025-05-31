@@ -12,7 +12,7 @@ const OurServicesTold = ({ icon, title }: WhyUsType) => {
           width={300}
           height={120}
           alt={title}
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
       <div>
@@ -34,7 +34,7 @@ const OurExparties = () => {
         Wide Range Of Industries. Our Apps Run Smoothly Across Different Devices
         And Platforms. Helping Businesses Stay Competitive And Connected.
       </h3>
-      <div className="grid origin-center grid-cols-2 md:grid-cols-4 gap-5">
+      <div className="grid origin-center grid-cols-2 gap-5 md:grid-cols-4">
         {OurIndustryExperties.map((items, index) => (
           <OurServicesTold key={index} {...items} />
         ))}
