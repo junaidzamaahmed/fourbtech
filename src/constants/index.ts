@@ -355,10 +355,10 @@ export const AppBenifitesData: AppBenifitesType[] = [
 ];
 
 export const OurIndustryExperties: WhyUsType[] = [
-  { icon: "/Icons/app/e-commerce.png", title: "E-Commerce" },
+  { icon: "/Icons/app/ecommerce.png", title: "E-Commerce" },
   { icon: "/Icons/app/healthcare.png", title: "Healthcare" },
   { icon: "/Icons/app/education.png", title: "Eductaion" },
-  { icon: "/Icons/app/travel.png", title: "Travel & Hospitality" },
+  { icon: "/Icons/app/real-estate.png", title: "Real Estate"}
 ];
 
 export const MindsApart: Team[] = [

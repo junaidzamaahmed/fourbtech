@@ -26,7 +26,7 @@ const OurExparties = () => {
   return (
     <section className="main-container mb-44 flex flex-col items-center pb-32 text-center">
       <h2 className="text-h2-color mb-5 text-4xl font-semibold">
-        Our Industry Exparties
+        Our Industry Expertise
       </h2>
       <h3 className="mb-12 max-w-[80%] text-center">
         We Specialise In The Cross-platform Of Outsource Mobile App Development
