@@ -13,13 +13,9 @@ export default function FaqSeo() {
       answer: (
         <div className="space-y-6">
           <p>
-            As more people rely on search engines to find information, SEO has
-            become more competitive and complex. Outdated practices like keyword
-            stuffing no longer work - instead, SEO today involves a wide range
-            of strategic elements that establish a website&apos;s authority,
-            relevance, and visibility.
+            As search engines become the go-to resource for finding information, SEO has grown increasingly competitive and complex. Gone are the days of keyword stuffing and outdated tactics—modern SEO focuses on building authority, relevance, and visibility through strategic, data-driven methods.
           </p>
-          <p>Here are some of the core components of effective SEO:</p>
+          <p>Here are the core components of effective SEO:</p>
           <div className="space-y-4">
             <div className="space-y-2">
               <h3 className="flex items-center font-medium">
@@ -27,13 +23,7 @@ export default function FaqSeo() {
                 Search Engine Results Page (SERP) Rankings
               </h3>
               <p className="pl-4">
-                SERPs are the pages that appear when someone performs a search
-                on platforms like Google or Bing. According to industry data,
-                websites listed on the first page of Google capture around 71%—
-                and in some cases up to 92%—of search traffic clicks. In
-                contrast, results on the second page receive only about 6% of
-                clicks. To gain meaningful visibility and attract more visitors,
-                itapos;s crucial to rank on the first page of search results.
+                SERPs are the listings displayed when someone searches on platforms like Google or Bing. Data shows that websites on the first page of Google capture about 71%—and sometimes up to 92%—of all clicks. In comparison, second-page results receive only around 6%. Ranking on the first page is essential to gain meaningful visibility and attract qualified visitors.
               </p>
             </div>
             <div className="space-y-2">
@@ -42,13 +32,7 @@ export default function FaqSeo() {
                 Organic Traffic
               </h3>
               <p className="pl-4">
-                Organic traffic refers to visitors who land on your website
-                through unpaid search results, as opposed to clicking on paid
-                advertisements. This type of traffic is considered highly
-                valuable because it&aos;s earned rather than bought—and it
-                doesn&aos;t cost you money with each click. SEO focuses on
-                increasing this type of unbiased search engine-recommended
-                traffic, which tends to be more sustainable and trustworthy.
+                Organic traffic refers to users who land on your website through unpaid search results. Unlike paid ads, this traffic is earned and doesn&apos;t cost you with each click. SEO focuses on growing this sustainable, high-trust traffic by aligning your content with what people are actively searching for.
               </p>
             </div>
             <div className="space-y-2">
@@ -57,12 +41,7 @@ export default function FaqSeo() {
                 Quality Of Traffic
               </h3>
               <p className="pl-4">
-                Attracting more visitors is only valuable if those users are
-                genuinely interested in your offerings. SEO helps connect your
-                business with people who are actively searching for what you
-                provide. This improves the quality of traffic to your site and
-                boosts the likelihood of conversions, turning visitors into
-                customers.
+                Driving traffic is only effective if the visitors are genuinely interested in what you offer. SEO ensures that your website reaches people who are actively looking for your products or services, increasing the likelihood of engagement and conversions.
               </p>
             </div>
             <div className="space-y-2">
@@ -71,11 +50,7 @@ export default function FaqSeo() {
                 Quantity Of Traffic
               </h3>
               <p className="pl-4">
-                While targeting the right audience is vital, bringing in a
-                higher volume of relevant visitors is equally important. Our SEO
-                strategies are designed to drive both high-quality and
-                high-quantity traffic, helping your business grow its reach and
-                generate consistent leads.
+                While attracting the right audience is crucial, scaling that audience is equally important. Our SEO strategies are designed to deliver both quality and volume—bringing in more of the right visitors to grow your brand, increase leads, and drive long-term success.
               </p>
             </div>
           </div>

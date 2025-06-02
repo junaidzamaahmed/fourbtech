@@ -31,19 +31,18 @@ const EmployeeCard = ({
   linkedin,
 }: Employee) => {
   return (
-    <Card className="border-dark-bg-primary/10 bg-custom-white flex h-full flex-col border-[1px] transition-all duration-300 hover:shadow-lg">
+    <Card className="border-dark-bg-primary/10 bg-custom-white group flex h-full flex-col border-[1px] transition-all duration-300 hover:shadow-lg">
       <CardHeader className="flex flex-col items-center justify-center space-y-3">
         <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
           <img
             src={image || `https://placehold.co/600x400?text=${name}`}
             alt={name}
-            className="h-full w-full object-cover object-center"
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
+            className="h-full w-full !object-cover !object-center transition-transform duration-300 group-hover:scale-105"
           />
         </div>
         <CardTitle className="w-full text-start">
           <h3 className="text-dark-bg-primary text-xl font-semibold">{name}</h3>
-          <p className="text-muted-foreground text-sm font-medium">{role}</p>
+          <p className="text-muted-foreground text-sm font-medium group-hover:text-dark-bg-primary">{role}</p>
         </CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">
@@ -58,25 +57,19 @@ const EmployeeCard = ({
       <CardFooter className="flex justify-start gap-3">
         <Link
           href={`mailto:${email}`}
-          className="bg-p-color/20 hover:bg-accent-hover group flex h-9 w-9 items-center justify-center rounded-full transition-all duration-300"
+          className="bg-p-color/20 hover:bg-accent-hover group hover:*:text-custom-white justify-center flex h-9 w-9 items-center rounded-full transition-all duration-300"
           aria-label={`Email ${name}`}
         >
-          <FiMail
-            size={18}
-            className="text-dark-bg-primary group-hover:text-custom-white"
-          />
+          <FiMail size={18} className="text-dark-bg-primary" />
         </Link>
         <Link
           href={linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-p-color/20 hover:bg-accent-hover group flex h-9 w-9 items-center justify-center rounded-full transition-all duration-300"
+          className="bg-p-color/20 hover:bg-accent-hover group hover:*:text-custom-white flex h-9 w-9 items-center justify-center rounded-full transition-all duration-300"
           aria-label={`LinkedIn profile of ${name}`}
         >
-          <FiLinkedin
-            size={18}
-            className="text-dark-bg-primary group-hover:text-custom-white"
-          />
+          <FiLinkedin size={18} className="text-dark-bg-primary" />
         </Link>
       </CardFooter>
     </Card>
@@ -132,8 +125,8 @@ const Employees = ({ isHome = true }: { isHome?: boolean }) => {
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Who We Are
             </h2>
-            <p className="text-muted-foreground text-base leading-relaxed">
-              At Our IT Solutions & Services Agency, we specialize in creating
+            <p className=" text-base !text-h1-color leading-relaxed">
+              At our IT solutions & services agency, we specialize in creating
               visually stunning and highly functional websites or mobile apps
               that help businesses stand out in the digital world. Our team of
               talented designers and developers are passionate about crafting
@@ -189,6 +182,10 @@ const Employees = ({ isHome = true }: { isHome?: boolean }) => {
               slidesPerView: 4,
               spaceBetween: 24,
             },
+            2048:{
+              slidesPerView: 5,
+              spaceBetween: 24,
+            }
           }}
           className="w-full"
           onInit={(swiper) => {

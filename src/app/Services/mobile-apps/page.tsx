@@ -108,7 +108,7 @@ const page = () => {
             src={performance}
             width={300}
             height={300}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
             alt="Consistent Performance On All Devices"
           />
         </div>
@@ -120,7 +120,7 @@ const page = () => {
             src={flutterDeveloper}
             width={300}
             height={300}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
             alt="development"
           />
         </div>
@@ -187,7 +187,7 @@ const page = () => {
             src={methodology}
             width={300}
             height={300}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
             alt="Our Methodology"
           />
         </div>

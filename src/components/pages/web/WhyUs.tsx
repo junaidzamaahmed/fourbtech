@@ -6,13 +6,13 @@ import React from "react";
 
 const OurServicesTold = ({ icon, title }: WhyUsType) => {
   return (
-    <Card className="border-dark-bg-primary/10 flex min-h-52 items-center justify-center border-[1px] p-5 shadow-none transition-all duration-500 hover:drop-shadow-xl">
+    <Card className="border-dark-bg-primary/10 group flex min-h-52 items-center justify-center border-[1px] p-5 shadow-none transition-all duration-500 hover:drop-shadow-xl">
       <img
         src={icon}
         width={40}
         height={40}
         alt={title}
-        className="object-cover"
+        className="object-cover transition-all duration-500 group-hover:scale-120"
       />
       <CardTitle>{title}</CardTitle>
     </Card>
@@ -31,7 +31,7 @@ const WhyUs = () => {
         innovative technology. Our team delivers scalable and budget-friendly
         web solutions tailored to address your unique challenges.
       </p>
-      <div className="grid grid-cols-2 gap-5 md:grid-cols-3">
+      <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
         {WhyUsData.map((items, index) => (
           <OurServicesTold key={index} {...items} />
         ))}

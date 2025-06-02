@@ -25,7 +25,7 @@ const page = () => {
             src={digital}
             alt="Digital Marketing"
             fill
-            className="object-cover opacity-50"
+            className="object-cover opacity-50 "
             priority
           />
           <div className="relative z-10 text-center">
@@ -50,7 +50,7 @@ const page = () => {
             src={strategy}
             width={300}
             height={300}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
             alt="Premium SEO Services"
           />
         </div>
@@ -60,12 +60,7 @@ const page = () => {
             Digital marketing agency for a service provider
           </h3>
           <p className="text-[clamp(.8rem, 2vw, 1rem)]">
-            At our Digital Marketing, we deliver results-driven SEO strategies
-            that boost your search rankings and drive targeted organic traffic
-            to your website. Fourbtech comprehensive SEO campaigns include
-            in-depth audits, keyword research, on-page and technical
-            optimization, authority building, citations, link building, content
-            creation, blogging, and much more to maximise
+            At Fourbtech Digital Marketing, we specialize in results-focused SEO strategies designed to improve your search engine rankings and attract high-quality organic traffic to your website. Our comprehensive SEO services include detailed site audits, strategic keyword research, on-page and technical optimization, authority development, citation management, link building, content creation, blogging, and more — all aimed at maximizing your online visibility and growth.
           </p>
           <div className="">
             <Link href={{ pathname: "/", hash: "contact" }}>
@@ -101,7 +96,7 @@ const page = () => {
       </section>
       {/* Boost Your Rankings and Drive Organic Traffic */}
       <section className="main-container">
-        <h1 className="text-h1-color mb-3 text-center font-semibold">
+        <h1 className="text-h1-color my-10 text-center font-semibold">
           Boost Your Rankings and Drive Organic Traffic
         </h1>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">

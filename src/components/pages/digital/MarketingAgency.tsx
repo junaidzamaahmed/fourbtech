@@ -32,7 +32,7 @@ const MarketingAgencyService = () => {
       <h2 className="!text-h1-color mb-5 text-4xl font-semibold">
         Full-stack digital marketing service agency
       </h2>
-      <div className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 ">
         {DigitalServiceAgency.map((service, index) => (
           <MarketAgencyCard key={index} {...service} />
         ))}
