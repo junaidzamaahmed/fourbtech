@@ -124,7 +124,7 @@ const page = () => {
             src={webDev}
             width={300}
             height={300}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
             alt="Professional Web Development Services"
           />
         </div>
@@ -136,7 +136,7 @@ const page = () => {
             src={frontend}
             width={300}
             height={300}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
             alt="development"
           />
         </div>
@@ -235,7 +235,7 @@ const page = () => {
           </p>
           <div className="**:text-[clamp(.7rem, 2vw, .9rem)] grid grid-cols-2 gap-4 pt-4 text-[.8rem] sm:text-[.9rem]">
             <div className="flex items-center gap-2">
-              <Image src={PHP} width={20} height={20} alt="PHP Development" />
+              <Image src={PHP} width={25} height={25} alt="PHP Development" />
               <span className="text-gray-700">PHP Development</span>
             </div>
             <div className="flex items-center gap-2">
@@ -290,7 +290,7 @@ const page = () => {
             src={backend}
             width={300}
             height={300}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
             alt="Backend Development Services"
           />
         </div>
@@ -302,7 +302,7 @@ const page = () => {
             src={consulting}
             width={300}
             height={300}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
             alt="Web Consulting Service Services"
           />
         </div>
@@ -389,7 +389,7 @@ const page = () => {
             src={pWebDev}
             width={300}
             height={300}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
             alt="development"
           />
         </div>

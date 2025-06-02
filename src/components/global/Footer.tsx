@@ -52,6 +52,10 @@ const Footer = () => {
             <strong>BD Office:</strong> KA-5, Bashundhara Main Gate, Dhaka,
             Bangladesh
           </p>
+          <p className="text-custom-white/70 text-sm leading-relaxed">
+            <strong>Italy Office:</strong> Via-VIa Di S.Martino Ai Monti,
+            900184, Roma, Italy
+          </p>
         </div>
 
         {/* Contact Info */}
@@ -68,6 +72,12 @@ const Footer = () => {
             className="text-custom-white/70 text-sm"
           >
             UK: +44 7424 438741
+          </Link>
+          <Link
+            href={"tel:+393319511365"}
+            className="text-custom-white/70 text-sm"
+          >
+            Italy: +3933 1951 1365
           </Link>
           <Link
             href={"tel:+8801674982831"}

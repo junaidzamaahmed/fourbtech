@@ -43,7 +43,7 @@ const Minds_Apart = () => {
         When businesses look to outsource mobile app development to the UK,
         Fourbtech Minds stands out as a trusted partner.
       </h3>
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4">
         {MindsApart.map((items, index) => (
           <WorkForceCard key={index} {...items} />
         ))}

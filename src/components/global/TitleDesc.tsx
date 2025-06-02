@@ -3,7 +3,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardHeader,
   CardTitle,
 } from "../ui/card";
 import { TitleDesc } from "@/types";
@@ -11,13 +10,9 @@ import { TitleDesc } from "@/types";
 const TitleDescCard = ({ title, desc }: TitleDesc) => {
   return (
     <Card className="border-dark-bg-primary/10 transform-all border-[1px] p-5 shadow-none duration-500 hover:drop-shadow-xl">
-      {title && (
-        <CardHeader>
-          <CardTitle className="">{title}</CardTitle>
-        </CardHeader>
-      )}
       <CardContent>
-        <CardDescription className="text-p-color">{desc}</CardDescription>
+      {title && <CardTitle className=" sm:text-base mb-4">{title}</CardTitle>}
+        <CardDescription className="sm:text-sm text-dark-bg-primary">{desc}</CardDescription>
       </CardContent>
     </Card>
   );

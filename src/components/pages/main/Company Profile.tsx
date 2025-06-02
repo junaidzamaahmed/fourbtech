@@ -52,7 +52,7 @@ const CompanyProfile = ({ isHome = true }: { isHome?: boolean }) => {
   return (
     <section
       ref={sectionRef}
-      className={`main-container grid min-h-[80vh] grid-cols-1 gap-10 sm:grid-cols-2 ${isHome ? "bg-dark-bg-primary text-custom-white" : "**:text-dark-bg-primary bg-custom-white"}`}
+      className={`main-container grid !py-16 grid-cols-1 gap-10 sm:grid-cols-2 ${isHome ? "bg-dark-bg-primary text-custom-white" : "**:text-dark-bg-primary bg-custom-white"}`}
     >
       {/* Text Content */}
       <div className="sm:order-1x order-2 flex flex-col items-start justify-center gap-6">

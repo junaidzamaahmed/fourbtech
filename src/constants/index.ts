@@ -197,7 +197,7 @@ export const employees: Employee[] = [
   },
   {
     name: "Hirok Roy Rahul",
-    role: "frontend Developer",
+    role: "Frontend Developer",
     image: "/members/Hirok_Roy_Rahul.png",
     description:
       "Former Web Developer at  Nebulae-Soft<br/>Junior Machine Vision Engineer at BRACU  Duburi<br/>BS.c in computer science & Engineering (BRAC University) ",
@@ -215,7 +215,7 @@ export const employees: Employee[] = [
   },
   {
     name: "Md Muhib Monowar",
-    role: "UI UX Designer",
+    role: "UI/UX Designer",
     image: "/members/Muhib_Monoar.png",
     description:
       "UI Designer - MediMontro App <br/>Professional UI/UX Designer - Freelance <br/>Complete Web & Mobile Design - ZTM <br/>Academy, Toronto",
@@ -290,11 +290,6 @@ export const IndustrySolutionData: IndustrySolutionType[] = [
     title: "Travel",
     desc: "Looking to create a comprehensive  travel booking platform? We build  dynamic travel web apps for everything  from navigation and event booking to  transport scheduling and management,  tailored to your specific needs.",
   },
-  {
-    icon: "/Icons/Web/education.png",
-    title: "Education",
-    desc: "We design custom eLearning platforms  to make education more accessible.  From virtual classrooms and study  resources to live chat and automated  exams, we help you create complete  online learning environments.",
-  },
 ];
 
 export const WhyUsData: WhyUsType[] = [
@@ -330,10 +325,10 @@ export const WhyUsData: WhyUsType[] = [
     icon: "/Icons/Web/need/varified.png",
     title: "Highest Code Quality",
   },
-  {
-    icon: "/Icons/Web/need/support.png",
-    title: "90 Days Maintainace Support",
-  },
+  // {
+  //   icon: "/Icons/Web/need/support.png",
+  //   title: "90 Days Maintainace Support",
+  // },
 ];
 
 export const AppBenifitesData: AppBenifitesType[] = [
@@ -360,11 +355,10 @@ export const AppBenifitesData: AppBenifitesType[] = [
 ];
 
 export const OurIndustryExperties: WhyUsType[] = [
-  { icon: "/Icons/app/e-commerce.png", title: "E-Commerce" },
+  { icon: "/Icons/app/ecommerce.png", title: "E-Commerce" },
   { icon: "/Icons/app/healthcare.png", title: "Healthcare" },
   { icon: "/Icons/app/education.png", title: "Eductaion" },
-  { icon: "/Icons/app/travel.png", title: "Travel & Hospitality" },
-  { icon: "/Icons/app/realEstate.png", title: "Real Estate" },
+  { icon: "/Icons/app/real-estate.png", title: "Real Estate"}
 ];
 
 export const MindsApart: Team[] = [
@@ -431,27 +425,27 @@ export const DigitalServiceAgency: AppBenifitesType[] = [
 export const SEO_Details: TitleDesc[] = [
   {
     title: "SEO Optimisation service provider",
-    desc: " Our comprehensive SEO audit evaluates  every aspect of your website, including  technical performance, content quality, user  experience, and how you stack up against  competitors. This analysis uncovers  opportunities for growth and aligns your site  with the latest search engine algorithms and  SEO best practices. Regular audits are  essential to stay ahead in a constantly  evolving digital landscape.",
+    desc: " Our comprehensive SEO audit thoroughly examines every element of your website — from technical performance and content quality to user experience and competitive positioning. This in-depth analysis identifies key opportunities for growth and ensures your site stays aligned with the latest search engine algorithms and industry best practices. With regular audits, you stay ahead of the curve in today's ever-evolving digital landscape.",
   },
   {
     title: "Keyword Research",
-    desc: " Keywords are the terms users enter into  search engines to find what they need.  Effective keyword research sets the  foundation for a successful SEO campaign  by identifying high-value search terms that  attract the right audience. It helps guide  content creation and prioritize SEO efforts  to ensure maximum impact.",
+    desc: "Keywords are the phrases your potential customers use in search engines to find products, services, or information. Strategic keyword research lays the foundation for a successful SEO campaign by uncovering high-value terms that draw in your ideal audience. It drives smarter content creation and helps focus your SEO efforts where they matter most—delivering maximum visibility and results.",
   },
   {
     title: "Off-Page SEO",
-    desc: " Off-page SEO builds your website's  credibility and authority beyond its own  pages. While link building is a key  component, effective off-page SEO also  includes brand mentions, citation  management, influencer outreach, and  social media engagement—all aimed at  boosting your site's trustworthiness and  search visibility.",
+    desc: "Off-page SEO strengthens your website's credibility and authority across the web. While link building plays a major role, effective off-page strategies also include brand mentions, citation management, influencer outreach, and active social media engagement. These efforts work together to enhance your site's trust, increase visibility in search results, and drive more qualified traffic to your business.",
   },
   {
     title: "Citation Building",
-    desc: "Citations are online references of your  business that include key details like name,  address, phone number, and website. They  are crucial for improving local search  rankings and establishing your local  presence. If you're aiming to rank in  Google's local pack or top SERP spots,  strong and consistent citation building is a  must.",
+    desc: "Citations are online listings of your business that include essential details such as your name, address, phone number, and website. They play a vital role in boosting your local search rankings and strengthening your presence in your target area. To secure a spot in Google's local pack or top search results, consistent and accurate citation building is essential.",
   },
   {
     title: "Link Building",
-    desc: " Link building involves earning backlinks  from authoritative and relevant websites to  boost your site's credibility. Search engines  use these links to gauge the quality and  trustworthiness of your content. When two  pages are otherwise equal, the one with  stronger backlinks often ranks higher.",
+    desc: "Link building is the process of acquiring high-quality backlinks from authoritative and relevant websites to enhance your site’s credibility. Search engines view these links as endorsements, using them to assess the trustworthiness and value of your content. When competing pages are similar, the one with stronger, more reputable backlinks typically ranks higher in search results.",
   },
   {
     title: "Blogging",
-    desc: " Blogging allows you to target additional  keywords and provide valuable content that  doesn't quite fit on your main site pages. It  also supports link building, increases social  media engagement, and strengthens your  brand's Expertise, Authority, and Trust  (E-A-T). Regular blogging enhances  visibility and supports long-term SEO  growth.",
+    desc: "Blogging is a powerful way to target additional keywords and share valuable content that may not fit on your main website pages. It also supports link building, boosts social media engagement, and reinforces your brand's Expertise, Authority, and Trust (E-A-T). Consistent, high-quality blogging not only improves your visibility but also drives long-term SEO success.",
   },
 ];
 

@@ -182,7 +182,7 @@ const page = () => {
             src={whyChooseUs}
             width={300}
             height={300}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
             alt="whyChooseUs"
           />
         </div>
