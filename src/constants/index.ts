@@ -222,6 +222,15 @@ export const employees: Employee[] = [
     email: "muhib@fourbtech.com",
     linkedin: "https://www.linkedin.com/in/muhibmonoar/",
   },
+  {
+    name: "Carl Katongomara",
+    role: "Business Navigator",
+    image: "/members/Carl_Katongomara.png",
+    description:
+      "UK. Computer Science and Engineering.<br/>City University London.",
+    email: "example@fourbtech.com",
+    linkedin: "https://www.linkedin.com/in/",
+  },
 ];
 
 export const services: Services[] = [
