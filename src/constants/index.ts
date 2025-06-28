@@ -228,8 +228,8 @@ export const employees: Employee[] = [
     image: "/members/Carl_Katongomara.png",
     description:
       "UK. Computer Science and Engineering.<br/>City University London.",
-    email: "example@fourbtech.com",
-    linkedin: "https://www.linkedin.com/in/",
+    email: "info@fourbtech.com",
+    linkedin: "https://www.linkedin.com/company/fourbtech",
   },
 ];
 
@@ -367,7 +367,7 @@ export const OurIndustryExperties: WhyUsType[] = [
   { icon: "/Icons/app/ecommerce.png", title: "E-Commerce" },
   { icon: "/Icons/app/healthcare.png", title: "Healthcare" },
   { icon: "/Icons/app/education.png", title: "Eductaion" },
-  { icon: "/Icons/app/real-estate.png", title: "Real Estate"}
+  { icon: "/Icons/app/real-estate.png", title: "Real Estate" },
 ];
 
 export const MindsApart: Team[] = [
