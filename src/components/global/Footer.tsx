@@ -46,7 +46,15 @@ const Footer = () => {
         <div className="flex flex-col gap-4">
           <h3 className="text-lg font-semibold">Locations</h3>
           <p className="text-custom-white/70 text-sm leading-relaxed">
-            <strong>UK Office:</strong> 252-262 Romford Road, E7 9HZ, London, UK
+            <strong>UK Office:</strong> 93/101 Green Field Road, London, United
+            Kingdom <br />
+            <Link
+              href="https://find-and-update.company-information.service.gov.uk/company/16572082"
+              target="_blank"
+            >
+              <strong>Registration number: </strong>
+              16572082
+            </Link>
           </p>
           <p className="text-custom-white/70 text-sm leading-relaxed">
             <strong>BD Office:</strong> KA-5, Bashundhara Main Gate, Dhaka,
