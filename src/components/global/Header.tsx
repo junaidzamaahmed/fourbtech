@@ -110,7 +110,7 @@ const Header = () => {
       className={`fixed top-0 z-50 h-16 w-full border-none transition-all duration-700 sm:top-3`}
     >
       <header className="bsolute absolute top-1/2 w-full -translate-y-1/2">
-        <nav className="flex-between main-container bg-custom-white">
+        <nav className="flex-between main-container bg-white/50 backdrop-blur-md">
           <Link href="/" className="relative w-20 sm:w-28 md:w-32">
             {/* <img
               src="/Primary logo.svg"
