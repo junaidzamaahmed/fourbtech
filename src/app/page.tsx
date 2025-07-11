@@ -17,7 +17,7 @@ export default function Home() {
         {/* Background Video */}
         <div className="absolute inset-0 -z-10 opacity-80">
           <video
-            src="/HeroBG.webm"
+            src="/herobg.webm"
             autoPlay
             playsInline
             controls={false}
