@@ -1,15 +1,22 @@
-"use client"
+"use client";
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
-import { useState } from "react"
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { useState } from "react";
 
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../../ui/form"
-import { Input } from "../../ui/input"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Textarea } from "@/components/ui/textarea"
-import ArrowButton from "@/components/global/ArrowButton"
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "../../ui/form";
+import { Input } from "../../ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Textarea } from "@/components/ui/textarea";
+import ArrowButton from "@/components/global/ArrowButton";
 // import { AlertCircle, CheckCircle } from "lucide-react"
 // import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
@@ -20,18 +27,18 @@ const formSchema = z.object({
   phone: z.string().min(9, "Invalid phone number"),
   message: z.string().min(1, "Message cannot be empty"),
   save: z.boolean(),
-})
+});
 
-type FormData = z.infer<typeof formSchema>
+type FormData = z.infer<typeof formSchema>;
 
 const ContactUS = () => {
-  const [save, setSave] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [save, setSave] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [submitStatus, setSubmitStatus] = useState<{
-    success?: boolean
-    message?: string
-  } | null>(null)
+    success?: boolean;
+    message?: string;
+  } | null>(null);
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -43,15 +50,15 @@ const ContactUS = () => {
       message: "",
       save: false,
     },
-  })
+  });
 
   const onSubmit = async (data: FormData) => {
     try {
-      setIsSubmitting(true)
-      setSubmitStatus(null)
+      setIsSubmitting(true);
+      setSubmitStatus(null);
 
       // Include the save checkbox value
-      const formData = { ...data, save }
+      const formData = { ...data, save };
 
       // Send email using API route
       const response = await fetch("/api/send", {
@@ -60,37 +67,38 @@ const ContactUS = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      })
+      });
 
-      const result = await response.json()
+      const result = await response.json();
 
       if (result.success) {
         setSubmitStatus({
           success: true,
           message: "Thank you! Your message has been sent successfully.",
-        })
-        form.reset()
-        setSave(false)
+        });
+        form.reset();
+        setSave(false);
       } else {
         setSubmitStatus({
           success: false,
-          message: result.message || "Failed to send your message. Please try again.",
-        })
+          message:
+            result.message || "Failed to send your message. Please try again.",
+        });
       }
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       setSubmitStatus({
         success: false,
         message: "An unexpected error occurred. Please try again.",
-      })
+      });
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <section
-      className="main-container bg-custom-white grid grid-cols-1 overflow-hidden rounded-xl lg:grid-cols-2 my-28"
+      className="main-container bg-custom-white my-28 grid grid-cols-1 overflow-hidden rounded-xl lg:grid-cols-2"
       id="contact"
     >
       {/* Left Info Block */}
@@ -100,7 +108,8 @@ const ContactUS = () => {
             Ready To Take Your Business to the Next Level?
           </h2>
           <p className="text-p-color mb-6">
-            Contact us today to schedule a consultation or learn more about our services.
+            Contact us today to schedule a consultation or learn more about our
+            services.
           </p>
           <ul className="text-p-color space-y-2 text-sm sm:text-base">
             <li>
@@ -110,14 +119,15 @@ const ContactUS = () => {
               <strong>Email:</strong> info@fourbtech.com
             </li>
             <li>
-              <strong>Address:</strong> 252-262 Romford Road, E7 9HZ, London, UK
+              <strong>Address:</strong> 93/101 Green Field Road, London, United
+              Kingdom
             </li>
           </ul>
         </div>
       </div>
 
       {/* Form Block */}
-      <div className="bg-dark-bg-primary p-10 md:p-14 rounded-xl">
+      <div className="bg-dark-bg-primary rounded-xl p-10 md:p-14">
         {/* {submitStatus && (
           <Alert
             className={`mb-6 ${submitStatus.success ? "bg-green-50 text-green-800 border-green-200" : "bg-red-50 text-red-800 border-red-200"}`}
@@ -129,7 +139,10 @@ const ContactUS = () => {
         )} */}
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="text-custom-white flex flex-col gap-6">
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="text-custom-white flex flex-col gap-6"
+          >
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {["firstname", "lastname", "email", "phone"].map((field, idx) => (
                 <FormField
@@ -150,7 +163,11 @@ const ContactUS = () => {
                       <FormControl>
                         <Input
                           {...field}
-                          value={typeof field.value === "boolean" ? field.value.toString() : field.value}
+                          value={
+                            typeof field.value === "boolean"
+                              ? field.value.toString()
+                              : field.value
+                          }
                           disabled={isSubmitting}
                           className="border-custom-white/60 rounded-none border-0 !border-b-2 px-1 py-2 focus:ring-0 focus:outline-0"
                         />
@@ -169,7 +186,7 @@ const ContactUS = () => {
                 checked={save}
                 onCheckedChange={(checked) => setSave(Boolean(checked))}
                 disabled={isSubmitting}
-                className="data-[state=checked]:!bg-accent-hover border-accent-hover size-4 rounded-full data-[state=checked]:text-custom-white"
+                className="data-[state=checked]:!bg-accent-hover border-accent-hover data-[state=checked]:text-custom-white size-4 rounded-full"
               />
               <label htmlFor="save" className="text-custom-white">
                 Save details for later
@@ -198,7 +215,13 @@ const ContactUS = () => {
 
             {/* Submit */}
             <div className="mt-4">
-              <ArrowButton variant="fill" left type="submit" className="w-fit" disabled={isSubmitting}>
+              <ArrowButton
+                variant="fill"
+                left
+                type="submit"
+                className="w-fit"
+                disabled={isSubmitting}
+              >
                 {isSubmitting ? "Sending..." : "Submit"}
               </ArrowButton>
             </div>
@@ -206,7 +229,7 @@ const ContactUS = () => {
         </Form>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ContactUS
+export default ContactUS;

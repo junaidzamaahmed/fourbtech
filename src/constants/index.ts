@@ -222,6 +222,15 @@ export const employees: Employee[] = [
     email: "muhib@fourbtech.com",
     linkedin: "https://www.linkedin.com/in/muhibmonoar/",
   },
+  {
+    name: "Carl Katongomara",
+    role: "Business Navigator",
+    image: "/members/Carl_Katongomara.png",
+    description:
+      "UK. Computer Science and Engineering.<br/>City University London.",
+    email: "info@fourbtech.com",
+    linkedin: "https://www.linkedin.com/company/fourbtech",
+  },
 ];
 
 export const services: Services[] = [
@@ -358,7 +367,7 @@ export const OurIndustryExperties: WhyUsType[] = [
   { icon: "/Icons/app/ecommerce.png", title: "E-Commerce" },
   { icon: "/Icons/app/healthcare.png", title: "Healthcare" },
   { icon: "/Icons/app/education.png", title: "Eductaion" },
-  { icon: "/Icons/app/real-estate.png", title: "Real Estate"}
+  { icon: "/Icons/app/real-estate.png", title: "Real Estate" },
 ];
 
 export const MindsApart: Team[] = [
