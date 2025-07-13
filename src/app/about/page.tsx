@@ -1,8 +1,8 @@
 import ArrowButton from "@/components/global/ArrowButton";
-import AboutFeedBack from "@/components/pages/about/AboutFeedBack";
+import AboutFeedBack from "@/app/about/_components/AboutFeedBack";
 // import AboutMarquee from "@/components/pages/about/AboutMarquee";
-import CompanyProfile from "@/components/pages/main/Company Profile";
-import Employees from "@/components/pages/main/Employess";
+import CompanyProfile from "@/components/main/Company Profile";
+import Employees from "@/components/main/Employess";
 // import Insides from "@/components/pages/main/Insides";
 import { services } from "@/constants";
 import { Metadata } from "next";
@@ -28,7 +28,7 @@ const page = () => {
   return (
     <main className="bg-custom-white">
       <section className="relative mb-14">
-        <div className="relative flex h-[300px] sm:h-[360px] w-full items-center justify-center bg-gray-900">
+        <div className="relative flex h-[300px] w-full items-center justify-center bg-gray-900 sm:h-[360px]">
           <Image
             src={aboutUs}
             alt="Code background"
@@ -82,11 +82,11 @@ const page = () => {
               );
             })}
           </div>
-            <Link href={"/"}>
-          <ArrowButton variant="fill" className="!py-5" left size={24}>
-            See Our Services
-          </ArrowButton>
-            </Link>
+          <Link href={"/"}>
+            <ArrowButton variant="fill" className="!py-5" left size={24}>
+              See Our Services
+            </ArrowButton>
+          </Link>
         </div>
       </section>
       <CompanyProfile isHome={false} />
@@ -182,7 +182,7 @@ const page = () => {
             src={whyChooseUs}
             width={300}
             height={300}
-            className="h-full w-full object-cover rounded-xl"
+            className="h-full w-full rounded-xl object-cover"
             alt="whyChooseUs"
           />
         </div>

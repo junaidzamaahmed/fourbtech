@@ -1,7 +1,7 @@
 import ArrowButton from "@/components/global/ArrowButton";
 import TitleDescCard from "@/components/global/TitleDesc";
-import FaqSeo from "@/components/pages/digital/Faq";
-import MarketingAgencyService from "@/components/pages/digital/MarketingAgency";
+import FaqSeo from "@/app/Services/digital-marketing/_components/Faq";
+import MarketingAgencyService from "@/app/Services/digital-marketing/_components/MarketingAgency";
 import { BoostRanking, SEO_Details } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";

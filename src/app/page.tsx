@@ -1,13 +1,13 @@
 import ArrowButton from "@/components/global/ArrowButton";
-import CaseStudies from "@/components/pages/main/CaseStudies";
-import CompanyProfile from "@/components/pages/main/Company Profile";
-import ContactUS from "@/components/pages/main/ContactUS";
-import CustomerFeedBack from "@/components/pages/main/CustomerFeedBack";
-import Employess from "@/components/pages/main/Employess";
-import { HeroMarqee } from "@/components/pages/main/FadingMarquee";
+import CaseStudies from "@/components/main/CaseStudies";
+import CompanyProfile from "@/components/main/Company Profile";
+import ContactUS from "@/components/main/ContactUS";
+import CustomerFeedBack from "@/components/main/CustomerFeedBack";
+import Employess from "@/components/main/Employess";
+import { HeroMarqee } from "@/components/main/FadingMarquee";
 // import Insides from "@/components/pages/main/Insides";
-import FaqSection from "@/components/pages/main/Questions";
-import Services from "@/components/pages/main/Services";
+import FaqSection from "@/components/main/Questions";
+import Services from "@/components/main/Services";
 import Link from "next/link";
 
 export default function Home() {

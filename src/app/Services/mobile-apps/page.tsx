@@ -1,7 +1,7 @@
 import ArrowButton from "@/components/global/ArrowButton";
-import Benefites from "@/components/pages/app-dev/Benifites";
-import OurExparties from "@/components/pages/app-dev/IndustryExparties";
-import Minds_Apart from "@/components/pages/app-dev/MindsAprat";
+import Benefites from "@/app/Services/mobile-apps/_components/Benifites";
+import OurExparties from "@/app/Services/mobile-apps/_components/IndustryExparties";
+import Minds_Apart from "@/app/Services/mobile-apps/_components/MindsAprat";
 import { CheckCircle } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";

@@ -1,6 +1,6 @@
 import ArrowButton from "@/components/global/ArrowButton";
-import IndustrySolution from "@/components/pages/web/industry";
-import WhyUs from "@/components/pages/web/WhyUs";
+import IndustrySolution from "@/app/Services/web-development/_components/industry";
+import WhyUs from "@/app/Services/web-development/_components/WhyUs";
 import { CheckCircle } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";

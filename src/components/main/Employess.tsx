@@ -14,7 +14,8 @@ import Link from "next/link";
 import { FiMail, FiLinkedin } from "react-icons/fi";
 import { useEffect, useRef } from "react";
 
-import palaceholder from "../../../../public/placeholders/palaceholder2.png";
+// import palaceholder from "../../../../public/placeholders/palaceholder2.png";
+import palaceholder from "../../../public/placeholders/palaceholder2.png";
 
 // Import Swiper and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
