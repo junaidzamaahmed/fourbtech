@@ -9,9 +9,31 @@ import SecondaryLogo from "../../../public/Secondary logo.svg";
 
 const Footer = () => {
   const [sendMail, setSendMail] = useState("");
+
   const handleSubmission = async () => {
-    // alert("this feature is not active")
+    try {
+      if (!sendMail){
+        return
+      }
+      // Send email using API route
+      await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstname: "New User",
+          lastname: "...",
+          email: sendMail,
+          phone: "",
+          message: "This message was sent form the footer.",
+        }),
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
+
   return (
     <footer className="bg-dark-bg-primary text-custom-white py-20">
       <div className="main-container grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
@@ -34,6 +56,7 @@ const Footer = () => {
               className="bg-custom-white text-dark-bg-primary rounded-full px-4 py-2 pr-10 text-sm focus-visible:!ring-0"
               value={sendMail}
               onChange={(e) => setSendMail(e.target.value)}
+              required
             />
             <CiPaperplane
               className="text-dark-bg-primary hover:text-accent-hover absolute top-1/2 right-4 z-50 size-6 -translate-y-1/2 cursor-pointer transition-transform duration-300 hover:scale-110 hover:-rotate-12"
