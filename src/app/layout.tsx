@@ -14,7 +14,10 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "FourBtech",
+  title:{
+    default:  "FourBtech",
+    template: "%s - FourBtech"
+  },
   description: "Tech Service Provider",
 };
 

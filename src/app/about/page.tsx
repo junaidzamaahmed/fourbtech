@@ -20,9 +20,8 @@ import story from "../../../public/about/story.png";
 import whyChooseUs from "../../../public/about/whyChooseUs.png";
 
 export const metadata: Metadata = {
-  title: "FourBtech | About US",
-  description: "Tech Service Provider",
-};
+  title: "About us",
+}
 
 const page = () => {
   return (

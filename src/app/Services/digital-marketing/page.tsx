@@ -1,7 +1,7 @@
 import ArrowButton from "@/components/global/ArrowButton";
 import TitleDescCard from "@/components/global/TitleDesc";
-import FaqSeo from "@/app/Services/digital-marketing/_components/Faq";
-import MarketingAgencyService from "@/app/Services/digital-marketing/_components/MarketingAgency";
+import FaqSeo from "@/app/services/digital-marketing/_components/Faq";
+import MarketingAgencyService from "@/app/services/digital-marketing/_components/MarketingAgency";
 import { BoostRanking, SEO_Details } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,8 +11,7 @@ import digital from "../../../../public/digital/digital.png";
 import strategy from "../../../../public/digital/strategy.png";
 
 export const metadata: Metadata = {
-  title: "FourBtech | Services",
-  description: "Tech Service Provider",
+  title: "Digital Marketing",
 };
 
 const page = () => {
@@ -25,7 +24,7 @@ const page = () => {
             src={digital}
             alt="Digital Marketing"
             fill
-            className="object-cover opacity-50 "
+            className="object-cover opacity-50"
             priority
           />
           <div className="relative z-10 text-center">
@@ -50,7 +49,7 @@ const page = () => {
             src={strategy}
             width={300}
             height={300}
-            className="h-full w-full object-cover rounded-xl"
+            className="h-full w-full rounded-xl object-cover"
             alt="Premium SEO Services"
           />
         </div>
@@ -60,7 +59,14 @@ const page = () => {
             Digital marketing agency for a service provider
           </h3>
           <p className="text-[clamp(.8rem, 2vw, 1rem)]">
-            At Fourbtech Digital Marketing, we specialize in results-focused SEO strategies designed to improve your search engine rankings and attract high-quality organic traffic to your website. Our comprehensive SEO services include detailed site audits, strategic keyword research, on-page and technical optimization, authority development, citation management, link building, content creation, blogging, and more — all aimed at maximizing your online visibility and growth.
+            At Fourbtech Digital Marketing, we specialize in results-focused SEO
+            strategies designed to improve your search engine rankings and
+            attract high-quality organic traffic to your website. Our
+            comprehensive SEO services include detailed site audits, strategic
+            keyword research, on-page and technical optimization, authority
+            development, citation management, link building, content creation,
+            blogging, and more — all aimed at maximizing your online visibility
+            and growth.
           </p>
           <div className="">
             <Link href={{ pathname: "/", hash: "contact" }}>

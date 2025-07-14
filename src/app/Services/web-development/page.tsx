@@ -1,6 +1,6 @@
 import ArrowButton from "@/components/global/ArrowButton";
-import IndustrySolution from "@/app/Services/web-development/_components/industry";
-import WhyUs from "@/app/Services/web-development/_components/WhyUs";
+import IndustrySolution from "@/app/services/web-development/_components/industry";
+import WhyUs from "@/app/services/web-development/_components/WhyUs";
 import { CheckCircle } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -29,8 +29,7 @@ import pWebDev from "../../../../public/webDev/pWebDev.png";
 import Python from "../../../../public/Icons/Web/python.png";
 
 export const metadata: Metadata = {
-  title: "FourBtech | Services",
-  description: "Tech Service Provider",
+  title: "Web Development",
 };
 
 const page = () => {
@@ -38,7 +37,7 @@ const page = () => {
     <main className="bg-custom-white">
       {/* Video and header  */}
       <section className="relative mb-14">
-        <div className="relative flex h-[300px] sm:h-[400px] w-full items-center justify-center bg-gray-900">
+        <div className="relative flex h-[300px] w-full items-center justify-center bg-gray-900 sm:h-[400px]">
           <Image
             src={CodingPng}
             alt="Web Development"
@@ -124,7 +123,7 @@ const page = () => {
             src={webDev}
             width={300}
             height={300}
-            className="h-full w-full object-cover rounded-xl"
+            className="h-full w-full rounded-xl object-cover"
             alt="Professional Web Development Services"
           />
         </div>
@@ -136,7 +135,7 @@ const page = () => {
             src={frontend}
             width={300}
             height={300}
-            className="h-full w-full object-cover rounded-xl"
+            className="h-full w-full rounded-xl object-cover"
             alt="development"
           />
         </div>
@@ -290,7 +289,7 @@ const page = () => {
             src={backend}
             width={300}
             height={300}
-            className="h-full w-full object-cover rounded-xl"
+            className="h-full w-full rounded-xl object-cover"
             alt="Backend Development Services"
           />
         </div>
@@ -302,7 +301,7 @@ const page = () => {
             src={consulting}
             width={300}
             height={300}
-            className="h-full w-full object-cover rounded-xl"
+            className="h-full w-full rounded-xl object-cover"
             alt="Web Consulting Service Services"
           />
         </div>
@@ -389,7 +388,7 @@ const page = () => {
             src={pWebDev}
             width={300}
             height={300}
-            className="h-full w-full object-cover rounded-xl"
+            className="h-full w-full rounded-xl object-cover"
             alt="development"
           />
         </div>

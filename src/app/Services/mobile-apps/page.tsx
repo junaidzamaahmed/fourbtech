@@ -1,7 +1,7 @@
 import ArrowButton from "@/components/global/ArrowButton";
-import Benefites from "@/app/Services/mobile-apps/_components/Benifites";
-import OurExparties from "@/app/Services/mobile-apps/_components/IndustryExparties";
-import Minds_Apart from "@/app/Services/mobile-apps/_components/MindsAprat";
+import Benefites from "@/app/services/mobile-apps/_components/Benifites";
+import OurExparties from "@/app/services/mobile-apps/_components/IndustryExparties";
+import Minds_Apart from "@/app/services/mobile-apps/_components/MindsAprat";
 import { CheckCircle } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -16,8 +16,7 @@ import ReactNative from "../../../../public/Icons/app/react-native.png";
 import methodology from "../../../../public/Icons/app/methodology.png";
 
 export const metadata: Metadata = {
-  title: "FourBtech | Services",
-  description: "Tech Service Provider",
+  title: "Mobile App Development",
 };
 
 const page = () => {
@@ -33,7 +32,7 @@ const page = () => {
             className="object-cover opacity-50"
             priority
           />
-          <div className="main-container relative z-10  text-center">
+          <div className="main-container relative z-10 text-center">
             <h1 className="mb-2 font-bold text-white">
               Mobile App Development
             </h1>
@@ -108,7 +107,7 @@ const page = () => {
             src={performance}
             width={300}
             height={300}
-            className="h-full w-full object-cover rounded-xl"
+            className="h-full w-full rounded-xl object-cover"
             alt="Consistent Performance On All Devices"
           />
         </div>
@@ -120,7 +119,7 @@ const page = () => {
             src={flutterDeveloper}
             width={300}
             height={300}
-            className="h-full w-full object-cover rounded-xl"
+            className="h-full w-full rounded-xl object-cover"
             alt="development"
           />
         </div>
@@ -187,7 +186,7 @@ const page = () => {
             src={methodology}
             width={300}
             height={300}
-            className="h-full w-full object-cover rounded-xl"
+            className="h-full w-full rounded-xl object-cover"
             alt="Our Methodology"
           />
         </div>
