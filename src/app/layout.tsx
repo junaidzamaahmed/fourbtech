@@ -37,7 +37,7 @@ export default function RootLayout({
         >
           <Header />
           {/* <SmoothScrollLayout> */}
-          <div className="">{children}</div>
+          <main>{children}</main>
           <Footer />
           {/* </SmoothScrollLayout> */}
         </ThemeProvider>

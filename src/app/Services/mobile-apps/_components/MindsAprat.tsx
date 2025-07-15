@@ -35,7 +35,7 @@ const WorkForceCard = ({ image, title, desc }: Team) => {
 };
 const Minds_Apart = () => {
   return (
-    <section className="main-container mb-44 flex flex-col items-center pb-32 text-center">
+    <section className="main-container flex flex-col items-center !pb-10 text-center lg:!pb-32">
       <h2 className="text-h1-color mb-5 text-4xl font-semibold">
         What Sets FourBtech Minds Apart
       </h2>

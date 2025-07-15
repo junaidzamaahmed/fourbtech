@@ -21,10 +21,10 @@ const OurServicesTold = ({ icon, title }: WhyUsType) => {
 
 const WhyUs = () => {
   return (
-    <section className="main-container mb-44 flex flex-col items-center pb-32 text-center">
-      <h1 className="mb-5">
+    <section className="main-container mb-44 flex flex-col items-center text-center ">
+      <h2 className="mb-5">
         Why Fourbtech is the Perfect Partner for Your Web Technology Needs
-      </h1>
+      </h2>
       <p className="mb-12 max-w-[80%] text-center">
         Located in London, UK, Fourbtech specializes in creating custom web
         applications. We are committed to helping businesses grow through

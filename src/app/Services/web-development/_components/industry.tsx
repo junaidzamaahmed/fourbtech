@@ -34,10 +34,10 @@ const IndustryCard = ({ icon, title, desc }: IndustrySolutionType) => {
 
 const IndustrySolution = () => {
   return (
-    <section className="main-container flex flex-col items-center pb-32 text-center">
-      <h1 className="mb-10">
+    <section className="main-container flex flex-col items-center !pb-10 lg:!pb-32 text-center">
+      <h2 className="mb-10">
         Industries We Support with Web Development Solutions
-      </h1>
+      </h2>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
         {IndustrySolutionData.map((items, index) => (
           <IndustryCard key={index} {...items} />

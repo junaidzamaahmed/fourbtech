@@ -24,7 +24,7 @@ const OurServicesTold = ({ icon, title }: WhyUsType) => {
 
 const OurExparties = () => {
   return (
-    <section className="main-container mb-44 flex flex-col items-center pb-32 text-center">
+    <section className="main-container flex flex-col items-center !pb-10 text-center lg:!pb-32">
       <h2 className="text-h2-color mb-5 text-4xl font-semibold">
         Our Industry Expertise
       </h2>

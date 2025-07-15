@@ -62,7 +62,7 @@ export default function FaqSeo() {
 
   return (
     <div className="main-container !py-24">
-      <h1 className="mb-10 text-center font-semibold">FAQ SEO</h1>
+      <h2 className="mb-10 text-center font-semibold">FAQ SEO</h2>
       <div className="flex flex-col sm:flex-row">
         <div className="-mr-5 mb-3 w-full sm:mb-0 sm:px-4 md:w-1/3">
           {faqs.map((faq) => (

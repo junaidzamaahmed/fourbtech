@@ -154,7 +154,7 @@ const Employees = ({ isHome = true }: { isHome?: boolean }) => {
         </div>
       )}
 
-      <h1 className="mt-16 text-center">Our Team</h1>
+      <h2 className="mt-16 text-center">Our Team</h2>
 
       <div className="mt-4 w-full">
         <Swiper

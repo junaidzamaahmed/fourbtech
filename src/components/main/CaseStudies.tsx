@@ -17,7 +17,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { NavigationButtons } from "@/components/global/NavigationButton";
 
-const CaseStudies = () => {
+const Events = () => {
   const divRef = useRef(null);
 
   useEffect(() => {
@@ -129,4 +129,4 @@ const CaseStudies = () => {
   );
 };
 
-export default CaseStudies;
+export default Events;

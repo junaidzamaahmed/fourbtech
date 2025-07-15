@@ -16,9 +16,9 @@ const AboutFeedBack = () => {
     <section className="main-container my-20">
       <div className="flex-center mb-8 flex-col sm:mb-16">
         <p className="">Testimonials</p>
-        <h1 className="text-h1-color">
+        <h2 className="text-h1-color">
           See What Customers Say About Our Services
-        </h1>
+        </h2>
         <p className="text-p-color capitalize">
           Our diverse team of designers, developers, and strategists
           collaborates seamlessly to turn your vision into reality—combining

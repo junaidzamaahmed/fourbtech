@@ -1,5 +1,5 @@
 import ArrowButton from "@/components/global/ArrowButton";
-import CaseStudies from "@/components/main/CaseStudies";
+import Events from "@/components/main/CaseStudies";
 import CompanyProfile from "@/components/main/Company Profile";
 import ContactUS from "@/components/main/ContactUS";
 import CustomerFeedBack from "@/components/main/CustomerFeedBack";
@@ -13,7 +13,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="mt-10 md:-mt-10">
+    <div className="mt-10 md:-mt-10">
       <section className="relative flex min-h-screen flex-col items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
         {/* Background Video */}
         <div className="absolute inset-0 -z-10 opacity-80">
@@ -73,12 +73,12 @@ export default function Home() {
       </section>
       <CompanyProfile />
       <Services />
-      <CaseStudies />
+      <Events />
       <Employess />
       <FaqSection />
       <ContactUS />
       <CustomerFeedBack />
       {/* <Insides /> */}
-    </main>
+    </div>
   );
 }

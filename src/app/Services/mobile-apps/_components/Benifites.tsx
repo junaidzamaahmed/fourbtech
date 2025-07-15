@@ -32,8 +32,8 @@ export const BenifitCard = ({ icon, title, desc }: AppBenifitesType) => (
 
 const Benefites = () => {
   return (
-    <section className="main-container mb-44 flex flex-col items-center pb-32 text-center">
-      <h2 className="!text-h1-color mb-5 text-4xl font-semibold">Benefits</h2>
+    <section className="main-container flex flex-col items-center !pb-10 text-center lg:!pb-32">
+      <h2 className="!text-h1-color mb-5 text-3xl font-semibold">Benefits</h2>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4">
         {AppBenifitesData.map((benifit, index) => (
           <BenifitCard key={index} {...benifit} />

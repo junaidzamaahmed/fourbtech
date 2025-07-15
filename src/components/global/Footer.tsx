@@ -1,39 +1,11 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { CiPaperplane } from "react-icons/ci";
-import { Input } from "../ui/input";
 import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
-import { useState } from "react";
 import SecondaryLogo from "../../../public/Secondary logo.svg";
+import SendMainFooter from "./SendMainFooter";
+import { ExternalLink } from "lucide-react";
 
 const Footer = () => {
-  const [sendMail, setSendMail] = useState("");
-
-  const handleSubmission = async () => {
-    try {
-      if (!sendMail){
-        return
-      }
-      // Send email using API route
-      await fetch("/api/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstname: "New User",
-          lastname: "...",
-          email: sendMail,
-          phone: "",
-          message: "This message was sent form the footer.",
-        }),
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   return (
     <footer className="bg-dark-bg-primary text-custom-white py-20">
       <div className="main-container grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
@@ -50,19 +22,7 @@ const Footer = () => {
             />
           </Link>
           <h3 className="text-lg font-semibold">Stay in Touch</h3>
-          <div className="relative max-w-full">
-            <Input
-              placeholder="Email Address"
-              className="bg-custom-white text-dark-bg-primary rounded-full px-4 py-2 pr-10 text-sm focus-visible:!ring-0"
-              value={sendMail}
-              onChange={(e) => setSendMail(e.target.value)}
-              required
-            />
-            <CiPaperplane
-              className="text-dark-bg-primary hover:text-accent-hover absolute top-1/2 right-4 z-50 size-6 -translate-y-1/2 cursor-pointer transition-transform duration-300 hover:scale-110 hover:-rotate-12"
-              onClick={handleSubmission}
-            />
-          </div>
+          <SendMainFooter />
         </div>
 
         {/* Location */}
@@ -74,9 +34,12 @@ const Footer = () => {
             <Link
               href="https://find-and-update.company-information.service.gov.uk/company/16572082"
               target="_blank"
+              className="flex gap-2"
             >
-              <strong>Registration number: </strong>
-              16572082
+              <strong>Registration number:</strong>
+              <span className="flex gap-1">
+                16572082 <ExternalLink size={16} />
+              </span>
             </Link>
           </p>
           <p className="text-custom-white/70 text-sm leading-relaxed">

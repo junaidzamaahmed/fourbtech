@@ -59,10 +59,10 @@ const CompanyProfile = ({ isHome = true }: { isHome?: boolean }) => {
         <h2 className="text-custom-white text-sm font-medium tracking-wider uppercase">
           Company Profile
         </h2>
-        <h1 className="text-custom-white leading-tight font-bold">
+        <h2 className="text-custom-white leading-tight font-bold">
           We Don&apos;t Just Work For You,
           <br /> We Grow With You!
-        </h1>
+        </h2>
         <p className="text-md text-custom-white leading-relaxed font-light">
           We specialize in creating visually stunning and highly functional
           websites that help businesses stand out in the digital world. Our team
