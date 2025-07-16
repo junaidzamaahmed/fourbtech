@@ -13,6 +13,7 @@ import React, { useEffect, useRef } from "react";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ArrowButton from "../global/ArrowButton";
 gsap.registerPlugin(ScrollTrigger);
 
 const ServiceCard = ({
@@ -27,8 +28,8 @@ const ServiceCard = ({
   link: string;
 }) => {
   return (
-    <Link href={link} >
-      <Card className="group bg-custom-white hover:bg-dark-bg-primary border-dark-bg-primary/10 h-full transition-all duration-500 ">
+    <Link href={link}>
+      <Card className="group bg-custom-white hover:bg-dark-bg-primary border-dark-bg-primary/10 h-full transition-all duration-500">
         <CardHeader>
           <div className="group-hover:bg-accent-hover bg-dark-bg-primary/20 flex h-10 w-10 items-center justify-center rounded-full">
             <Image
@@ -46,8 +47,17 @@ const ServiceCard = ({
               {title}
             </h1>
           </CardTitle>
-          <CardDescription className="group-hover:!text-custom-white cardParagraph !text-h1-color">
-            {description}
+          <CardDescription className="group-hover:!text-custom-white cardParagraph !text-h1-color flex flex-col gap-4">
+            <div> {description}</div>
+            <Link href={link}>
+              <ArrowButton
+                right
+                variant='noOutline'
+                className="group-hover:!text-white"
+              >
+                Learn More
+              </ArrowButton>
+            </Link>
           </CardDescription>
         </CardContent>
       </Card>

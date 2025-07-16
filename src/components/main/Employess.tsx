@@ -14,8 +14,7 @@ import Link from "next/link";
 import { FiMail, FiLinkedin } from "react-icons/fi";
 import { useEffect, useRef } from "react";
 
-// import palaceholder from "../../../../public/placeholders/palaceholder2.png";
-import palaceholder from "../../../public/placeholders/palaceholder2.png";
+import signing from '../../../public/whoWeAre/signing.jpg'
 
 // Import Swiper and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -142,7 +141,7 @@ const Employees = ({ isHome = true }: { isHome?: boolean }) => {
           <div className="h-[300px] w-full sm:h-[350px] lg:min-h-full">
             <div className="relative h-full w-full overflow-hidden rounded-xl">
               <Image
-                src={palaceholder}
+                src={signing}
                 alt="Our team at work"
                 fill
                 className="object-cover object-center"

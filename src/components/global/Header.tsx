@@ -108,24 +108,16 @@ const Header = () => {
   return (
     <div
       ref={navContainerRef}
-      className={`fixed top-0 z-50 h-16 w-full border-none transition-all duration-700 sm:top-3`}
+      className={`fixed top-0 z-50 h-20 w-full border-b-[1px] border-dark-bg-primary/50 transition-all duration-700 sm:top-0 bg-white py-4`}
     >
-      <header className="bsolute absolute top-1/2 w-full -translate-y-1/2">
-        <nav className="flex-between main-container bg-custom-white">
-          {/* <Link href="/" className="relative w-20 sm:w-28 md:w-32">
-            <Image
-              src={PrimaryLogo}
-              alt="Logo"
-              width={200}
-              height={200}
-              className="origin-center object-cover object-center"
-            />
-          </Link> */}
+      <header className="absolute top-1/2 w-full -translate-y-1/2">
+        <nav className="flex-between main-container">
+
           <Link
             href="/"
-            className="flex-shrink-0 transition-opacity hover:opacity-80"
+            className="flex-shrink-0"
           >
-            <PrimaryLogo className="h-auto w-20 sm:w-28 md:w-32 lg:w-36 xl:w-40" />
+            <PrimaryLogo className="h-16 w-20 sm:w-28 " />
           </Link>
           {/* Desktop Nav */}
           <div className="hidden sm:block">

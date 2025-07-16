@@ -31,13 +31,15 @@ const Footer = () => {
           <p className="text-custom-white/70 text-sm leading-relaxed">
             <strong>UK Office:</strong> 93/101 Green Field Road, London, United
             Kingdom <br />
+          </p>
+          <p >
             <Link
               href="https://find-and-update.company-information.service.gov.uk/company/16572082"
               target="_blank"
-              className="flex gap-2"
+              className="text-custom-white/70 hover:text-custom-white before:bg-custom-white relative inline-flex items-center gap-2 transition-all before:absolute before:bottom-0 before:h-[1px] before:w-0 before:duration-300 hover:before:w-full"
             >
               <strong>Registration number:</strong>
-              <span className="flex gap-1">
+              <span className="flex items-center gap-1">
                 16572082 <ExternalLink size={16} />
               </span>
             </Link>

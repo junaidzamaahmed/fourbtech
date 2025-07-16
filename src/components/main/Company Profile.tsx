@@ -38,7 +38,7 @@ const Counter = ({
   return (
     <div ref={ref} className="text-center">
       <h1 className="text-custom-white font-semibold">
-        <CountUp start={0} end={number} duration={2.5} />
+        <CountUp start={0} end={number} duration={4.5} />
         <span>K+</span>
       </h1>
       <p className="text-custom-white mt-2 text-sm font-light">{text}</p>

@@ -12,7 +12,7 @@ const PrimaryLogo = ({ className = "", width, height }: PrimaryLogoProps) => {
       viewBox="0 0 185 61"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={`w-24 h-auto sm:w-32 md:w-36 lg:w-40 xl:w-44 ${className}`}
+      className={`w-24 h-auto sm:w-32 md:w-36 ${className}`}
     >
       <g clipPath="url(#clip0_97_62884)">
         <path d="M59.0473 0.5H38.1387L1.10016 47.8684H22.0087L59.0473 0.5Z" fill="#0000EE" />
