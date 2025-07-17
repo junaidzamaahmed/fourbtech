@@ -3,7 +3,7 @@ import { ServiceBannersHome } from "./ServiceBannersHome";
 
 export default function CrossIndustry() {
   return (
-    <section className="main-container grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <section className="main-container my-20 grid grid-cols-1 gap-4 sm:grid-cols-2">
       <Experience />
       <OurPerformance />
     </section>

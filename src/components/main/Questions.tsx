@@ -59,7 +59,7 @@ export default function FaqSection() {
   }, [openIndex]);
 
   return (
-    <section className="bg-dark-bg-primary main-container text-custom-white ">
+    <section className="bg-dark-bg-primary main-container text-custom-white my-20">
       <div className="py-20">
         <h1 className="text-custom-white pb-20 text-center">
           Frequently Asked Questions

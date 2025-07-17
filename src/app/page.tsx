@@ -1,6 +1,6 @@
 import ArrowButton from "@/components/global/ArrowButton";
 import Events from "@/components/main/CaseStudies";
-import CompanyProfile from "@/components/main/Company Profile";
+// import CompanyProfile from "@/components/main/Company Profile";
 import ContactUS from "@/components/main/ContactUS";
 import CustomerFeedBack from "@/components/main/CustomerFeedBack";
 import Employess from "@/components/main/Employess";
@@ -32,8 +32,12 @@ export default function Home() {
         <div className="flex w-full max-w-5xl flex-col items-center gap-8 text-center">
           <ItSolutions />
           <h1 className="text-h1-color text-3xl leading-snug sm:text-4xl md:text-5xl">
-            We Design, Build & Grow Digital <br />
-            Brands That Deliver Results
+            We Design, Build &{" "}
+            <span className="text-accent-hover italic">
+              Grow Digital <br />
+              Brands
+            </span>{" "}
+            That Deliver Results
           </h1>
           <h3 className="text-h3-color max-w-3xl text-base sm:text-lg md:text-xl">
             Empowering Your Business With Cutting-Edge Technology Solutions.
@@ -72,7 +76,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <CompanyProfile />
+      {/* <CompanyProfile /> */}
       <CrossIndustry />
       <Services />
       <Events />

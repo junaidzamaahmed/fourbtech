@@ -35,7 +35,7 @@ const Events = () => {
   const swiperRef = useRef(null);
   return (
     <section
-      className="main-container bg-dark-bg-primary !my-28 !py-16 md:!py-20"
+      className="main-container bg-dark-bg-primary !my-20 !py-16 md:!py-20 "
       ref={divRef}
     >
       <div className="mb-6 flex flex-col gap-4 sm:mb-10 sm:flex-row sm:items-center sm:justify-between md:mb-16">

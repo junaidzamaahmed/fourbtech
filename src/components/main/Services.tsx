@@ -49,15 +49,13 @@ const ServiceCard = ({
           </CardTitle>
           <CardDescription className="group-hover:!text-custom-white cardParagraph !text-h1-color flex flex-col gap-4">
             <div> {description}</div>
-            <Link href={link}>
-              <ArrowButton
-                right
-                variant='noOutline'
-                className="group-hover:!text-white"
-              >
-                Learn More
-              </ArrowButton>
-            </Link>
+            <ArrowButton
+              right
+              variant="noOutline"
+              className="group-hover:!text-white"
+            >
+              Learn More
+            </ArrowButton>
           </CardDescription>
         </CardContent>
       </Card>
@@ -94,7 +92,7 @@ const Services = () => {
   return (
     <div
       id="services"
-      className="main-container my-28 flex flex-col items-center justify-between gap-14"
+      className="main-container my-20 flex flex-col items-center justify-between gap-14"
     >
       <div className="text-center">
         <h1 className="mb-3">Our Services</h1>

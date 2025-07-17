@@ -45,7 +45,7 @@ const EmployeeCard = ({
           <p className="text-muted-foreground text-sm font-medium group-hover:text-dark-bg-primary">{role}</p>
         </CardTitle>
       </CardHeader>
-      <CardContent className="flex-grow">
+      {/* <CardContent className="flex-grow">
         <div className="prose prose-sm text-muted-foreground max-w-none">
           {description?.split("<br/>").map((text, index) => (
             <p className="mb-1 text-sm" key={index}>
@@ -53,7 +53,7 @@ const EmployeeCard = ({
             </p>
           ))}
         </div>
-      </CardContent>
+      </CardContent> */}
       <CardFooter className="flex justify-start gap-3">
         <Link
           href={`mailto:${email}`}
@@ -118,7 +118,7 @@ const Employees = ({ isHome = true }: { isHome?: boolean }) => {
   }, []);
 
   return (
-    <section className="main-container my-28 flex flex-col items-center justify-between gap-10">
+    <section className="main-container my-20 flex flex-col items-center justify-between gap-10">
       {isHome && (
         <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-2">
           <div className="flex flex-col items-start justify-center gap-10">

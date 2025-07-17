@@ -15,7 +15,7 @@ const CustomerFeedback = () => {
   const swiperRef = useRef(null);
 
   return (
-    <section className="main-container">
+    <section className="main-container my-20">
       <div className="flex-center mb-8 flex-col sm:mb-16">
         <h1 className="text-h1-color">Our Customer Feedback</h1>
         <p className="text-p-color capitalize">
@@ -24,7 +24,7 @@ const CustomerFeedback = () => {
       </div>
       <div className="relative">
         <Swiper
-          ref = {swiperRef}
+          ref={swiperRef}
           modules={[Navigation, Pagination]}
           spaceBetween={30}
           slidesPerView={1}
@@ -73,7 +73,6 @@ const CustomerFeedback = () => {
             swiperRef={swiperRef}
             customClass="customerFeedBack bg-accent-hover"
           />
-          <div className="mb-16"></div>
         </Swiper>
       </div>
     </section>

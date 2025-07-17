@@ -108,16 +108,12 @@ const Header = () => {
   return (
     <div
       ref={navContainerRef}
-      className={`fixed top-0 z-50 h-20 w-full border-b-[1px] border-dark-bg-primary/50 transition-all duration-700 sm:top-0 bg-white py-4`}
+      className={`border-dark-bg-primary/50 fixed top-0 z-50 h-20 w-full border-b-[1px] bg-white py-4 transition-all duration-700 sm:top-0`}
     >
       <header className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex-between main-container">
-
-          <Link
-            href="/"
-            className="flex-shrink-0"
-          >
-            <PrimaryLogo className="h-16 w-20 sm:w-28 " />
+          <Link href="/" className="flex-shrink-0">
+            <PrimaryLogo className="h-16 w-20 sm:w-28" />
           </Link>
           {/* Desktop Nav */}
           <div className="hidden sm:block">
@@ -219,7 +215,7 @@ const Header = () => {
               {/* Mobile Menu */}
               <div
                 id="mobile-menu"
-                className={`!bg-dark-bg-primary fixed inset-0 z-40 flex h-screen flex-col items-center justify-center pt-20 transition-all duration-500 ${
+                className={`!bg-dark-bg-primary fixed inset-0 -top-2 z-40 flex h-[110vh] flex-col items-center justify-center transition-all duration-500 ${
                   mobileMenu
                     ? "pointer-events-auto visible opacity-100"
                     : "pointer-events-none invisible opacity-0"

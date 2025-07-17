@@ -28,7 +28,7 @@ const gridConfig = [
 
 export default function PhotoGallery() {
   return (
-    <div className="main-container bg-dark-bg-primary mb-10 !py-8 sm:!py-14">
+    <div className="main-container bg-dark-bg-primary !my-20 !py-8 sm:!py-14">
       <div className="mx-auto h-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex w-full flex-col items-center justify-center gap-4 pb-14">
           <h2 className="text-custom-white text-2xl sm:text-3xl md:text-4xl">

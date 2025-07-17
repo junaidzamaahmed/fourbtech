@@ -98,7 +98,7 @@ const ContactUS = () => {
 
   return (
     <section
-      className="main-container bg-custom-white my-28 grid grid-cols-1 overflow-hidden rounded-xl lg:grid-cols-2"
+      className="main-container bg-custom-white my-20 grid grid-cols-1 overflow-hidden rounded-xl lg:grid-cols-2"
       id="contact"
     >
       {/* Left Info Block */}

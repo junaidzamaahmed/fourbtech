@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/providers/ThemeProvider";
+// import { ThemeProvider } from "@/providers/ThemeProvider";
 import Header from "@/components/global/Header";
 import Footer from "@/components/global/Footer";
 // import SmoothScrollLayout from "@/components/global/SmoothScroll";
@@ -22,7 +22,7 @@ const poppins = Poppins({
 // };
 
 export const metadata: Metadata = {
-  title: "FourBtech | Mobile Apps, Web Design & Digital Marketing",
+  title: "FourBtech Limited | Mobile Apps, Web Design & Digital Marketing",
   description:
     "FourBtech delivers expert mobile app development, website development, and digital marketing to help businesses grow online with smart IT solutions.",
   openGraph: {
@@ -60,18 +60,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body className={`${poppins.className} antialiased`}>
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        >
-          <Header />
-          {/* <SmoothScrollLayout> */}
-          <main>{children}</main>
-          <Footer />
-          {/* </SmoothScrollLayout> */}
-        </ThemeProvider>
+        > */}
+        <Header />
+        {/* <SmoothScrollLayout> */}
+        <main>{children}</main>
+        <Footer />
+        {/* </SmoothScrollLayout> */}
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );

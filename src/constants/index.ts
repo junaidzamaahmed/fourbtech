@@ -170,7 +170,7 @@ export const employees: Employee[] = [
 
   {
     name: "Junaid Ahmed Zama",
-    role: "Software Engineer",
+    role: "Software Engineer & Tech Lead",
     image: "/members/Junaid_Ahmed_Zama.png",
     description:
       "Former Founder of Zobotics IT<br/>Former Web Developer at Raqamisuq<br/>BSc. in Computer Science and <br/>Engineering (BRAC University)",
