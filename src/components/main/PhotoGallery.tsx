@@ -26,32 +26,6 @@ const gridConfig = [
   { colSpan: 3, rowSpan: 4 },
 ];
 
-// Create a mapping for reliable class generation
-const getGridClasses = (colSpan: number, rowSpan: number) => {
-  const colSpanClasses = {
-    1: "col-span-1",
-    2: "col-span-2",
-    3: "col-span-3",
-    4: "col-span-4",
-    5: "col-span-5",
-    6: "col-span-6",
-    7: "col-span-7",
-    8: "col-span-8",
-  };
-
-  const rowSpanClasses = {
-    1: "row-span-1",
-    2: "row-span-2",
-    3: "row-span-3",
-    4: "row-span-4",
-    5: "row-span-5",
-    6: "row-span-6",
-    7: "row-span-7",
-  };
-
-  return `${colSpanClasses[colSpan]} ${rowSpanClasses[rowSpan]}`;
-};
-
 export default function PhotoGallery() {
   return (
     <div className="main-container bg-dark-bg-primary mb-10 !py-8 sm:!py-14">
@@ -68,10 +42,10 @@ export default function PhotoGallery() {
           {images.map((src, i) => (
             <div
               key={i}
-              className={`group relative ${getGridClasses(gridConfig[i].colSpan, gridConfig[i].rowSpan)} overflow-hidden rounded-lg`}
+              className={`group relative col-span-${gridConfig[i].colSpan} row-span-${gridConfig[i].rowSpan} overflow-hidden rounded-lg`}
             >
               <div className="relative h-full w-full">
-                <div className="min-h-56 h-full">
+                <div className="h-full min-h-56">
                   <Image
                     src={src.image || "/placeholder.svg"}
                     alt={src.title}
