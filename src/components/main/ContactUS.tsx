@@ -127,7 +127,7 @@ const ContactUS = () => {
       </div>
 
       {/* Form Block */}
-      <div className="bg-dark-bg-primary rounded-xl p-10 md:p-14">
+      <div className="to-dark-bg-primary rounded-xl bg-radial-[at_50%_10%] from-[#5A75BB] p-10 md:p-14">
         {/* {submitStatus && (
           <Alert
             className={`mb-6 ${submitStatus.success ? "bg-green-50 text-green-800 border-green-200" : "bg-red-50 text-red-800 border-red-200"}`}

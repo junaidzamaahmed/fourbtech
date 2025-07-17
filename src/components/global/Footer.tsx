@@ -32,15 +32,19 @@ const Footer = () => {
             <strong>UK Office:</strong> 93/101 Green Field Road, London, United
             Kingdom <br />
           </p>
-          <p >
+          <p className="group">
             <Link
               href="https://find-and-update.company-information.service.gov.uk/company/16572082"
               target="_blank"
               className="text-custom-white/70 hover:text-custom-white before:bg-custom-white relative inline-flex items-center gap-2 transition-all before:absolute before:bottom-0 before:h-[1px] before:w-0 before:duration-300 hover:before:w-full"
             >
               <strong>Registration number:</strong>
-              <span className="flex items-center gap-1">
-                16572082 <ExternalLink size={16} />
+              <span className="flex items-center gap-2">
+                16572082
+                <ExternalLink
+                  size={16}
+                  className="transition-all duration-300 group-hover:scale-110 group-hover:rotate-12"
+                />
               </span>
             </Link>
           </p>

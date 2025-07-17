@@ -14,13 +14,14 @@ import Link from "next/link";
 import { FiMail, FiLinkedin } from "react-icons/fi";
 import { useEffect, useRef } from "react";
 
-import signing from '../../../public/whoWeAre/signing.jpg'
+import signing from "../../../public/whoWeAre/signing.jpg";
 
 // Import Swiper and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import YouTubePlayer from "../YoutubePlayer";
 
 const EmployeeCard = ({
   name,
@@ -42,7 +43,9 @@ const EmployeeCard = ({
         </div>
         <CardTitle className="w-full text-start">
           <h3 className="text-dark-bg-primary text-xl font-semibold">{name}</h3>
-          <p className="text-muted-foreground text-sm font-medium group-hover:text-dark-bg-primary">{role}</p>
+          <p className="text-muted-foreground group-hover:text-dark-bg-primary text-sm font-medium">
+            {role}
+          </p>
         </CardTitle>
       </CardHeader>
       {/* <CardContent className="flex-grow">
@@ -57,7 +60,7 @@ const EmployeeCard = ({
       <CardFooter className="flex justify-start gap-3">
         <Link
           href={`mailto:${email}`}
-          className="bg-p-color/20 hover:bg-accent-hover group hover:*:text-custom-white justify-center flex h-9 w-9 items-center rounded-full transition-all duration-300"
+          className="bg-p-color/20 hover:bg-accent-hover group hover:*:text-custom-white flex h-9 w-9 items-center justify-center rounded-full transition-all duration-300"
           aria-label={`Email ${name}`}
         >
           <FiMail size={18} className="text-dark-bg-primary" />
@@ -125,7 +128,7 @@ const Employees = ({ isHome = true }: { isHome?: boolean }) => {
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Who We Are
             </h2>
-            <p className=" text-base !text-h1-color leading-relaxed">
+            <p className="!text-h1-color text-base leading-relaxed">
               At our IT solutions & services agency, we specialize in creating
               visually stunning and highly functional websites or mobile apps
               that help businesses stand out in the digital world. Our team of
@@ -140,14 +143,15 @@ const Employees = ({ isHome = true }: { isHome?: boolean }) => {
           </div>
           <div className="h-[300px] w-full sm:h-[350px] lg:min-h-full">
             <div className="relative h-full w-full overflow-hidden rounded-xl">
-              <Image
+              {/* <Image
                 src={signing}
                 alt="Our team at work"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
-              />
+              /> */}
+              <YouTubePlayer videoid="MO-w7Y4zRl0" />
             </div>
           </div>
         </div>
@@ -182,10 +186,10 @@ const Employees = ({ isHome = true }: { isHome?: boolean }) => {
               slidesPerView: 4,
               spaceBetween: 24,
             },
-            2048:{
+            2048: {
               slidesPerView: 5,
               spaceBetween: 24,
-            }
+            },
           }}
           className="w-full"
           onInit={(swiper) => {
