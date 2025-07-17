@@ -8,7 +8,8 @@ import collaborationIcon from "../../../../public/about/colaboration-Icon.png";
 import tools from "../../../../public/about/tools.png";
 import data from "../../../../public/about/data.png";
 import story from "../../../../public/about/story.png";
-import whyChooseUs from "../../../../public/about/whyChooseUs.png";
+import signing from "../../../../public/whoWeAre/signing.jpg"
+
 
 const Why_choose_Us = () => {
   return (
@@ -73,7 +74,7 @@ const Why_choose_Us = () => {
       </div>
       <div className="order-1 h-full w-full lg:order-2">
         <Image
-          src={whyChooseUs}
+          src={signing}
           width={300}
           height={300}
           className="h-full w-full rounded-xl object-cover"

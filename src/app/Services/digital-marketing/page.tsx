@@ -11,9 +11,32 @@ import MarketingAgencyService from "./_components/MarketingAgency";
 import FaqSeo from "./_components/Faq";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing",
-};
-
+  title: 'FourBtech Digital Marketing Services to Boost Your Brand',
+  description: "Drive targeted traffic and increase sales with FourBtech's expert digital marketing solutions including SEO, PPC, social media, and content strategy",
+  openGraph: {
+    title: 'FourBtech Digital Marketing Solutions for Business Growth',
+    description: " Maximize online visibility and ROI with FourBtech's tailored digital marketing services covering SEO, PPC ads, social media, and brand strategy.",
+    type: 'website',
+    url: 'https://www.fourbtech.com/',
+    images: [
+      {
+        url: 'https://www.fourbtech.com/MetaImages/og-image.jpg',
+        alt: 'FourBtech - Mobile Apps, Web Design & Digital Marketing'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Effective Digital Marketing Services by FourBtech',
+    description: 'Grow your brand with FourBtech’s proven digital marketing strategies. SEO, paid ads, social media, and content marketing designed to convert.',
+    images: [
+      {
+        url: 'https://www.fourbtech.com/MetaImages/twitter-image.jpg',
+        alt: 'FourBtech - Complete Web, App & Marketing Solutions'
+      }
+    ]
+  }
+}
 const page = () => {
   return (
     <div className="bg-custom-white">

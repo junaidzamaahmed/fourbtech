@@ -16,9 +16,35 @@ import LetsTalk from "./_components/LetsTalk";
 import FullStackService from "./_components/FullStackService";
 
 export const metadata: Metadata = {
-  title: "Web Development",
+  title: "Website Development Services by FourBtech — Expert IT Solutions",
+  description:
+    "FourBtech delivers responsive, SEO-friendly website design and development services to grow your business online effectively.",
+  openGraph: {
+    title: "Professional Website Development",
+    description:
+      "Build fast, modern, and user-friendly websites with FourBtech's expert team. Enhance your brand and online presence today",
+    type: "website",
+    url: "https://www.fourbtech.com/",
+    images: [
+      {
+        url: "https://www.fourbtech.com/MetaImages/og-image.jpg",
+        alt: "FourBtech - Mobile Apps, Web Design & Digital Marketing",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FourBtech Expert Website Development Services",
+    description:
+      " Elevate your online presence with FourBtech's custom website development, designed for speed, SEO, and great user experience.",
+    images: [
+      {
+        url: "https://www.fourbtech.com/MetaImages/twitter-image.jpg",
+        alt: "FourBtech - Complete Web, App & Marketing Solutions",
+      },
+    ],
+  },
 };
-
 const page = () => {
   return (
     <div className="bg-custom-white">

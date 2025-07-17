@@ -12,9 +12,32 @@ import DevelopmentTools from "./_components/DevelopmentTools";
 import Consistancy from "./_components/consistancy";
 
 export const metadata: Metadata = {
-  title: "Mobile App Development",
-};
-
+  title: 'FourBtech | Expert Mobile App Development Services',
+  description: ": FourBtech delivers custom mobile app development for iOS and Android, creating scalable, user-friendly apps that drive business growth and engagement.",
+  openGraph: {
+    title: 'FourBtech | Professional Mobile App Development',
+    description: "Build powerful mobile apps with FourBtech. We specialize in creating innovative, high-performance applications for businesses of all sizes.",
+    type: 'website',
+    url: 'https://www.fourbtech.com/',
+    images: [
+      {
+        url: 'https://www.fourbtech.com/MetaImages/og-image.jpg',
+        alt: 'FourBtech - Mobile Apps, Web Design & Digital Marketing'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FourBtech | Custom Mobile App Development Experts',
+    description: ' Partner with FourBtech for tailored mobile app solutions. We develop feature-rich, scalable apps designed to enhance your digital presence.',
+    images: [
+      {
+        url: 'https://www.fourbtech.com/MetaImages/twitter-image.jpg',
+        alt: 'FourBtech - Complete Web, App & Marketing Solutions'
+      }
+    ]
+  }
+}
 const page = () => {
   return (
     <div className="bg-custom-white">

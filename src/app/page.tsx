@@ -17,8 +17,8 @@ import PhotoGallery from "@/components/main/PhotoGallery";
 
 export default function Home() {
   return (
-    <div className="mt-10 md:-mt-10">
-      <section className="relative flex min-h-screen flex-col items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
+    <div className="mt-10">
+      <section className="relative flex min-h-screen flex-col items-center justify-center px-4 py-20 sm:px-6 lg:px-8">
         {/* Background Image */}
         <div className="absolute inset-0 -z-10 opacity-80">
           <Image
@@ -72,15 +72,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <CrossIndustry />
       <CompanyProfile />
+      <CrossIndustry />
       <Services />
       <Events />
-      <PhotoGallery />
       <Employess />
+      <PhotoGallery />
+      <CustomerFeedBack />
       <FaqSection />
       <ContactUS />
-      <CustomerFeedBack />
     </div>
   );
 }

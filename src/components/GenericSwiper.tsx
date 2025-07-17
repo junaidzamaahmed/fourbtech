@@ -1,27 +1,35 @@
-"use client";
+"use client"
 
-import type React from "react";
+import type React from "react"
+import { cn } from "@/lib/utils"
+import { useEffect, useState, useRef, type ReactNode } from "react"
+import { gsap } from "gsap"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
-import { cn } from "@/lib/utils";
-import { useEffect, useState, useRef, type ReactNode } from "react";
-import { gsap } from "gsap";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+interface SlidesPerViewConfig {
+  default: number
+  sm?: number
+  md?: number
+  lg?: number
+  xl?: number
+  "2xl"?: number
+}
 
 interface GenericSwiperProps {
-  children: ReactNode[];
-  autoPlay?: boolean;
-  autoPlayDelay?: number;
-  loop?: boolean;
-  slidesPerView?: number;
-  spaceBetween?: number;
-  showNavigation?: boolean;
-  showPagination?: boolean;
-  draggable?: boolean; // Add this new prop
-  className?: string;
-  slideClassName?: string;
-  navigationClassName?: string;
-  paginationClassName?: string;
-  onSlideChange?: (activeIndex: number) => void;
+  children: ReactNode[]
+  autoPlay?: boolean
+  autoPlayDelay?: number
+  loop?: boolean
+  slidesPerViewConfig: SlidesPerViewConfig
+  spaceBetween?: number
+  showNavigation?: boolean
+  showPagination?: boolean
+  draggable?: boolean
+  className?: string
+  slideClassName?: string
+  navigationClassName?: string
+  paginationClassName?: string
+  onSlideChange?: (activeIndex: number) => void
 }
 
 export const GenericSwiper = ({
@@ -29,225 +37,266 @@ export const GenericSwiper = ({
   autoPlay = false,
   autoPlayDelay = 3000,
   loop = true,
-  slidesPerView = 1,
+  slidesPerViewConfig,
   spaceBetween = 20,
   showNavigation = false,
   showPagination = true,
-  draggable = true, // Add this line
+  draggable = true,
   className,
   slideClassName,
   navigationClassName,
   paginationClassName,
   onSlideChange,
 }: GenericSwiperProps) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const wrapperRef = useRef<HTMLDivElement>(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [totalSlides, setTotalSlides] = useState(0);
-  const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
-  const isAnimatingRef = useRef(false);
+  const containerRef = useRef<HTMLDivElement>(null)
+  const wrapperRef = useRef<HTMLDivElement>(null)
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [totalSlides, setTotalSlides] = useState(0)
+  const [currentSlidesPerView, setCurrentSlidesPerView] = useState(slidesPerViewConfig.default)
+  const autoPlayRef = useRef<NodeJS.Timeout | null>(null)
+  const isAnimatingRef = useRef(false)
+  const [isDragging, setIsDragging] = useState(false)
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 })
+  const [dragOffset, setDragOffset] = useState(0)
+  const dragThreshold = 50 // Minimum drag distance to trigger slide change
 
-  const [isDragging, setIsDragging] = useState(false);
-  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-  const [dragOffset, setDragOffset] = useState(0);
-  const dragThreshold = 50; // Minimum drag distance to trigger slide change
-
+  // Effect to determine currentSlidesPerView based on window width
   useEffect(() => {
-    setTotalSlides(Math.floor(children.length / slidesPerView));
-  }, [children.length, slidesPerView]);
+    const updateSlidesPerView = () => {
+      const width = window.innerWidth
+      let newSlidesPerView = slidesPerViewConfig.default
+
+      if (slidesPerViewConfig["2xl"] && width >= 1536) {
+        newSlidesPerView = slidesPerViewConfig["2xl"]
+      } else if (slidesPerViewConfig.xl && width >= 1280) {
+        newSlidesPerView = slidesPerViewConfig.xl
+      } else if (slidesPerViewConfig.lg && width >= 1024) {
+        newSlidesPerView = slidesPerViewConfig.lg
+      } else if (slidesPerViewConfig.md && width >= 768) {
+        newSlidesPerView = slidesPerViewConfig.md
+      } else if (slidesPerViewConfig.sm && width >= 640) {
+        newSlidesPerView = slidesPerViewConfig.sm
+      }
+      setCurrentSlidesPerView(newSlidesPerView)
+    }
+
+    // Set initial value
+    updateSlidesPerView()
+
+    window.addEventListener("resize", updateSlidesPerView)
+    return () => window.removeEventListener("resize", updateSlidesPerView)
+  }, [slidesPerViewConfig])
+
+  // Effect to recalculate totalSlides and adjust currentIndex when currentSlidesPerView changes
+  useEffect(() => {
+    const newTotalSlides = Math.ceil(children.length / currentSlidesPerView)
+    setTotalSlides(newTotalSlides)
+
+    // Adjust current index if it goes out of bounds due to slidesPerView change
+    if (currentIndex >= newTotalSlides) {
+      const targetIndex = newTotalSlides > 0 ? newTotalSlides - 1 : 0
+      setCurrentIndex(targetIndex)
+      goToSlide(targetIndex) // Immediately snap to the new position
+    } else {
+      // If current index is still valid, ensure the slider position is correct
+      goToSlide(currentIndex)
+    }
+  }, [children.length, currentSlidesPerView, currentIndex]) // Added currentIndex to dependencies
 
   useEffect(() => {
     if (autoPlay) {
-      startAutoPlay();
+      startAutoPlay()
     } else {
-      stopAutoPlay();
+      stopAutoPlay()
     }
-
-    return () => stopAutoPlay();
-  }, [autoPlay, autoPlayDelay, currentIndex]);
+    return () => stopAutoPlay()
+  }, [autoPlay, autoPlayDelay, currentIndex])
 
   useEffect(() => {
-    onSlideChange?.(currentIndex);
-  }, [currentIndex, onSlideChange]);
+    onSlideChange?.(currentIndex)
+  }, [currentIndex, onSlideChange])
 
   const startAutoPlay = () => {
-    stopAutoPlay();
+    stopAutoPlay()
     autoPlayRef.current = setTimeout(() => {
-      goToNext();
-    }, autoPlayDelay);
-  };
+      goToNext()
+    }, autoPlayDelay)
+  }
 
   const stopAutoPlay = () => {
     if (autoPlayRef.current) {
-      clearTimeout(autoPlayRef.current);
-      autoPlayRef.current = null;
+      clearTimeout(autoPlayRef.current)
+      autoPlayRef.current = null
     }
-  };
+  }
 
   const goToSlide = (index: number) => {
-    if (isAnimatingRef.current || !wrapperRef.current) return;
+    if (isAnimatingRef.current || !wrapperRef.current || !containerRef.current) return
 
-    let targetIndex = index;
-
+    let targetIndex = index
     // Handle loop logic
     if (loop) {
       if (index < 0) {
-        targetIndex = totalSlides - 1;
+        targetIndex = totalSlides - 1
       } else if (index >= totalSlides) {
-        targetIndex = 0;
+        targetIndex = 0
       }
     } else {
-      targetIndex = Math.max(0, Math.min(index, totalSlides - 1));
+      targetIndex = Math.max(0, Math.min(index, totalSlides - 1))
     }
 
-    if (targetIndex === currentIndex) return;
+    if (targetIndex === currentIndex && dragOffset === 0) return
 
-    isAnimatingRef.current = true;
+    isAnimatingRef.current = true
 
-    const slideWidth = containerRef.current?.offsetWidth || 0;
-    const translateX = -(targetIndex * (slideWidth + spaceBetween));
+    // Calculate the index of the first child element for the target page
+    const firstChildIndexOnTargetPage = targetIndex * currentSlidesPerView
+    const targetSlideElement = wrapperRef.current.children[firstChildIndexOnTargetPage] as HTMLElement
+
+    let translateX = 0
+    if (targetSlideElement) {
+      // Use offsetLeft to get the precise position of the target slide
+      translateX = -targetSlideElement.offsetLeft
+    }
 
     gsap.to(wrapperRef.current, {
       x: translateX,
       duration: 0.5,
       ease: "power2.out",
       onComplete: () => {
-        setCurrentIndex(targetIndex);
-        isAnimatingRef.current = false;
+        setCurrentIndex(targetIndex)
+        isAnimatingRef.current = false
       },
-    });
-  };
+    })
+  }
 
   const goToPrev = () => {
-    const prevIndex = loop
-      ? currentIndex === 0
-        ? totalSlides - 1
-        : currentIndex - 1
-      : Math.max(0, currentIndex - 1);
-    goToSlide(prevIndex);
-  };
+    const prevIndex = loop ? (currentIndex === 0 ? totalSlides - 1 : currentIndex - 1) : Math.max(0, currentIndex - 1)
+    goToSlide(prevIndex)
+  }
 
   const goToNext = () => {
     const nextIndex = loop
       ? currentIndex === totalSlides - 1
         ? 0
         : currentIndex + 1
-      : Math.min(totalSlides - 1, currentIndex + 1);
-    goToSlide(nextIndex);
-  };
+      : Math.min(totalSlides - 1, currentIndex + 1)
+    goToSlide(nextIndex)
+  }
 
   const handleDragStart = (clientX: number, clientY: number) => {
-    if (!draggable || isAnimatingRef.current) return;
-
-    setIsDragging(true);
-    setDragStart({ x: clientX, y: clientY });
-    setDragOffset(0);
-
-    if (autoPlay) stopAutoPlay();
-  };
+    if (!draggable || isAnimatingRef.current) return
+    setIsDragging(true)
+    setDragStart({ x: clientX, y: clientY })
+    setDragOffset(0)
+    if (autoPlay) stopAutoPlay()
+  }
 
   const handleDragMove = (clientX: number, clientY: number) => {
-    if (!isDragging || !draggable) return;
-
-    const deltaX = clientX - dragStart.x;
-    const deltaY = clientY - dragStart.y;
+    if (!isDragging || !draggable) return
+    const deltaX = clientX - dragStart.x
+    const deltaY = clientY - dragStart.y
 
     // Only drag horizontally if the horizontal movement is greater than vertical
     if (Math.abs(deltaX) > Math.abs(deltaY)) {
-      setDragOffset(deltaX);
+      setDragOffset(deltaX)
+      if (wrapperRef.current && containerRef.current) {
+        // Get the current base translation from the actual slide position
+        const firstChildIndexOnCurrentPage = currentIndex * currentSlidesPerView
+        const currentSlideElement = wrapperRef.current.children[firstChildIndexOnCurrentPage] as HTMLElement
+        const currentTranslateX = -(currentSlideElement?.offsetLeft || 0)
 
-      if (wrapperRef.current) {
-        const slideWidth = containerRef.current?.offsetWidth || 0;
-        const currentTranslateX = -(currentIndex * (slideWidth + spaceBetween));
         gsap.set(wrapperRef.current, {
           x: currentTranslateX + deltaX,
-        });
+        })
       }
     }
-  };
+  }
 
   const handleDragEnd = () => {
-    if (!isDragging || !draggable) return;
-
-    setIsDragging(false);
+    if (!isDragging || !draggable) return
+    setIsDragging(false)
 
     // Determine if we should change slides based on drag distance
     if (Math.abs(dragOffset) > dragThreshold) {
       if (dragOffset > 0) {
         // Dragged right, go to previous slide
-        goToPrev();
+        goToPrev()
       } else {
         // Dragged left, go to next slide
-        goToNext();
+        goToNext()
       }
     } else {
-      // Snap back to current slide
-      if (wrapperRef.current) {
-        const slideWidth = containerRef.current?.offsetWidth || 0;
-        const translateX = -(currentIndex * (slideWidth + spaceBetween));
+      // Snap back to current slide using offsetLeft for precise alignment
+      if (wrapperRef.current && containerRef.current) {
+        const firstChildIndexOnCurrentPage = currentIndex * currentSlidesPerView
+        const currentSlideElement = wrapperRef.current.children[firstChildIndexOnCurrentPage] as HTMLElement
+        const translateX = -(currentSlideElement?.offsetLeft || 0)
+
         gsap.to(wrapperRef.current, {
           x: translateX,
           duration: 0.3,
           ease: "power2.out",
-        });
+        })
       }
     }
-
-    setDragOffset(0);
-
-    if (autoPlay) startAutoPlay();
-  };
+    setDragOffset(0)
+    if (autoPlay) startAutoPlay()
+  }
 
   // Mouse event handlers
   const handleMouseDown = (e: React.MouseEvent) => {
-    e.preventDefault();
-    handleDragStart(e.clientX, e.clientY);
-  };
+    e.preventDefault()
+    handleDragStart(e.clientX, e.clientY)
+  }
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    handleDragMove(e.clientX, e.clientY);
-  };
+    handleDragMove(e.clientX, e.clientY)
+  }
 
   const handleMouseUp = () => {
-    handleDragEnd();
-  };
+    handleDragEnd()
+  }
 
-  const handleMouseEnter = () => {
-    if (autoPlay && !isDragging) stopAutoPlay();
-  };
+  const handleMouseLeave = () => {
+    // If autoplay is enabled and not currently dragging, stop autoplay
+    if (autoPlay && !isDragging) {
+      stopAutoPlay()
+    }
+    // If dragging and mouse leaves the container, end the drag operation
+    if (isDragging && draggable) {
+      handleDragEnd()
+    }
+  }
 
   // Touch event handlers
   const handleTouchStart = (e: React.TouchEvent) => {
-    const touch = e.touches[0];
-    handleDragStart(touch.clientX, touch.clientY);
-  };
+    const touch = e.touches[0]
+    handleDragStart(touch.clientX, touch.clientY)
+  }
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    const touch = e.touches[0];
-    handleDragMove(touch.clientX, touch.clientY);
-  };
+    const touch = e.touches[0]
+    handleDragMove(touch.clientX, touch.clientY)
+  }
 
   const handleTouchEnd = () => {
-    handleDragEnd();
-  };
+    handleDragEnd()
+  }
 
   return (
     <div
       className={cn("relative w-full", className)}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseEnter}
+      onMouseEnter={() => autoPlay && stopAutoPlay()} // Stop autoplay on hover
+      onMouseLeave={handleMouseLeave} // Corrected mouse leave handler
     >
       {/* Main swiper container */}
       <div
         ref={containerRef}
-        className={cn(
-          "overflow-hidden",
-          draggable ? "cursor-grab active:cursor-grabbing" : "",
-        )}
+        className={cn("overflow-hidden", draggable ? "cursor-grab active:cursor-grabbing" : "")}
         onMouseDown={draggable ? handleMouseDown : undefined}
         onMouseMove={draggable ? handleMouseMove : undefined}
         onMouseUp={draggable ? handleMouseUp : undefined}
-        onMouseLeave={draggable ? handleMouseEnter : handleMouseEnter}
         onTouchStart={draggable ? handleTouchStart : undefined}
         onTouchMove={draggable ? handleTouchMove : undefined}
         onTouchEnd={draggable ? handleTouchEnd : undefined}
@@ -255,10 +304,7 @@ export const GenericSwiper = ({
       >
         <div
           ref={wrapperRef}
-          className={cn(
-            "flex",
-            !isDragging && "transition-transform duration-500 ease-out",
-          )}
+          className={cn("flex", !isDragging && "transition-transform duration-500 ease-out")}
           style={{
             gap: `${spaceBetween}px`,
           }}
@@ -268,7 +314,7 @@ export const GenericSwiper = ({
               key={index}
               className={cn("flex-shrink-0", slideClassName)}
               style={{
-                width: `calc((100% - ${(slidesPerView - 1) * spaceBetween}px) / ${slidesPerView})`,
+                width: `calc((100% - ${(currentSlidesPerView - 1) * spaceBetween}px) / ${currentSlidesPerView})`,
               }}
             >
               {child}
@@ -294,7 +340,6 @@ export const GenericSwiper = ({
           >
             <ChevronLeft className="h-5 w-5 text-gray-700" />
           </button>
-
           <button
             onClick={goToNext}
             disabled={!loop && currentIndex === totalSlides - 1}
@@ -314,21 +359,14 @@ export const GenericSwiper = ({
 
       {/* Pagination dots */}
       {showPagination && (
-        <div
-          className={cn(
-            "mt-4 flex justify-center space-x-2",
-            paginationClassName,
-          )}
-        >
+        <div className={cn("mt-4 flex justify-center space-x-2", paginationClassName)}>
           {Array.from({ length: totalSlides }).map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
               className={cn(
                 "h-2 w-2 rounded-full transition-all duration-200",
-                currentIndex === index
-                  ? "scale-110 bg-blue-600"
-                  : "hover:bg-accent-hover bg-gray-300 hover:scale-105",
+                currentIndex === index ? "scale-110 bg-blue-600" : "hover:bg-accent-hover bg-gray-300 hover:scale-105",
               )}
               aria-label={`Go to slide ${index + 1}`}
             />
@@ -336,14 +374,14 @@ export const GenericSwiper = ({
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
 // Helper component for individual swiper slides
 export const SwiperSlide = ({
   children,
   className,
 }: {
-  children: ReactNode;
-  className?: string;
-}) => <div className={cn("h-full w-full", className)}>{children}</div>;
+  children: ReactNode
+  className?: string
+}) => <div className={cn("h-full w-full", className)}>{children}</div>

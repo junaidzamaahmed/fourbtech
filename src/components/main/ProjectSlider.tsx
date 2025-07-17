@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import Image, { StaticImageData } from "next/image"
-import { GenericSwiper, SwiperSlide } from "../GenericSwiper"
+import Image, { StaticImageData } from "next/image";
+import { GenericSwiper, SwiperSlide } from "../GenericSwiper";
 
-import thumbnail from '../../../public/projectsCarousel/thumbnail.png'
-import thumbnail1 from '../../../public/projectsCarousel/thumbnail1.png'
-import thumbnail2 from '../../../public/projectsCarousel/thumbnail2.png'
-import thumbnail3 from '../../../public/projectsCarousel/thumbnail3.png'
+import thumbnail from "../../../public/projectsCarousel/thumbnail.png";
+import thumbnail1 from "../../../public/projectsCarousel/thumbnail1.png";
+import thumbnail2 from "../../../public/projectsCarousel/thumbnail2.png";
+import thumbnail3 from "../../../public/projectsCarousel/thumbnail3.png";
 interface ImageSlide {
-  id: number
-  src: StaticImageData
-  alt: string
-  title?: string
-  description?: string
+  id: number;
+  src: StaticImageData;
+  alt: string;
+  title?: string;
+  description?: string;
 }
 
 const imageSlides: ImageSlide[] = [
@@ -44,7 +44,7 @@ const imageSlides: ImageSlide[] = [
     title: "Multivendor Ecommerce Mobile App",
     description: "Multivendor Ecommerce Mobile App",
   },
-]
+];
 
 export const ProjectSlider = () => {
   return (
@@ -53,7 +53,11 @@ export const ProjectSlider = () => {
       autoPlayDelay={2000}
       loop={true}
       draggable={true}
-      slidesPerView={2}
+      slidesPerViewConfig={{
+        default: 2,
+        sm: 2,
+        md: 2,
+      }}
       showNavigation={false}
       showPagination={true}
       className="main-container w-full"
@@ -61,12 +65,17 @@ export const ProjectSlider = () => {
     >
       {imageSlides.map((slide) => (
         <SwiperSlide key={slide.id} className="relative">
-          <div className="relative h-56 md:h-80 rounded-lg overflow-hidden">
-            <Image src={slide.src || "/placeholder.svg"} alt={slide.alt} fill className="object-cover" />
+          <div className="relative h-56 overflow-hidden rounded-lg md:h-80">
+            <Image
+              src={slide.src || "/placeholder.svg"}
+              alt={slide.alt}
+              fill
+              className="object-cover"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
           </div>
         </SwiperSlide>
       ))}
     </GenericSwiper>
-  )
-}
+  );
+};
