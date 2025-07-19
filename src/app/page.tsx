@@ -1,38 +1,43 @@
 import ArrowButton from "@/components/global/ArrowButton";
-import CaseStudies from "@/components/pages/main/CaseStudies";
-import CompanyProfile from "@/components/pages/main/Company Profile";
-import ContactUS from "@/components/pages/main/ContactUS";
-import CustomerFeedBack from "@/components/pages/main/CustomerFeedBack";
-import Employess from "@/components/pages/main/Employess";
-import { HeroMarqee } from "@/components/pages/main/FadingMarquee";
-// import Insides from "@/components/pages/main/Insides";
-import FaqSection from "@/components/pages/main/Questions";
-import Services from "@/components/pages/main/Services";
+import Events from "@/components/main/CaseStudies";
+// import CompanyProfile from "@/components/main/Company Profile";
+import ContactUS from "@/components/main/ContactUS";
+import CustomerFeedBack from "@/components/main/CustomerFeedBack";
+import Employess from "@/components/main/Employess";
+import { HeroMarqee } from "@/components/main/FadingMarquee";
+import FaqSection from "@/components/main/Questions";
+import Services from "@/components/main/Services";
+import Image from "next/image";
 import Link from "next/link";
+import heroBG from "../../public/HeroBG.jpg";
+import { ArrowRight } from "lucide-react";
+import CrossIndustry from "@/components/main/CrossIndustry";
+import { ProjectSlider } from "@/components/main/ProjectSlider";
+// import PhotoGallery from "@/components/main/PhotoGallery";
 
 export default function Home() {
   return (
-    <main className="mt-10 md:-mt-10">
-      <section className="relative flex min-h-screen flex-col items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
-        {/* Background Video */}
+    <div className="mt-10">
+      <section className="relative flex min-h-screen flex-col items-center justify-center px-4 py-20 sm:px-6 lg:px-8">
+        {/* Background Image */}
         <div className="absolute inset-0 -z-10 opacity-80">
-          <video
-            src="/herobg.webm"
-            autoPlay
-            playsInline
-            controls={false}
-            preload="auto"
-            loop
-            muted
+          <Image
+            src={heroBG}
+            alt="Hero BG"
             className="h-full w-full object-cover"
           />
         </div>
 
         {/* Content Container */}
         <div className="flex w-full max-w-5xl flex-col items-center gap-8 text-center">
+          <ItSolutions />
           <h1 className="text-h1-color text-3xl leading-snug sm:text-4xl md:text-5xl">
-            We Design, Build & Grow Digital <br />
-            Brands That Deliver Results
+            We Design, Build &{" "}
+            <span className="text-accent-hover italic">
+              Grow Digital <br />
+              Brands
+            </span>{" "}
+            That Deliver Results
           </h1>
           <h3 className="text-h3-color max-w-3xl text-base sm:text-lg md:text-xl">
             Empowering Your Business With Cutting-Edge Technology Solutions.
@@ -67,18 +72,30 @@ export default function Home() {
           {/* Marquee */}
           <div className="mt-8 -mb-6">
             <HeroMarqee />
+            <ProjectSlider />
           </div>
         </div>
       </section>
-
-      <CompanyProfile />
+      {/* <CompanyProfile /> */}
+      <CrossIndustry />
       <Services />
-      <CaseStudies />
+      <Events />
       <Employess />
+      {/* <PhotoGallery /> */}
+      <CustomerFeedBack />
       <FaqSection />
       <ContactUS />
-      <CustomerFeedBack />
-      {/* <Insides /> */}
-    </main>
+    </div>
+  );
+}
+
+function ItSolutions() {
+  return (
+    <Link href={{ pathname: "/", hash: "contact" }}>
+      <div className="border-dark-bg-primary/30 flex items-center gap-2 rounded-full border-[1px] px-3 py-1 text-xs text-black sm:text-sm">
+        <ArrowRight size={16} className="text-accent-hover" />
+        It Solutions & Service Agency
+      </div>
+    </Link>
   );
 }

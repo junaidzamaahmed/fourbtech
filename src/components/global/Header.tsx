@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+// import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useRef, useState, useEffect } from "react";
 import ArrowButton from "./ArrowButton";
@@ -7,7 +7,8 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import gsap from "gsap";
 import { useWindowScroll } from "react-use";
 import Link from "next/link";
-import PrimaryLogo from "../../../public/Primary logo.svg";
+import PrimaryLogo from "./PrimaryLogo";
+// import PrimaryLogo from "../../../public/Primary logo.svg";
 
 const links = [
   { title: "Home", path: "/", sub: [] },
@@ -107,25 +108,12 @@ const Header = () => {
   return (
     <div
       ref={navContainerRef}
-      className={`fixed top-0 z-50 h-16 w-full border-none transition-all duration-700 sm:top-3`}
+      className={`border-dark-bg-primary/50 fixed top-0 z-50 h-20 w-full border-b-[1px] bg-white py-4 transition-all duration-700 sm:top-0`}
     >
-      <header className="bsolute absolute top-1/2 w-full -translate-y-1/2">
-        <nav className="flex-between main-container bg-white/50 backdrop-blur-md">
-          <Link href="/" className="relative w-20 sm:w-28 md:w-32">
-            {/* <img
-              src="/Primary logo.svg"
-              alt="Logo"
-              width={200}
-              height={200}
-              className="origin-center object-cover object-center"
-            /> */}
-            <Image
-              src={PrimaryLogo}
-              alt="Logo"
-              width={200}
-              height={200}
-              className="origin-center object-cover object-center"
-            />
+      <header className="absolute top-1/2 w-full -translate-y-1/2">
+        <nav className="flex-between main-container">
+          <Link href="/" className="flex-shrink-0">
+            <PrimaryLogo className="h-16 w-20 sm:w-28" />
           </Link>
           {/* Desktop Nav */}
           <div className="hidden sm:block">
@@ -227,7 +215,7 @@ const Header = () => {
               {/* Mobile Menu */}
               <div
                 id="mobile-menu"
-                className={`!bg-dark-bg-primary fixed inset-0 z-40 flex h-screen flex-col items-center justify-center pt-20 transition-all duration-500 ${
+                className={`!bg-dark-bg-primary fixed inset-0 -top-2 z-40 flex h-[110vh] flex-col items-center justify-center transition-all duration-500 ${
                   mobileMenu
                     ? "pointer-events-auto visible opacity-100"
                     : "pointer-events-none invisible opacity-0"

@@ -1,23 +1,45 @@
-import ArrowButton from "@/components/global/ArrowButton";
-import TitleDescCard from "@/components/global/TitleDesc";
-import FaqSeo from "@/components/pages/digital/Faq";
-import MarketingAgencyService from "@/components/pages/digital/MarketingAgency";
-import { BoostRanking, SEO_Details } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Metadata } from "next";
 import digital from "../../../../public/digital/digital.png";
-import strategy from "../../../../public/digital/strategy.png";
+import BoostRanking from "./_components/BoostRanking";
+import GetInspired from "./_components/GetInspired";
+import DigitalMarketingAgency from "./_components/DigitalMarketingAgency";
+import SeoExplained from "./_components/SeoExplained";
+import MarketingAgencyService from "./_components/MarketingAgency";
+import FaqSeo from "./_components/Faq";
 
 export const metadata: Metadata = {
-  title: "FourBtech | Services",
-  description: "Tech Service Provider",
-};
-
+  title: 'FourBtech Digital Marketing Services to Boost Your Brand',
+  description: "Drive targeted traffic and increase sales with FourBtech's expert digital marketing solutions including SEO, PPC, social media, and content strategy",
+  openGraph: {
+    title: 'FourBtech Digital Marketing Solutions for Business Growth',
+    description: " Maximize online visibility and ROI with FourBtech's tailored digital marketing services covering SEO, PPC ads, social media, and brand strategy.",
+    type: 'website',
+    url: 'https://www.fourbtech.com/',
+    images: [
+      {
+        url: 'https://www.fourbtech.com/MetaImages/og-image.jpg',
+        alt: 'FourBtech - Mobile Apps, Web Design & Digital Marketing'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Effective Digital Marketing Services by FourBtech',
+    description: 'Grow your brand with FourBtech’s proven digital marketing strategies. SEO, paid ads, social media, and content marketing designed to convert.',
+    images: [
+      {
+        url: 'https://www.fourbtech.com/MetaImages/twitter-image.jpg',
+        alt: 'FourBtech - Complete Web, App & Marketing Solutions'
+      }
+    ]
+  }
+}
 const page = () => {
   return (
-    <main className="bg-custom-white">
+    <div className="bg-custom-white">
       {/* Video and header  */}
       <section className="relative mb-14">
         <div className="relative flex h-[300px] w-full items-center justify-center bg-gray-900 sm:h-[400px]">
@@ -25,7 +47,7 @@ const page = () => {
             src={digital}
             alt="Digital Marketing"
             fill
-            className="object-cover opacity-50 "
+            className="object-cover opacity-50"
             priority
           />
           <div className="relative z-10 text-center">
@@ -42,72 +64,13 @@ const page = () => {
           </div>
         </div>
       </section>
-
-      {/* Digital Marketing Agency For A Service Provider */}
-      <section className="main-container grid grid-cols-1 gap-12 object-center !pb-32 lg:grid-cols-2">
-        <div className="order-1 h-full w-full lg:order-2">
-          <Image
-            src={strategy}
-            width={300}
-            height={300}
-            className="h-full w-full object-cover rounded-xl"
-            alt="Premium SEO Services"
-          />
-        </div>
-        <div className="order-2 flex flex-col items-start justify-center gap-4 md:order-1">
-          <h3>Premium SEO Services</h3>
-          <h3 className="text-h1-color mb-3 text-4xl font-semibold">
-            Digital marketing agency for a service provider
-          </h3>
-          <p className="text-[clamp(.8rem, 2vw, 1rem)]">
-            At Fourbtech Digital Marketing, we specialize in results-focused SEO strategies designed to improve your search engine rankings and attract high-quality organic traffic to your website. Our comprehensive SEO services include detailed site audits, strategic keyword research, on-page and technical optimization, authority development, citation management, link building, content creation, blogging, and more — all aimed at maximizing your online visibility and growth.
-          </p>
-          <div className="">
-            <Link href={{ pathname: "/", hash: "contact" }}>
-              <ArrowButton variant="blueOutline" right className="!px-6 !py-6">
-                Get In touch
-              </ArrowButton>
-            </Link>
-          </div>
-        </div>
-      </section>
-      {/* Full-stack digital marketing service agency */}
+      <DigitalMarketingAgency />
       <MarketingAgencyService />
-      {/* Get Inspired. Get Informed. Get Started. */}
-      <section className="main-container flex-center mb-32 flex-col pb-32 text-center *:max-w-[95%]">
-        <h2 className="text-h2-color mb-3 text-4xl font-semibold">
-          Get Inspired. Get Informed. Get Started.
-        </h2>
-        <p className="">
-          Discover powerful ideas, transparent pricing, and a clear path forward
-          to help you achieve real, measurable results.
-        </p>
-        <Link href={{ pathname: "/", hash: "contact" }}>
-          <ArrowButton variant="fill" size={20} left className="!py-5">
-            get free seo consultation
-          </ArrowButton>
-        </Link>
-      </section>
-      {/* SEO Explainded */}
-      <section className="main-container mb-20 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-        {SEO_Details.map((service, index) => (
-          <TitleDescCard key={index} {...service} />
-        ))}
-      </section>
-      {/* Boost Your Rankings and Drive Organic Traffic */}
-      <section className="main-container">
-        <h1 className="text-h1-color my-10 text-center font-semibold">
-          Boost Your Rankings and Drive Organic Traffic
-        </h1>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {BoostRanking.map((text, index) => (
-            <TitleDescCard key={index} {...text} />
-          ))}
-        </div>
-      </section>
-      {/* FAQ */}
+      <GetInspired />
+      <SeoExplained />
+      <BoostRanking />
       <FaqSeo />
-    </main>
+    </div>
   );
 };
 
