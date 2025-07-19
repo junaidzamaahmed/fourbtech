@@ -22,11 +22,12 @@ const poppins = Poppins({
 // };
 
 export const metadata: Metadata = {
-  title: "FourBtech Limited | Mobile Apps, Web Design & Digital Marketing",
+  title:
+    "FourBtech Limited | Web Development, Mobile Apps, & Digital Marketing",
   description:
-    "FourBtech delivers expert mobile app development, website development, and digital marketing to help businesses grow online with smart IT solutions.",
+    "FourBtech delivers expert website development, mobile app development, and digital marketing to help businesses grow online with smart IT solutions.",
   openGraph: {
-    title: "FourBtech | Mobile App, Website & Marketing Experts",
+    title: "FourBtech | Website, Mobile App, & Marketing Experts",
     description:
       "Build better apps, websites, and digital strategies with FourBtech. Your trusted IT partner for growth, innovation, and online success.",
     type: "website",
