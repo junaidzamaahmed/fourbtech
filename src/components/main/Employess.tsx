@@ -2,7 +2,7 @@
 import ArrowButton from "@/components/global/ArrowButton";
 import {
   Card,
-  CardContent,
+  // CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -21,7 +21,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import YouTubePlayer from "../YoutubePlayer";
+// import YouTubePlayer from "../YoutubePlayer";
 
 const EmployeeCard = ({
   name,
@@ -143,15 +143,15 @@ const Employees = ({ isHome = true }: { isHome?: boolean }) => {
           </div>
           <div className="h-[300px] w-full sm:h-[350px] lg:min-h-full">
             <div className="relative h-full w-full overflow-hidden rounded-xl">
-              {/* <Image
+              <Image
                 src={signing}
                 alt="Our team at work"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
-              /> */}
-              <YouTubePlayer videoid="MO-w7Y4zRl0" />
+              />
+              {/* <YouTubePlayer videoid="MO-w7Y4zRl0" /> */}
             </div>
           </div>
         </div>
