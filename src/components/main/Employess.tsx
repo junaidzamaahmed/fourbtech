@@ -31,6 +31,7 @@ const EmployeeCard = ({
   email,
   linkedin,
 }: Employee) => {
+  console.log(description);
   return (
     <Card className="border-dark-bg-primary/10 bg-custom-white group flex h-full flex-col border-[1px] transition-all duration-300 hover:shadow-lg">
       <CardHeader className="flex flex-col items-center justify-center space-y-3">
