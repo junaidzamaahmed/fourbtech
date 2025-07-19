@@ -38,11 +38,11 @@ export default function PhotoGallery() {
             We Meet, We Greet, We Enjoy, We Work
           </p>
         </div>
-        <div className="hidden h-full min-h-full grid-cols-8 grid-rows-7 gap-4 md:grid">
+        <div className="hidden h-full min-h-full grid-cols-8 grid-rows-7 gap-4 md:grid ">
           {images.map((src, i) => (
             <div
               key={i}
-              className={`group relative col-span-${gridConfig[i].colSpan} row-span-${gridConfig[i].rowSpan} overflow-hidden rounded-lg`}
+              className={`group relative col-span-${gridConfig[i].colSpan} row-span-${gridConfig[i].rowSpan} overflow-hidden rounded-lg `}
             >
               <div className="relative h-full w-full">
                 <div className="h-full min-h-56">

@@ -13,7 +13,7 @@ import heroBG from "../../public/HeroBG.jpg";
 import { ArrowRight } from "lucide-react";
 import CrossIndustry from "@/components/main/CrossIndustry";
 import { ProjectSlider } from "@/components/main/ProjectSlider";
-import PhotoGallery from "@/components/main/PhotoGallery";
+// import PhotoGallery from "@/components/main/PhotoGallery";
 
 export default function Home() {
   return (
@@ -81,7 +81,7 @@ export default function Home() {
       <Services />
       <Events />
       <Employess />
-      <PhotoGallery />
+      {/* <PhotoGallery /> */}
       <CustomerFeedBack />
       <FaqSection />
       <ContactUS />

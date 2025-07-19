@@ -47,7 +47,7 @@ const ServiceCard = ({
               {title}
             </h1>
           </CardTitle>
-          <CardDescription className="group-hover:!text-custom-white cardParagraph !text-h1-color flex flex-col gap-4">
+          <CardDescription className="group-hover:!text-custom-white cardParagraph !text-h1-color flex flex-col gap-4 items-start">
             <div> {description}</div>
             <ArrowButton
               right
