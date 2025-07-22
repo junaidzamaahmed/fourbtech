@@ -12,7 +12,8 @@ import Link from "next/link";
 import heroBG from "../../public/HeroBG.jpg";
 import { ArrowRight } from "lucide-react";
 import CrossIndustry from "@/components/main/CrossIndustry";
-import { ProjectSlider } from "@/components/main/ProjectSlider";
+import HeroPhotoMarquee from "@/components/main/HeroPhotoMarquee";
+
 // import PhotoGallery from "@/components/main/PhotoGallery";
 
 export default function Home() {
@@ -72,7 +73,7 @@ export default function Home() {
           {/* Marquee */}
           <div className="mt-8 -mb-6">
             <HeroMarqee />
-            <ProjectSlider />
+            <HeroPhotoMarquee />
           </div>
         </div>
       </section>

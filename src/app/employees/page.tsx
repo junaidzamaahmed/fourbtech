@@ -3,8 +3,7 @@ import FounderCard from "./_components/FounderCard";
 
 export default function page() {
   return (
-    <div className="sm:mt-20 mainContainer">
-      
+    <div className="main-container sm:mt-20">
       <FounderCard />
     </div>
   );

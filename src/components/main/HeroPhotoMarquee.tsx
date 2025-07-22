@@ -1,17 +1,18 @@
-"use client";
-
-import Image, { StaticImageData } from "next/image";
-import { GenericSwiper, SwiperSlide } from "../GenericSwiper";
+import React from "react";
+import { FadingPhotoSlider } from "../FadingPhoto";
 
 import thumbnail from "../../../public/projectsCarousel/thumbnail.png";
 import thumbnail1 from "../../../public/projectsCarousel/thumbnail1.png";
 import thumbnail2 from "../../../public/projectsCarousel/thumbnail2.png";
 import thumbnail3 from "../../../public/projectsCarousel/thumbnail3.png";
+import { StaticImageData } from "next/image";
+
 interface ImageSlide {
   id: number;
   src: StaticImageData;
   alt: string;
   title?: string;
+  link?: string;
   description?: string;
 }
 
@@ -20,6 +21,7 @@ const imageSlides: ImageSlide[] = [
     id: 1,
     src: thumbnail,
     alt: "HomeX",
+    link: "/",
     title: "HomeX",
     description: "HomeX",
   },
@@ -27,6 +29,7 @@ const imageSlides: ImageSlide[] = [
     id: 2,
     src: thumbnail1,
     alt: "OMS",
+    link: "/",
     title: "OMS",
     description: "OMS",
   },
@@ -34,6 +37,7 @@ const imageSlides: ImageSlide[] = [
     id: 3,
     src: thumbnail2,
     alt: "Multivendor Ecommerce",
+    link: "/",
     title: "Multivendor Ecommerce",
     description: "Multivendor Ecommerce",
   },
@@ -41,43 +45,22 @@ const imageSlides: ImageSlide[] = [
     id: 4,
     src: thumbnail3,
     alt: "Multivendor Ecommerce Mobile App",
+    link: "/",
     title: "Multivendor Ecommerce Mobile App",
     description: "Multivendor Ecommerce Mobile App",
   },
 ];
 
-export const ProjectSlider = () => {
+const HeroPhotoMarquee = () => {
   return (
-    <GenericSwiper
-      autoPlay={true}
-      autoPlayDelay={0}
-      loop={true}
-      draggable={true}
-      slidesPerViewConfig={{
-        default: 2,
-        sm: 2,
-        md: 2,
-      }}
-      showNavigation={false}
-      showPagination={true}
-      className="main-container w-full"
-      // onSlideChange={(index) => console.log("Active slide:", index)}
-    >
-      {imageSlides.map((slide) => (
-        <SwiperSlide key={slide.id} className="relative">
-          <div className="relative h-56 overflow-hidden rounded-lg md:h-80">
-            <Image
-              src={slide.src || "/placeholder.svg"}
-              alt={slide.alt}
-              fill
-              className="object-cover"
-            />
-
-          </div>
-        </SwiperSlide>
-      ))}
-    </GenericSwiper>
+    <div className="overflowHidden flex max-w-[95vw] items-center justify-center">
+      <FadingPhotoSlider
+        images={imageSlides}
+        direction="right"
+        pauseOnHover={false}
+      />
+    </div>
   );
 };
 
-
+export default HeroPhotoMarquee;

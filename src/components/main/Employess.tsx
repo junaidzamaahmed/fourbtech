@@ -27,11 +27,10 @@ const EmployeeCard = ({
   name,
   role,
   image,
-  description,
   email,
   linkedin,
 }: Employee) => {
-  console.log(description);
+
   return (
     <Card className="border-dark-bg-primary/10 bg-custom-white group flex h-full flex-col border-[1px] transition-all duration-300 hover:shadow-lg">
       <CardHeader className="flex flex-col items-center justify-center space-y-3">
@@ -158,7 +157,7 @@ const Employees = ({ isHome = true }: { isHome?: boolean }) => {
         </div>
       )}
 
-      <h2 className="mt-16 text-center">Our Team</h2>
+      <h2 className="mt-16 text-center text-3xl">Our Team</h2>
 
       <div className="mt-4 w-full">
         <Swiper
@@ -207,6 +206,13 @@ const Employees = ({ isHome = true }: { isHome?: boolean }) => {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <div>
+        <Link href="/employees">
+          <ArrowButton right variant="fill">
+            <span className="font-medium">View All Employees</span>
+          </ArrowButton>
+        </Link>
       </div>
     </section>
   );
