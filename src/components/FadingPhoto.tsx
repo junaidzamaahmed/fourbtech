@@ -20,12 +20,16 @@ export const FadingPhotoSlider = ({
   speed = "normal",
   pauseOnHover = true,
   images = [],
+  height = "400",
+  width = "400",
   className,
 }: {
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
   images?: ImageProps[];
+  height?: string;
+  width?: string;
   className?: string;
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -175,14 +179,16 @@ export const FadingPhotoSlider = ({
           <li key={id}>
             <Link href={link || "/"} className="flex-shrink-0">
               <div className="text-h1-color marquee-item mx-4 flex items-center md:mx-10">
-                <div className="relative h-[200px] w-[300px] overflow-hidden rounded-lg sm:h-[250px] sm:w-[400px] md:h-[300px] md:w-[500px]">
+                <div
+                  className={`relative h-[${height}px] w-[${width}px] overflow-hidden rounded-lg sm:h-[250px] sm:w-[400px] md:h-[300px] md:w-[500px]`}
+                >
                   <Image
                     src={src || "/placeholder.svg"}
                     alt={alt}
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center  bg-opacity-50 text-white">
+                  <div className="bg-opacity-50 absolute inset-0 flex items-center justify-center text-white bottom-10 left-20
                     {alt}
                   </div>
                 </div>
