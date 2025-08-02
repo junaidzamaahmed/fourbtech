@@ -90,7 +90,7 @@ export default function OurApproach() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="mx-auto max-w-7xl px-4 py-12 md:px-0">
+    <section ref={sectionRef} className="main-container max-w-7xl mx-auto px-4 py-12 md:px-0">
       <div className="mb-20 text-center">
         <h2 className="mb-2 text-3xl font-bold md:text-4xl">
           Our Comprehensive Approach To UI/UX

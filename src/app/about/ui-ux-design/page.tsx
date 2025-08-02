@@ -5,10 +5,12 @@ import React from "react";
 import UIUX_categories from "./_components/UIUX_categories";
 import Why_choose_our_service from "./_components/Why_choose_our_service";
 import OurApproach from "./_components/our_approach";
+import { ServiceBannersHome } from "@/components/main/ServiceBannersHome";
+import ConnectWithUs from "./_components/ConnectWithUs";
 
 const page = () => {
   return (
-    <div className="bg-custom-white min-h-screen md:mt-25">
+    <div className="bg-custom-white min-h-screen space-y-20 md:mt-25">
       <div className="flex items-center justify-center gap-2 text-gray-500">
         <Link href="/" className="transition-colors hover:text-white">
           Home
@@ -18,7 +20,7 @@ const page = () => {
       </div>
 
       {/* Heading */}
-      <div className="mt-8 text-center">
+      <div className="text-center">
         <h1 className="text-3xl text-black md:text-5xl">
           Design That Feels Right, Functions Better &amp;
         </h1>
@@ -27,8 +29,8 @@ const page = () => {
         </h2>
       </div>
 
-      {/* Marquee */}
-      <div className="mt-8 -mb-6 space-y-8">
+      {/* Marquee section */}
+      <div className="-mb-6 space-y-8">
         <HeroPhotoMarquee />
         <p className="text-center font-semibold">
           We create sleek, intuitive, and user-friendly interfaces that elevate
@@ -49,18 +51,25 @@ const page = () => {
       </div>
 
       {/* categories */}
-      <div className="mt-12">
-        <UIUX_categories />
-      </div>
+      <UIUX_categories />
 
       {/* Why Choose Our Service */}
-      <div className="mt-12">
-        <Why_choose_our_service />
-      </div>
+      <Why_choose_our_service />
 
       {/* Our Approach */}
-      <div className="mt-12">
-        <OurApproach />
+      <OurApproach />
+
+      {/* Industries we've expertise on */}
+      <div className="mt-12 flex flex-col items-center justify-center">
+        <h1 className="text-center text-2xl font-bold">
+          Industries we&apos;ve expertise on
+        </h1>
+        <ServiceBannersHome direction="left" borderColor="accent-hover" />
+      </div>
+
+      {/* Connect Section */}
+      <div className="flex flex-col items-center justify-center">
+        <ConnectWithUs />
       </div>
     </div>
   );
