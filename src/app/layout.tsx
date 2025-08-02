@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
-// import { ThemeProvider } from "@/providers/ThemeProvider";
 import Header from "@/components/global/Header";
 import Footer from "@/components/global/Footer";
 // import SmoothScrollLayout from "@/components/global/SmoothScroll";
@@ -13,13 +12,12 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
-// export const metadata: Metadata = {
-//   title: {
-//     default: "FourBtech Limited",
-//     template: "%s - FourBtech Limited",
-//   },
-//   description: "Tech Service Provider",
-// };
+const dmSerif = DM_Serif_Display({
+  variable: "--font-dm-serif",
+  weight: ["400"],
+  style: "italic",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title:
@@ -60,19 +58,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
-      <body className={`${poppins.className} antialiased`}>
-        {/* <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        > */}
+      <body className={`${poppins.variable} ${dmSerif.variable} antialiased`}>
         <Header />
         {/* <SmoothScrollLayout> */}
         <main>{children}</main>
         <Footer />
         {/* </SmoothScrollLayout> */}
-        {/* </ThemeProvider> */}
       </body>
     </html>
   );

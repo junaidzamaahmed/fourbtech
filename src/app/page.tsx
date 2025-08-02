@@ -9,7 +9,7 @@ import FaqSection from "@/components/main/Questions";
 import Services from "@/components/main/Services";
 import Image from "next/image";
 import Link from "next/link";
-import heroBG from "../../public/HeroBG.jpg";
+
 import { ArrowRight } from "lucide-react";
 import CrossIndustry from "@/components/main/CrossIndustry";
 import { ProjectSlider } from "@/components/main/ProjectSlider";
@@ -22,8 +22,11 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 -z-10 opacity-80">
           <Image
-            src={heroBG}
+            src={"/HeroBG.jpg"}
             alt="Hero BG"
+            fill
+            priority
+            sizes="100vw"
             className="h-full w-full object-cover"
           />
         </div>
