@@ -51,7 +51,6 @@ const Why_choose_our_service = () => {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top 70%",
-        toggleActions: "play none none none",
       },
     });
 

@@ -67,11 +67,10 @@ const UIUX_categories = () => {
       y: 30,
       duration: 0.8,
       stagger: 0.2,
-      ease: "power3.out",
+      ease: "ease.out",
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top 70%",
-        toggleActions: "play none none none",
       },
     });
 

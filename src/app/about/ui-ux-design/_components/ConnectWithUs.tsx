@@ -114,33 +114,34 @@ const ConnectWithUs = () => {
           >
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {["name", "email"].map((field, idx) => (
-                <FormField
-                  key={idx}
-                  control={form.control}
-                  name={field as keyof FormData}
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-sm capitalize">
-                        {field.name === "name"
-                          ? "Name"
-                          : field.name === "email" && "Email"}
-                      </FormLabel>
-                      <FormControl>
-                        <Input
-                          {...field}
-                          value={
-                            typeof field.value === "boolean"
-                              ? field.value.toString()
-                              : field.value
-                          }
-                          disabled={isSubmitting}
-                          className="border-custom-white/60 rounded-none border-0 !border-b-2 px-1 py-2 focus:ring-0 focus:outline-0"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                <div className="col-span-full" key={idx}>
+                  <FormField
+                    control={form.control}
+                    name={field as keyof FormData}
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm capitalize">
+                          {field.name === "name"
+                            ? "Name"
+                            : field.name === "email" && "Email"}
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            {...field}
+                            value={
+                              typeof field.value === "boolean"
+                                ? field.value
+                                : field.value
+                            }
+                            disabled={isSubmitting}
+                            className="border-custom-white/60 rounded-none border-0 !border-b-2 px-1 py-2 focus:ring-0 focus:outline-0"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
               ))}
             </div>
 
