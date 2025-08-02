@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 // import { ThemeProvider } from "@/providers/ThemeProvider";
 import Header from "@/components/global/Header";
@@ -9,6 +10,12 @@ import Footer from "@/components/global/Footer";
 const poppins = Poppins({
   variable: "--font-poppins",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: "normal",
+  subsets: ["latin"],
+});
+const dmSerif = DM_Serif_Display({
+  variable: "--font-dm-serif",
+  weight: "400",
   style: "normal",
   subsets: ["latin"],
 });
