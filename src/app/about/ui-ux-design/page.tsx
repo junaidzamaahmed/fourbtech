@@ -10,7 +10,7 @@ import ConnectWithUs from "./_components/ConnectWithUs";
 
 const page = () => {
   return (
-    <div className="bg-custom-white min-h-screen space-y-20 md:mt-25">
+    <div className="min-h-screen space-y-10 md:space-y-20 mt-25">
       <div className="flex items-center justify-center gap-2 text-gray-500">
         <Link href="/" className="transition-colors hover:text-white">
           Home
@@ -20,7 +20,7 @@ const page = () => {
       </div>
 
       {/* Heading */}
-      <div className="text-center">
+      <div className="text-center px-4">
         <h1 className="text-3xl text-black md:text-5xl">
           Design That Feels Right, Functions Better &amp;
         </h1>
@@ -30,7 +30,7 @@ const page = () => {
       </div>
 
       {/* Marquee section */}
-      <div className="-mb-6 space-y-8">
+      <div className="-mb-6 space-y-8 px-4">
         <HeroPhotoMarquee />
         <p className="text-center font-semibold">
           We create sleek, intuitive, and user-friendly interfaces that elevate

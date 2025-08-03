@@ -91,15 +91,15 @@ const ConnectWithUs = () => {
 
   return (
     <section
-      className="main-container to-dark-bg-primary mx-20 my-20 grid grid-cols-1 overflow-hidden rounded-xl bg-radial-[at_50%_0%] from-[#5A75BB] p-10 lg:grid-cols-2"
+      className="main-container to-dark-bg-primary mx-4 md:mx-20 my-20 grid grid-cols-1 overflow-hidden rounded-xl bg-radial-[at_50%_0%] from-[#5A75BB] p-10 lg:grid-cols-2"
       id="contact"
     >
       {/* Left Info Block */}
-      <div className="flex flex-col items-center gap-12 px-10 md:p-14">
-        <h1 className="text-5xl text-white">
+      <div className="flex flex-col items-center gap-12 sm:px-10 text-center sm:text-left md:p-14">
+        <h1 className="text-4xl sm:text-5xl mt-4 sm:mt-0 text-white">
           Let&apos;s Design Something That Help Grow Your Business
         </h1>
-        <p className="text-xl text-white">
+        <p className="text-lg sm:text-xl text-white mb-8 sm:mb-0">
           Book a free discovery call and explore how great UX can accelerate
           your product&apos;s success.
         </p>
