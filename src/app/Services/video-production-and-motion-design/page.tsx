@@ -7,10 +7,11 @@ import WeAreCapableOfSection from "./_components/WeAreCapableOfSection";
 import ProcessWorkflowSection from "./_components/ProcessWorkflowSection";
 import ConnectWithUs from "./_components/ConnectWithUs";
 import Works from "./_components/Works";
+import WhyBrandChooseUs from "./_components/WhyBrandChooseUs";
 
 const VideoProductionAndMotionDesignPage = () => {
   return (
-    <div className="bg-custom-white min-h-screen space-y-20 md:mt-25">
+    <div className=" min-h-screen space-y-20 md:mt-25">
       {/* Header */}
       <div className="flex flex-col items-center justify-center gap-12">
         {/* navigation */}
@@ -65,6 +66,9 @@ const VideoProductionAndMotionDesignPage = () => {
 
       {/* We are capable of */}
       <WeAreCapableOfSection />
+
+      {/* Why Brands Choose Us Section */}
+      <WhyBrandChooseUs />
 
       {/* Process Workflow Section */}
       <ProcessWorkflowSection />

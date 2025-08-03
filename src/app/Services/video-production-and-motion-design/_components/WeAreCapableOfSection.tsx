@@ -124,11 +124,11 @@ const WeAreCapableOfSection = () => {
   );
 
   return (
-    <div className="main-container mx-auto py-20">
+    <div className="main-container mx-auto my-30">
       {/* Header */}
       <div>
         <div className="py-8 text-center">
-          <h1 className="text-3xl font-bold text-gray-900">
+          <h1 className="text-4xl font-bold text-gray-900">
             We Are Capable Of
           </h1>
         </div>

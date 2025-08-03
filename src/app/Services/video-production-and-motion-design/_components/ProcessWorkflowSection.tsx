@@ -89,7 +89,7 @@ const ProcessWorkflowSection = () => {
   };
 
   return (
-    <div className="main-container min-h-screen py-16">
+    <div className="main-container min-h-screen">
       <h1 className="mb-12 text-center text-4xl font-bold">How We Do It</h1>
       <div className="mx-auto px-6">
         {/* Process Steps Navigation */}
