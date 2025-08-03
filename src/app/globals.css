@@ -8,6 +8,9 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
+  --font-poppins: "Poppins", sans-serif;
+  --font-dm-serif: "DM Serif Display", serif;
+
   --color-deep-black: var(--deep-black);
   --color-dark-bg: var(--dark-bg);
   --color-dark-bg-primary: var(--dark-bg-primary);
@@ -62,9 +65,7 @@
   --accent-hover: hsl(222, 100%, 50%);
   --custom-white: hsl(228, 45%, 98%);
 
-  --radius: 8px;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --radius: 0.625rem;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -94,6 +95,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
 }
 
 .dark {
@@ -147,6 +150,10 @@
       transform: translate(calc(-50% - 0.5rem));
     }
   }
+}
+
+* {
+  @apply font-poppins;
 }
 
 @layer base {
@@ -222,4 +229,13 @@
     filter 1s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
   will-change: opacity, transform, filter;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

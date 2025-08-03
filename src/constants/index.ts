@@ -274,7 +274,7 @@ export const services: Services[] = [
     description:
       "Building responsive, high-performance web applications using modern frameworks and technologies.",
     icon: "/service/video production.svg",
-    link: "/",
+    link: "/services/video-production-and-motion-design",
   },
 ];
 

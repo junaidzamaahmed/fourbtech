@@ -16,7 +16,7 @@ const poppins = Poppins({
 const dmSerif = DM_Serif_Display({
   variable: "--font-dm-serif",
   weight: "400",
-  style: "normal",
+  style: ["normal", "italic"],
   subsets: ["latin"],
 });
 
@@ -67,7 +67,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
-      <body className={`${poppins.className} antialiased`}>
+      <body className={`${dmSerif.className} ${poppins.className}  antialiased`}>
         {/* <ThemeProvider
           attribute="class"
           defaultTheme="system"

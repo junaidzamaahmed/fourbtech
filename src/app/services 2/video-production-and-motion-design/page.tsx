@@ -1,12 +1,8 @@
+import ArrowButton from "@/components/global/ArrowButton";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
-import ArrowButton from "@/components/global/ArrowButton";
-import WeAreCapableOfSection from "./_components/WeAreCapableOfSection";
-import ProcessWorkflowSection from "./_components/ProcessWorkflowSection";
-import ConnectWithUs from "./_components/ConnectWithUs";
-import Works from "./_components/Works";
+import WeAreCapableOfSection from "../../services/video-production-and-motion-design/_components/WeAreCapableOfSection";
 
 const VideoProductionAndMotionDesignPage = () => {
   return (
@@ -65,15 +61,6 @@ const VideoProductionAndMotionDesignPage = () => {
 
       {/* We are capable of */}
       <WeAreCapableOfSection />
-
-      {/* Process Workflow Section */}
-      <ProcessWorkflowSection />
-
-      {/* Works Section */}
-      <Works />
-
-      {/* Contact us */}
-      <ConnectWithUs />
     </div>
   );
 };
