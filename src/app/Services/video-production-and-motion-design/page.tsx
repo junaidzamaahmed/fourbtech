@@ -11,7 +11,7 @@ import WhyBrandChooseUs from "./_components/WhyBrandChooseUs";
 
 const VideoProductionAndMotionDesignPage = () => {
   return (
-    <div className=" min-h-screen space-y-20 md:mt-25">
+    <div className=" min-h-screen space-y-10 md:space-y-20 mt-25">
       {/* Header */}
       <div className="flex flex-col items-center justify-center gap-12">
         {/* navigation */}
@@ -37,7 +37,7 @@ const VideoProductionAndMotionDesignPage = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="main-container -mb-6 flex flex-col items-center space-y-8">
+      <div className="main-container flex flex-col items-center space-y-8">
         <div className="relative aspect-video w-full">
           <Image
             src="/videoProduction/video_production_image.jpg"

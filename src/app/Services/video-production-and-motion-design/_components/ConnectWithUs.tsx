@@ -91,15 +91,15 @@ const ConnectWithUs = () => {
 
   return (
     <section
-      className="main-container to-dark-bg-primary mx-20 my-20 grid grid-cols-1 overflow-hidden rounded-xl bg-radial-[at_50%_0%] from-[#5A75BB] p-10 lg:grid-cols-2"
+      className="main-container to-dark-bg-primary mx-4 sm:mx-20 my-20 grid grid-cols-1 overflow-hidden rounded-xl bg-radial-[at_50%_0%] from-[#5A75BB] p-10 lg:grid-cols-2"
       id="contact"
     >
       {/* Left Info Block */}
-      <div className="flex flex-col items-center gap-12 px-10 md:p-14">
-        <h1 className="text-5xl text-white">
+      <div className="flex flex-col items-center gap-12 mb-8 sm:mb-0 text-center sm:text-left sm:px-10 md:p-14">
+        <h1 className="text-4xl md:text-5xl text-white mt-4 sm:mt-0">
           Let&apos;s Bring Your Vision to Life!
         </h1>
-        <p className="text-xl text-white">
+        <p className="text-lg sm:text-xl text-white">
           Let&apos;s create visually stunning, emotionally powerful videos that move
           your audience and elevate your brand.
         </p>

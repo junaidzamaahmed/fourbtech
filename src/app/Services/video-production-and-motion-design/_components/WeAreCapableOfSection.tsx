@@ -128,7 +128,7 @@ const WeAreCapableOfSection = () => {
       {/* Header */}
       <div>
         <div className="py-8 text-center">
-          <h1 className="text-4xl font-bold text-gray-900">
+          <h1 className="text-4xl font-bold">
             We Are Capable Of
           </h1>
         </div>
@@ -149,11 +149,11 @@ const WeAreCapableOfSection = () => {
         </Tabs>
       </div>
 
-      <div className="flex">
+      <div className="flex flex-col sm:flex-row">
         {/* Left Sub Menu */}
         <div className="w-80">
           <div className="p-6">
-            <div className="space-y-2">
+            <div className="space-y-2 flex text-xs gap-4 sm:flex-col sm:text-base sm:gap-0">
               {currentMainItem.subItems?.map((item) => (
                 <button
                   key={item.id}
@@ -175,7 +175,7 @@ const WeAreCapableOfSection = () => {
         <div className="flex-1">
           <div className="p-8">
             {currentSubItem ? (
-              <div className="flex items-start gap-8">
+              <div className="flex flex-col sm:flex-row items-start gap-8">
                 {/* Image */}
                 <div className="flex-shrink-0">
                   <Image

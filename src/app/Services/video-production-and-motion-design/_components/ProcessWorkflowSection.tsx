@@ -93,28 +93,28 @@ const ProcessWorkflowSection = () => {
       <h1 className="mb-12 text-center text-4xl font-bold">How We Do It</h1>
       <div className="mx-auto px-6">
         {/* Process Steps Navigation */}
-        <div className="mb-16">
-          <div className="flex justify-center space-x-8 overflow-x-auto pb-4">
+        <div className="mb-10 sm:mb-16">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 md:gap-8 overflow-x-auto pb-4">
             {processSteps.map((step, index) => (
               <button
-                key={step.id}
-                onClick={() => setCurrentStep(index)}
-                className={`flex-shrink-0 px-6 py-3 font-medium transition-colors duration-200 ${
-                  currentStep === index
-                    ? "text-accent-hover"
-                    : "hover:text-accent-hover text-gray-600"
-                }`}
+          key={step.id}
+          onClick={() => setCurrentStep(index)}
+          className={`flex-shrink-0 px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 text-sm sm:text-base font-medium rounded transition-colors duration-200 ${
+            currentStep === index
+              ? "text-accent-hover"
+              : "hover:text-accent-hover text-gray-600"
+          }`}
               >
-                {step.title}
+          {step.title}
               </button>
             ))}
           </div>
         </div>
 
         {/* Main Content */}
-        <div className="flex items-center gap-12">
+        <div className="flex flex-col sm:flex-row items-center gap-12">
           {/* Image */}
-          <div className="relative h-100 w-1/2 overflow-hidden rounded-lg bg-gray-200">
+          <div className="relative h-100 w-full sm:w-1/2 overflow-hidden rounded-lg bg-gray-200">
             <Image
               src={currentProcessStep.image}
               alt={currentProcessStep.title}

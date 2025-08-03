@@ -73,15 +73,15 @@ const VideoPortfolio = () => {
         </h1>
 
         {/* Category Filter */}
-        <div className="mb-12 flex justify-center gap-2">
+        <div className="mb-12 flex flex-wrap justify-center gap-2">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
               className={`rounded-full px-6 py-3 text-sm font-medium transition-all duration-200 ${
-                activeCategory === category
-                  ? "bg-accent-hover text-white shadow-lg"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+          activeCategory === category
+            ? "bg-accent-hover text-white shadow-lg"
+            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >
               {category}
