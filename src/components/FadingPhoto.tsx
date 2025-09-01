@@ -188,7 +188,7 @@ export const FadingPhotoSlider = ({
                     fill
                     className="object-cover"
                   />
-                  <div className="bg-opacity-50 absolute inset-0 flex items-center justify-center text-white ">
+                  <div className="bg-opacity-50 absolute inset-0 flex items-center justify-center text-white">
                     {alt}
                   </div>
                 </div>
