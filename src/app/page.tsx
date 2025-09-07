@@ -18,7 +18,7 @@ import HeroPhotoMarquee from "@/components/main/HeroPhotoMarquee";
 
 export default function Home() {
   return (
-    <div className="mt-10">
+    <main className="mt-10">
       <section className="relative flex min-h-screen flex-col items-center justify-center px-4 py-20 sm:px-6 lg:px-8">
         {/* Background Image */}
         <div className="absolute inset-0 -z-10 opacity-80">
@@ -86,7 +86,7 @@ export default function Home() {
       <CustomerFeedBack />
       <FaqSection />
       <ContactUS />
-    </div>
+    </main>
   );
 }
 

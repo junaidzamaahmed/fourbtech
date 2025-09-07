@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     "FourBtech Limited | Web Development, Mobile Apps, & Digital Marketing",
   description:
     "FourBtech delivers expert website development, mobile app development, and digital marketing to help businesses grow online with smart IT solutions.",
+    other:{
+      "facebook-domain-verification": "4q2133f6hueuq6l7r2inlh1y390tej",
+    },
   openGraph: {
     title: "FourBtech | Website, Mobile App, & Marketing Experts",
     description:
