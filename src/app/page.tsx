@@ -12,12 +12,13 @@ import Link from "next/link";
 import heroBG from "../../public/HeroBG.jpg";
 import { ArrowRight } from "lucide-react";
 import CrossIndustry from "@/components/main/CrossIndustry";
-import { ProjectSlider } from "@/components/main/ProjectSlider";
+import HeroPhotoMarquee from "@/components/main/HeroPhotoMarquee";
+
 // import PhotoGallery from "@/components/main/PhotoGallery";
 
 export default function Home() {
   return (
-    <div className="mt-10">
+    <main className="mt-10">
       <section className="relative flex min-h-screen flex-col items-center justify-center px-4 py-20 sm:px-6 lg:px-8">
         {/* Background Image */}
         <div className="absolute inset-0 -z-10 opacity-80">
@@ -72,7 +73,7 @@ export default function Home() {
           {/* Marquee */}
           <div className="mt-8 -mb-6">
             <HeroMarqee />
-            <ProjectSlider />
+            <HeroPhotoMarquee />
           </div>
         </div>
       </section>
@@ -85,7 +86,7 @@ export default function Home() {
       <CustomerFeedBack />
       <FaqSection />
       <ContactUS />
-    </div>
+    </main>
   );
 }
 
