@@ -1,22 +1,22 @@
 import React from "react";
 
-import img1 from "../../../../../public/seo/Powredby/yoast.png";
-import img2 from "../../../../../public/seo/Powredby/ahrefs.png";
-import img3 from "../../../../../public/seo/Powredby/moz.png";
-import img4 from "../../../../../public/seo/Powredby/semrush.png";
-import img5 from "../../../../../public/seo/Powredby/supfer.png";
+// import img1 from "../../../../../public/seo/Powredby/yoast.png";
+// import img2 from "../../../../../public/seo/Powredby/ahrefs.png";
+// import img3 from "../../../../../public/seo/Powredby/moz.png";
+// import img4 from "../../../../../public/seo/Powredby/semrush.png";
+// import img5 from "../../../../../public/seo/Powredby/supfer.png";
 // import { FadingPhotoSlider } from "@/components/FadingPhoto";
 // id: number;
 // src: StaticImageData;
 // alt: string;
 
-const Tools = [
-  { id: 1, src: img1, alt: "image1" },
-  { id: 2, src: img2, alt: "image1" },
-  { id: 3, src: img3, alt: "image1" },
-  { id: 4, src: img4, alt: "image1" },
-  { id: 5, src: img5, alt: "image1" },
-];
+// const Tools = [
+//   { id: 1, src: img1, alt: "image1" },
+//   { id: 2, src: img2, alt: "image1" },
+//   { id: 3, src: img3, alt: "image1" },
+//   { id: 4, src: img4, alt: "image1" },
+//   { id: 5, src: img5, alt: "image1" },
+// ];
 
 export default function PoweredBy() {
   return (
